@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boat-scheduling</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Side Bar</title>
+    <style>
+     /* blue header */
+body{
+    font-family: Arial;
+    padding:0px;
+    background-color: rgb(236, 244, 248);  
+}
+.home-page-link{
+    text-decoration: none;
+    color: white;
+}
+.header{
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 70px;
+    background-image: linear-gradient(to right, rgba(20, 94, 164, 100), rgb(22, 163, 192) );
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 20px;
+    color: white;
+    z-index: 2;
+}
+.header-right-side{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+.tabaco-go-title{
+    font-size: 30px;
+    margin-bottom: -4px;
+    font-weight: 900;
+}
+.tabaco-go-subtitle{
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+ /* Sidebar styling */
+.sidebar {
+height: 100%;
+background-color: #ffffff;
+position: fixed;
+width: 220px;
+padding-top: 20px;
+left: 0;
+top: 0;
+transition: transform 0.3s ease;
+z-index: 1000;
+margin-top: 72px;
+text-decoration: none;font-size: 13px;
+}
+/* Hidden sidebar overlay */
+.sidebar-hidden {
+transform: translateX(-100%);
+}
+        
+/* Overlay effect for sidebar */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+display: none;
+}
+        
+ /* Main content */
+.main-content {
+font-size: 12px;
+width: 80%;
+padding: 20px;
+transition: margin-left 0.3s ease;
+margin-top: 70px;
+align-items: center;
+}
+        
+        /* sidebar  */
+@media (min-width: 768px) {
+.sidebar-hidden {
+transform: translateX(0); /* Always show sidebar on larger screens */
+            }
+            .overlay {
+                display: none; /* No overlay on larger screens */
+            }
+            /* Space for sidebar on larger screens */
+            .main-content {
+                margin-left: 220px;
+            }
+}
+.content-title{
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;  
+    text-decoration: none;
+}
+@media (min-width: 2000px ){
+    .card-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width: 800px ){
+    .card-grid{
+    grid-template-columns: 1fr;
+    margin: 0px 10px 0px 10px;
+    }
+}
+.link-names-grid{
+    text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+ <!-- blue header -->
+ <a href="home_page.html" class="home-page-link">
+    <div class="header">
+        <div class="header-right-side">
+            <div class="tabaco-go-title">
+                <i class="fa-brands fa-digital-ocean"></i>TABACO GO</div>
+            <div class="tabaco-go-subtitle">
+                <div>Tabaco International Port Online Booking</div>
+            </div>
+        </div>
+    </div>
+</a> 
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+    <div class="sidebar sidebar-hidden" id="sidebar">
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="Dashboard.html">
+                <i class="fa-solid fa-house" 
+                style="padding-right: 10px;"></i>Dashboard</a>
+            <a class="nav-link" href="#">
+                <i class="fa-solid fa-calendar-check" 
+                style="padding-right: 10px;"></i>Appointment</a>
+            <a class="nav-link" href="bill-of-lading.html">
+                <i class="fa-solid fa-clipboard-list" 
+                style="padding-right: 10px;"></i>Bill of Lading</a>
+            <a class="nav-link" href="boat-scheduling.html">
+                <i class="fa-solid fa-ferry" 
+                style="padding-right: 10px;"></i>Boat Schedule</a>
+            <a class="nav-link" href="#">
+                <i class="fa-solid fa-users" 
+                style="padding-right: 10px;"></i>Authentication</a>
+        </nav>
+    </div>
+ <!-- Main content -->
+<div class="main-content" id="main-content">
+    <!-- Toggle Button within the main content area -->
+    <button class="btn mb-3 d-md-none" onclick="toggleSidebar()">☰</button>
+    <div class="container mt-5">
+        <h4>Boat Scheduling</h4>
+        <div class="d-flex justify-content-between mb-3">
+          <div>
+            <button type="button" class="btn btn-outline-secondary btn-sm">Export CSV</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">Export PDF</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm">Export Excel</button>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addScheduleModal">
+            <i class="bi bi-plus-lg"></i> Add New Schedule
+          </button>
+        </div>
+      
+        <div class="table">
+          <table class="table table-striped table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>Vessel No.</th>
+                <th>Vessel Name</th>
+                <th>Departure Time</th>
+                <th>Destination</th>
+                <th>Capacity</th>
+                <th>Date Scheduled</th>
+                <th>Ordinary Fare Price</th>
+                <th>Aircon Fare Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Titanic I</td>
+                <td>8:00 AM</td>
+                <td>Virac</td>
+                <td>4 / 300.00</td>
+                <td>2024-09-10</td>
+                <td>320.00</td>
+                <td>278.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Titanic II</td>
+                <td>10:00 AM</td>
+                <td>San Andres</td>
+                <td>3 / 250.00</td>
+                <td>2024-09-09</td>
+                <td>230.00</td>
+                <td>210.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Titanic III</td>
+                <td>12:00 PM</td>
+                <td>Masbate</td>
+                <td>5 / 300.00</td>
+                <td>2024-09-08</td>
+                <td>300.00</td>
+                <td>270.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Roro I</td>
+                <td>2:00 PM</td>
+                <td>Catanduanes</td>
+                <td>2 / 150.00</td>
+                <td>2024-09-07</td>
+                <td>200.00</td>
+                <td>180.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Roro II</td>
+                <td>4:00 PM</td>
+                <td>San Andres</td>
+                <td>3 / 200.00</td>
+                <td>2024-09-06</td>
+                <td>210.00</td>
+                <td>200.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Titanic IV</td>
+                <td>6:00 PM</td>
+                <td>Virac</td>
+                <td>4 / 320.00</td>
+                <td>2024-09-05</td>
+                <td>320.00</td>
+                <td>300.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Titanic V</td>
+                <td>8:00 PM</td>
+                <td>Masbate</td>
+                <td>5 / 400.00</td>
+                <td>2024-09-04</td>
+                <td>400.00</td>
+                <td>380.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Titanic VI</td>
+                <td>10:00 PM</td>
+                <td>Catanduanes</td>
+                <td>6 / 420.00</td>
+                <td>2024-09-03</td>
+                <td>420.00</td>
+                <td>400.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Roro III</td>
+                <td>12:00 PM</td>
+                <td>San Andres</td>
+                <td>4 / 200.00</td>
+                <td>2024-09-02</td>
+                <td>200.00</td>
+                <td>180.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Roro IV</td>
+                <td>2:00 PM</td>
+                <td>Virac</td>
+                <td>3 / 250.00</td>
+                <td>2024-09-01</td>
+                <td>250.00</td>
+                <td>230.00</td>
+                <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+              </tr>
+            </tbody>
+          </table>
+           <!-- Pagination -->
+           <nav>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Add New Schedule Modal -->
+      <div class="modal fade" id="addScheduleModal" tabindex="-1" aria-labelledby="addScheduleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addScheduleModalLabel">Add New Schedule</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="scheduleForm">
+                <div class="mb-3">
+                  <label for="vesselName" class="form-label">Vessel Name</label>
+                  <input type="text" class="form-control" id="vesselName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="departureTime" class="form-label">Departure Time</label>
+                  <input type="time" class="form-control" id="departureTime" required>
+                </div>
+                <div class="mb-3">
+                  <label for="destination" class="form-label">Destination</label>
+                  <input type="text" class="form-control" id="destination" required>
+                </div>
+                <div class="mb-3">
+                  <label for="capacity" class="form-label">Capacity</label>
+                  <input type="number" class="form-control" id="capacity" required>
+                </div>
+                <div class="mb-3">
+                  <label for="dateScheduled" class="form-label">Date Scheduled</label>
+                  <input type="date" class="form-control" id="dateScheduled" required>
+                </div>
+                <div class="mb-3">
+                  <label for="ordinaryFare" class="form-label">Ordinary Fare Price</label>
+                  <input type="number" step="0.01" class="form-control" id="ordinaryFare" required>
+                </div>
+                <div class="mb-3">
+                  <label for="airconFare" class="form-label">Aircon Fare Price</label>
+                  <input type="number" step="0.01" class="form-control" id="airconFare" required>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="addSchedule()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        function addSchedule() {
+          // Logic to add new schedule entry
+          alert('New schedule added successfully!');
+          // Optionally, you could gather data from form fields and update the table dynamically
+        }
+      </script>
+    
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Function to toggle sidebar and overlay visibility
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        
+        // Toggle sidebar visibility
+        sidebar.classList.toggle('sidebar-hidden');
+        
+        // Toggle overlay visibility
+        if (overlay.style.display === "block") {
+            overlay.style.display = "none";
+        } else {
+            overlay.style.display = "block";
+        }
+    }
+
+    // Ensure sidebar and overlay states on resize
+    window.addEventListener('resize', function () {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        
+        if (window.innerWidth >= 768) {
+            // Show sidebar and hide overlay on larger screens
+            sidebar.classList.remove('sidebar-hidden');
+            overlay.style.display = "none";
+        } else {
+            // Hide sidebar and show toggle button on smaller screens
+            sidebar.classList.add('sidebar-hidden');
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

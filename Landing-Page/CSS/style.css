@@ -1,0 +1,104 @@
+body {
+  padding-top: 60px;
+  font-family: Barlow;
+}
+header {
+  font-family: Nunito;
+  font-weight: bold;
+}
+tabaco-go {
+  font-family: arial;
+}
+@media (max-width: 500px) {
+  .online-booking {
+    letter-spacing: 4.5px;
+  }
+}
+@media (min-width: 576px) {
+  .online-booking {
+    letter-spacing: 6.5px;
+  }
+}
+@media (min-width: 768px) {
+  .online-booking {
+    letter-spacing: 7.4px;
+  }
+}
+@media (min-width: 992px) {
+  .online-booking {
+    letter-spacing: 9px;
+  }
+}
+
+.showcase {
+  margin-top: 45px;
+}
+
+@media (min-width: 800px) {
+  .sched {
+    width: 800px;
+  }
+}
+.go-to {
+  font-family: barlow;
+  font-weight: 200px;
+}
+
+.catanduanes {
+  font-family: nunito;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+/*
+      Color Palete from Adobe XD
+
+     DARK BLUE        =   rgb(20 65 105)
+     DARK/LIGHT BLUE  =   rgb(35 100 151)
+     LIGHT BLUE       =   rgb(134 193 205)
+     SOFT BLUE        =   rgb(244 249 249)
+     GREY             =   rgb(235 235 235)
+    
+*/
+/* Fonts */
+.nunito{
+  font-family: Nunito;
+}
+.barlow{
+  font-family: barlow;
+}
+
+
+
+/* Background Color */
+.bg-dark-blue{
+  background-color: rgb(20 65 105);
+}
+
+.bg-semi-dark-blue{
+  background-color: rgb(35 100 151);
+}
+
+.bg-light-blue{
+  background-color: rgb(134 193 205);
+}
+.bg-fade-blue{
+  background-color: rgb(244 249 249);
+}
+
+.bg-grey{
+  background-color: rgb(235 235 235);
+}
+ 
+.bg-dark-grey{
+  background-color: rgb(88 112 130);
+}
+
+/* Text Color */
+.text-semi-dark-blue{
+ color: rgb(35 100 151);
+}
+
+.text-light-blue{
+  color: rgb(134 193 205);
+}
+

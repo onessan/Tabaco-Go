@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill of Lading</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Side Bar</title>
+    <style>
+     /* blue header */
+body{
+    font-family: Arial;
+    padding:0px;
+    background-color: rgb(236, 244, 248);  
+}
+.home-page-link{
+    text-decoration: none;
+    color: white;
+}
+.header{
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 70px;
+    background-image: linear-gradient(to right, rgba(20, 94, 164, 100), rgb(22, 163, 192) );
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 20px;
+    color: white;
+    z-index: 2;
+}
+.header-right-side{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+.tabaco-go-title{
+    font-size: 30px;
+    margin-bottom: -4px;
+    font-weight: 900;
+}
+.tabaco-go-subtitle{
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+ /* Sidebar styling */
+.sidebar {
+height: 100%;
+background-color: #ffffff;
+position: fixed;
+width: 220px;
+padding-top: 20px;
+left: 0;
+top: 0;
+transition: transform 0.3s ease;
+z-index: 1000;
+margin-top: 72px;
+text-decoration: none;
+font-size: 15px;
+}
+/* Hidden sidebar overlay */
+.sidebar-hidden {
+transform: translateX(-100%);
+}
+        
+/* Overlay effect for sidebar */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+display: none;
+}
+        
+ /* Main content */
+.main-content {
+font-size: 12px;
+width: 80%x;
+padding: 5px;
+transition: margin-left 0.3s ease;
+margin-top: 70px;
+align-items: center;
+}
+        
+        /* sidebar  */
+@media (min-width: 768px) {
+.sidebar-hidden {
+transform: translateX(0); /* Always show sidebar on larger screens */
+            }
+            .overlay {
+                display: none; /* No overlay on larger screens */
+            }
+            /* Space for sidebar on larger screens */
+            .main-content {
+                margin-left: 220px;
+            }
+}
+.content-title{
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.search{
+    size: 30px;
+}
+.filter-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .filter-container select,
+        .filter-container input {
+            width: 100%;
+        }
+        .table-container {
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .export-buttons {
+            margin-bottom: 15px;
+        }
+        .export-buttons .btn {
+            margin-right: 10px;
+        }
+        .table-container table thead th {
+            font-weight: normal;
+            text-align: left;
+        }
+        .table-container table tbody tr td {
+            text-align: center;
+            color: #6c757d;
+        }
+        .pagination {
+            justify-content: flex-end;
+        }
+        .pagination .page-link {
+            color: #6c757d;
+        }
+    .dropdown-menu{
+        border: none;
+        font-size: 15px;
+    }
+       
+
+    </style>
+</head>
+<body>
+ <!-- blue header -->
+ <a href="home_page.html" class="home-page-link">
+    <div class="header">
+        <div class="header-right-side">
+            <div class="tabaco-go-title">
+                <i class="fa-brands fa-digital-ocean"></i>TABACO GO</div>
+            <div class="tabaco-go-subtitle">
+                <div>Tabaco International Port Online Booking</div>
+            </div>
+        </div>
+    </div>
+</a> 
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+    <div class="sidebar sidebar-hidden" id="sidebar">
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="Dashboard.html">
+                <i class="fa-solid fa-house" 
+                style="padding-right: 10px;"></i>Dashboard</a>
+            <a class="nav-link" href="#">
+                <i class="fa-solid fa-calendar-check" 
+                style="padding-right: 10px;"></i>Appointment</a>
+            <a class="nav-link" href="bill-of-lading.html">
+                <i class="fa-solid fa-clipboard-list" 
+                style="padding-right: 10px;"></i>Bill of Lading</a>
+            <a class="nav-link" href="boat-scheduling.html">
+                <i class="fa-solid fa-ferry" 
+                style="padding-right: 10px;"></i>Boat Schedule</a>
+
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="background-color: #ffffff; border: none; color: rgb(12 104 239);"><i class="fa-solid fa-users" 
+                        style="padding-right: 10px;"></i>
+                         Authentication
+                </button>
+                <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" style="background-color: #ffffff; border: none; color: rgb(12 104 239);"href="#">Action</a></li>
+                      <li><a class="dropdown-item" style="background-color: #ffffff; border: none; color: rgb(12 104 239);"href="#" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" style="background-color: #ffffff; border: none; color: rgb(12 104 239);"href="#" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </nav>
+    </div>
+ 
+
+
+<!-- Main content -->
+<div class="main-content" id="main-content">
+    <!-- Toggle Button within the main content area -->
+    <button class="btn mb-3 d-md-none" onclick="toggleSidebar()">☰</button>
+    
+     <!-- tabs -->
+     <div class="container my-5">
+        <div class="content-title">
+            <p>Cargo <br>
+            <i class="fa-solid fa-chart-simple" style="padding-right: 5px;"></i>Cargo List</p>
+        </div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="cargoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" 
+                        id="add-cargo-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#add-cargo" 
+                        type="button" role="tab" 
+                        aria-controls="add-cargo" 
+                        aria-selected="true">
+                        <i class="fa-solid fa-truck-ramp-box" style="padding-right: 5px;"></i> Add New Cargo
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" 
+                        id="cargo-info-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#cargo-info" 
+                        type="button" role="tab" 
+                        aria-controls="cargo-info" 
+                        aria-selected="false">
+                        <i class="fa-solid fa-circle-info" style="padding-right: 5px;"></i>Cargo Information
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" 
+                id="inventory-report-tab" 
+                data-bs-toggle="tab" 
+                data-bs-target="#inventory-report" 
+                type="button" role="tab" 
+                aria-controls="inventory-report" aria-selected="false">
+                <i class="fa-solid fa-truck-fast" style="padding-right: 5px;"></i> Cargo Inventory Report
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content p-3 border border-top-0">
+            <!-- Add New Cargo Tab -->
+            <div class="tab-pane fade show active" id="add-cargo" role="tabpanel" aria-labelledby="add-cargo-tab">
+                <div class="container mt-5">
+                    <!-- Section for Number of Cargo -->
+                    <div class="mb-3">
+                      <label for="cargoNumber" class="form-label">Number of Cargo</label>
+                      <input type="number" class="form-control" id="cargoNumber" placeholder="1">
+                    </div>
+                  
+                    <!-- Section Header -->
+                    <h5 class="fw-bold mt-4">Cargo Information</h5>
+                  
+                    <!-- Form Rows for Cargo Information -->
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="vesselName" class="form-label">Vessel Name</label>
+                        <input type="text" class="form-control" id="vesselName" placeholder="Enter vessel name">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="voyageNumber" class="form-label">Voyage Number</label>
+                        <input type="text" class="form-control" id="voyageNumber" placeholder="Enter voyage number">
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="shipper" class="form-label">Shipper</label>
+                        <input type="text" class="form-control" id="shipper" placeholder="Enter shipper">
+                      </div>
+                      
+                          <div class="col-md-6">
+                              <label for="date" class="form-label">Date</label>
+                              <input type="date" class="form-control" id="date" placeholder="date">
+                          </div>
+                  
+                    </div>
+                  
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="consignee" class="form-label">Consignee</label>
+                        <input type="text" class="form-control" id="consignee" placeholder="Enter consignee">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Enter destination">
+                      </div>
+                    </div>
+                  
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" placeholder="Enter quantity">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="comments" class="form-label">Comments</label>
+                        <input type="text" class="form-control" id="comments" placeholder="Add comments">
+                      </div>
+                    </div>
+                  
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="value" class="form-label">Value</label>
+                        <input type="number" class="form-control" id="value" placeholder="Enter value in metric tons">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="weightMeasurement" class="form-label">Weight Measurement</label>
+                        <input type="text" class="form-control" id="weightMeasurement" placeholder="Enter weight measurement">
+                      </div>
+                    </div>
+                  
+                    <!-- Save Button -->
+                    <button type="button" class="btn btn-primary" onclick="saveFormData()">Save</button>
+                  </div>
+                  
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                  <script>
+                    function saveFormData() {
+                      // Retrieve data from input fields
+                      const cargoNumber = document.getElementById('cargoNumber').value;
+                      const vesselName = document.getElementById('vesselName').value;
+                      const voyageNumber = document.getElementById('voyageNumber').value;
+                      const shipper = document.getElementById('shipper').value;
+                      const date = document.getElementById('date').value;
+                      const consignee = document.getElementById('consignee').value;
+                      const destination = document.getElementById('destination').value;
+                      const quantity = document.getElementById('quantity').value;
+                      const comments = document.getElementById('comments').value;
+                      const value = document.getElementById('value').value;
+                      const weightMeasurement = document.getElementById('weightMeasurement').value;
+                  
+                      // Store the form data in an object
+                      const formData = {
+                        cargoNumber,
+                        vesselName,
+                        voyageNumber,
+                        shipper,
+                        date,
+                        consignee,
+                        destination,
+                        quantity,
+                        comments,
+                        value,
+                        weightMeasurement
+                      };
+                  
+                      // For now, just log the data to the console
+                      console.log("Form Data:", formData);
+                      
+                      // Display a success message
+                      alert("Data saved successfully!");
+                    }
+                  </script>
+
+            </div>
+
+            <!-- Cargo Information Tab -->
+            <div class="tab-pane fade" id="cargo-info" role="tabpanel" aria-labelledby="cargo-info-tab">
+                <div class="container mt-5">
+                    <!-- Search bar -->
+                    <div class="row mb-3">
+                      <div class="col-md-4">
+                        <h6 class="mb-3">Recent Cargo</h6>
+                        <input class="search" type="text" size="form-control" class="form-control" id="searchInput" placeholder="Search...">
+                      </div>
+                    </div>
+                  
+                    <!-- Table -->
+                    <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Vessel</th>
+                          <th>Voyage Number</th>
+                          <th>Shipper</th>
+                          <th>Date</th>
+                          <th>Consignee</th>
+                          <th>Cargo Destination</th>
+                          <th>Description</th>
+                          <th>Qty</th>
+                          <th>Value</th>
+                          <th>Weight Measurement</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody">
+                        <tr>
+                          <td>63</td>
+                          <td>Titanic I</td>
+                          <td>4552</td>
+                          <td>Malaysia</td>
+                          <td>2024-09-07</td>
+                          <td>mm</td>
+                          <td>mm</td>
+                          <td>none</td>
+                          <td>1000</td>
+                          <td>2000</td>
+                          <td>10000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>62</td>
+                          <td>Titanic V</td>
+                          <td>345</td>
+                          <td>Malaysia</td>
+                          <td>2024-06-09</td>
+                          <td>mamamo</td>
+                          <td>sa tabi lang</td>
+                          <td>none</td>
+                          <td>1000</td>
+                          <td>10000</td>
+                          <td>25000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>61</td>
+                          <td>Titanic V</td>
+                          <td>1192</td>
+                          <td>Malaysia</td>
+                          <td>2024-11-16</td>
+                          <td>mamamo</td>
+                          <td>sa tabi lang</td>
+                          <td>laaaaaaaaaa</td>
+                          <td>1920</td>
+                          <td>10000</td>
+                          <td>25000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>60</td>
+                          <td>Titanic V</td>
+                          <td>902</td>
+                          <td>Malaysia</td>
+                          <td>2024-11-16</td>
+                          <td>mamamo</td>
+                          <td>sa tabi lang</td>
+                          <td>jjjjjjjjj</td>
+                          <td>1111</td>
+                          <td>10000</td>
+                          <td>25000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>59</td>
+                          <td>Titanic V</td>
+                          <td>121</td>
+                          <td>Malaysia</td>
+                          <td>2024-11-16</td>
+                          <td>mamamo</td>
+                          <td>sa tabi lang</td>
+                          <td>boom</td>
+                          <td>2811</td>
+                          <td>10000</td>
+                          <td>25000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>58</td>
+                          <td>Titanic V</td>
+                          <td>345</td>
+                          <td>Malaysia</td>
+                          <td>2024-11-16</td>
+                          <td>mamamo</td>
+                          <td>sa tabi lang</td>
+                          <td>haaaaa</td>
+                          <td>1000</td>
+                          <td>10000</td>
+                          <td>25000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>57</td>
+                          <td>Titanic V</td>
+                          <td>345</td>
+                          <td>Malaysia</td>
+                          <td>2024-11-16</td>
+                          <td>mamamo</td>
+                          <td>sa tabi lang</td>
+                          <td>sack of rice</td>
+                          <td>1000</td>
+                          <td>10000</td>
+                          <td>25000</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>56</td>
+                          <td>TEST</td>
+                          <td>2</td>
+                          <td>D</td>
+                          <td>2024-08-20</td>
+                          <td>D</td>
+                          <td>D</td>
+                          <td>D</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>55</td>
+                          <td>d</td>
+                          <td>22</td>
+                          <td>d</td>
+                          <td>2024-08-13</td>
+                          <td>d</td>
+                          <td>d</td>
+                          <td>d</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>5</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                          <td>54</td>
+                          <td>kk</td>
+                          <td>23333</td>
+                          <td>s</td>
+                          <td>2024-08-28</td>
+                          <td>d</td>
+                          <td>d</td>
+                          <td>d</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>0</td>
+                          <td><button class="btn btn-primary btn-sm">Edit</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                    <!-- Pagination -->
+                    <nav>
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <script>
+                    // Search functionality
+                    document.getElementById("searchInput").addEventListener("keyup", function() {
+                      const filter = this.value.toLowerCase();
+                      const rows = document.querySelectorAll("#tableBody tr");
+                      rows.forEach(row => {
+                        const cells = row.querySelectorAll("td");
+                        const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(filter));
+                        row.style.display = match ? "" : "none";
+                      });
+                    });
+                  </script> 
+            </div>
+
+            <!-- Cargo Inventory Report Tab -->
+            <div class="tab-pane fade" id="inventory-report" role="tabpanel" aria-labelledby="inventory-report-tab">
+                <div class="container my-4">
+                    <!-- Filter Row -->
+                    <div class="filter-container">
+                        <div class="col-md-3">
+                            <select class="form-select" aria-label="Filter By">
+                                <option selected>Open this select menu</option>
+                                <!-- Add more options here -->
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="date" class="form-control" placeholder="Filter Date From">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="date" class="form-control" placeholder="Filter Date To">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary w-100">Filter Data</button>
+                        </div>
+                    </div>
+                
+                    <!-- Export Buttons -->
+                    <div class="export-buttons">
+                        <button class="btn btn-secondary">Export CSV</button>
+                        <button class="btn btn-secondary">Export PDF</button>
+                        <button class="btn btn-secondary">Export Excel</button>
+                    </div>
+                
+                    <!-- Table -->
+                    <div class="table-container">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Bill of Lading ID</th>
+                                    <th>Cargo ID</th>
+                                    <th>Vessel</th>
+                                    <th>Voyage Number</th>
+                                    <th>Shipper</th>
+                                    <th>Date</th>
+                                    <th>Consignee</th>
+                                    <th>Cargo Destination</th>
+                                    <th>Description of Article</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="10" class="text-center">No data available in table</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination mt-3">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">Previous</a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Bootstrap JS and dependencies -->
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script> 
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Function to toggle sidebar and overlay visibility
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        
+        // Toggle sidebar visibility
+        sidebar.classList.toggle('sidebar-hidden');
+        
+        // Toggle overlay visibility
+        if (overlay.style.display === "block") {
+            overlay.style.display = "none";
+        } else {
+            overlay.style.display = "block";
+        }
+    }
+
+    // Ensure sidebar and overlay states on resize
+    window.addEventListener('resize', function () {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        
+        if (window.innerWidth >= 768) {
+            // Show sidebar and hide overlay on larger screens
+            sidebar.classList.remove('sidebar-hidden');
+            overlay.style.display = "none";
+        } else {
+            // Hide sidebar and show toggle button on smaller screens
+            sidebar.classList.add('sidebar-hidden');
+        }
+    });
+</script>
+</body>
+</html>
