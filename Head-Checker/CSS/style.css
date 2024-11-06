@@ -1,0 +1,261 @@
+body {
+  padding-top: 60px;
+  font-family: Barlow;
+}
+header {
+  font-family: Nunito;
+  font-weight: bold;
+}
+tabaco-go {
+  font-family: arial;
+}
+@media (max-width: 500px) {
+  .online-booking {
+    letter-spacing: 4.5px;
+  }
+}
+@media (min-width: 576px) {
+  .online-booking {
+    letter-spacing: 6.5px;
+  }
+}
+@media (min-width: 768px) {
+  .online-booking {
+    letter-spacing: 7.4px;
+  }
+}
+@media (min-width: 992px) {
+  .online-booking {
+    letter-spacing: 9px;
+  }
+}
+
+.showcase {
+  margin-top: 45px;
+}
+
+@media (min-width: 800px) {
+  .sched {
+    width: 800px;
+  }
+}
+.go-to {
+  font-family: barlow;
+  font-weight: 200px;
+}
+
+.catanduanes {
+  font-family: nunito;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+/*
+      Color Palete from Adobe XD
+
+     DARK BLUE        =   rgb(20 65 105)
+     DARK/LIGHT BLUE  =   rgb(35 100 151)
+     LIGHT BLUE       =   rgb(134 193 205)
+     SOFT BLUE        =   rgb(244 249 249)
+     GREY             =   rgb(235 235 235)
+    
+*/
+/* Fonts */
+.nunito{
+  font-family: Nunito;
+}
+.barlow{
+  font-family: barlow;
+}
+
+
+
+/* Background Color */
+.bg-dark-blue{
+  background-color: rgb(20 65 105);
+}
+
+.bg-semi-dark-blue{
+  background-color: rgb(35 100 151);
+}
+
+.bg-light-blue{
+  background-color: rgb(134 193 205);
+}
+.bg-fade-blue{
+  background-color: rgb(244 249 249);
+}
+
+.bg-grey{
+  background-color: rgb(235 235 235);
+}
+ 
+.bg-dark-grey{
+  background-color: rgb(88 112 130);
+}
+
+/* Text Color */
+.text-semi-dark-blue{
+ color: rgb(35 100 151);
+}
+
+.text-light-blue{
+  color: rgb(134 193 205);
+}
+
+/* Ian's  Head Checker*/
+
+/* blue header */
+body {
+  font-family: Arial;
+  padding: 0px;
+}
+.home-page-link {
+  text-decoration: none;
+  color: white;
+}
+.header {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  height: 70px;
+  background-image: linear-gradient(
+    to right,
+    rgba(20, 94, 164, 100),
+    rgb(22, 163, 192)
+  );
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0px 20px;
+  color: white;
+  z-index: 2;
+}
+.header-right-side {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+}
+.tabaco-go-title {
+  font-size: 30px;
+  margin-bottom: -4px;
+  font-weight: 900;
+}
+.tabaco-go-subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+/* Sidebar styling */
+.sidebar {
+  height: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  width: 220px;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  margin-top: 70px;
+  text-decoration: none;
+  font-size: 15px;
+}
+/* Hidden sidebar overlay */
+.sidebar-hidden {
+  transform: translateX(-100%);
+}
+
+/* Overlay effect for sidebar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Main content */
+.main-content {
+  font-size: 12px;
+  width: 80%;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  margin-top: 70px;
+  align-items: center;
+}
+
+/* sidebar  */
+@media (min-width: 768px) {
+  .sidebar-hidden {
+    transform: translateX(0); /* Always show sidebar on larger screens */
+  }
+  .overlay {
+    display: none; /* No overlay on larger screens */
+  }
+  /* Space for sidebar on larger screens */
+  .main-content {
+    margin-left: 220px;
+  }
+}
+.content-title {
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  text-decoration: none;
+}
+@media (min-width: 2000px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    margin: 0px 10px 0px 10px;
+  }
+}
+.link-names-grid {
+  text-decoration: none;
+}
+.content-title {
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.appointment-card,
+.manifest-card,
+.user-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  height: 200px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+.card {
+  border-style: none;
+}
+.card-bg3 {
+  background-image: url("./test-image/123.png");
+  background-size: cover;
+  background-position: right;
+  background-size: 100px;
+  background-repeat: no-repeat;
+}
+.dropdown-menu {
+  border: none;
+  font-size: 15px;
+}
+
+/* Ian's  Head Checker*/
