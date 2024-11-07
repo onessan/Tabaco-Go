@@ -36,12 +36,54 @@
       rel="stylesheet"
     />
     <title>Head Checker - Dashboard</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/sidebars/"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+
+    <link
+      href="/docs/5.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      href="/docs/5.3/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/docs/5.3/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/docs/5.3/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg"
+      color="#712cf9"
+    />
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico" />
+    <meta name="theme-color" content="#712cf9" />
   </head>
   <body>
     <!-- Header  -->
     <header
-      class="navbar navbar-expand-md bg-primary navbar-dark py-1 fixed-top"
+      class="navbar bg-primary navbar-dark py-1 fixed-top"
       style="
         background-image: linear-gradient(
           to right,
@@ -50,8 +92,8 @@
         );
       "
     >
-      <div class="container">
-        <div class="">
+      <div class="container-flex d-flex">
+        <div class="ps-4">
           <div class="">
             <a href="#" class="navbar-brand">
               <h1
@@ -75,223 +117,224 @@
             <span class="online-booking">ONLINE &ensp; BOOKING</span>
           </div>
         </div>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse gap-2" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="#" class="nav-link active">Home</a>
-            </li>
-            
-            <li class="nav-item">
-              <a href="#account" class="nav-link">Account</a>
-            </li>
-          </ul>
-          <div class="my-4">
-            <div class="btn-group">
-              <button
-                class="btn btn-secondary btn-sm rounded-start-5"
-                data-bs-theme-value="dark"
-              >
-                <span class=""> <i class="bi bi-moon text-light"></i></span>
-              </button>
-              <button
-                class="btn btn-light btn-sm rounded-end-5"
-                data-bs-theme-value="light"
-              >
-                <span class="">
-                  <i class="bi bi-brightness-high-fill text-secondary"></i
-                ></span>
-              </button>
-            </div>
+      </div>
+      <div class="justify-content-end pe-4 py-4">
+        <div class="">
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary btn-sm rounded-start-5"
+              data-bs-theme-value="dark"
+            >
+              <span class="">
+                <i class="bi bi-moon text-light"></i>
+              </span>
+            </button>
+            <button
+              class="btn btn-light btn-sm rounded-end-5"
+              data-bs-theme-value="light"
+            >
+              <span class="">
+                <i class="bi bi-brightness-high-fill text-secondary"></i>
+              </span>
+            </button>
           </div>
         </div>
       </div>
     </header>
     <!-- /Header -->
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <!-- SVG -->
+
+    <!-- /SVG -->
 
     <!-- Sidebar -->
-    <div class="sidebar sidebar-hidden" id="sidebar">
-      <nav class="nav flex-column">
-        <a class="nav-link active" href="Dashboard.html">
-          <i class="fa-solid fa-house" style="padding-right: 10px"></i
-          >Dashboard</a
-        >
-        <a class="nav-link" href="#">
-          <i class="fa-solid fa-calendar-check" style="padding-right: 10px"></i
-          >Appointment</a
-        >
-        <a class="nav-link" href="bill-of-lading.html">
-          <i class="fa-solid fa-clipboard-list" style="padding-right: 10px"></i
-          >Bill of Lading</a
-        >
-        <a class="nav-link" href="boat-scheduling.html">
-          <i class="fa-solid fa-ferry" style="padding-right: 10px"></i>Boat
-          Schedule</a
-        >
-
+    <!-- Full Sidebar -->
+    <nav class="d-none d-md-block">
+      <div
+        class="position-fixed d-flex flex-column p-3 bg-body-tertiary"
+        style="height: 100%; width: 280px"
+        s
+      >
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto mt-5">
+          <li>
+            <a
+              href="#"
+              class="nav-link text-light"
+              aria-current="page"
+              style="
+                background-image: linear-gradient(
+                  to right,
+                  rgb(20 65 105),
+                  hsl(190deg 41% 67%)
+                );
+              "
+            >
+              <i class="bi bi-speedometer2 pe-2"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis">
+              <i class="bi bi-list-task pe-2"></i>
+              Apointments
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis">
+              <i class="bi bi-receipt pe-2"></i>
+              Bill of Lading
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis">
+              <i class="bi bi-calendar2-week pe-2"></i>
+              Boat Schedule
+            </a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a
+                href="#"
+                class="nav-link link-body-emphasis dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-patch-check pe-2"></i>
+                Authentication
+              </a>
+              <ul class="dropdown-menu text-small ms-3">
+                <li><a class="dropdown-item ps-4" href="#">Account</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <hr />
         <div class="dropdown">
-          <button
-            class="btn dropdown-toggle"
-            type="button"
+          <a
+            href="#"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-            style="background-color: #ffffff; border: none"
           >
-            <i class="fa-solid fa-users" style="padding-right: 10px"></i>
-            Authentication
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <img
+              src="https://github.com/mdo.png"
+              alt=""
+              width="32"
+              height="32"
+              class="rounded-circle me-2"
+            />
+            Ian Azupardo
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      </nav>
-    </div>
+      </div>
+    </nav>
+    <!-- /Full Sidebar -->
+
+    <!-- Mobile Sidebar -->
+    <nav class="d-md-none">
+      <div
+        class="position-fixed bottom-0 d-flex flex-column bg-body-tertiary"
+        style="height: 96%; width: 4.9rem; top: 39px;"
+      >
+        <ul
+          class="nav nav-pills nav-flush flex-column mb-auto text-center mt-5"
+        >
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link p-0 border-bottom rounded-0"
+              aria-current="page"
+              data-bs-placement="right"
+              data-bs-original-title="Home"
+              style="background-color: rgb(35 100 151)"
+            >
+              <i class="bi bi-speedometer2 text-white fs-1"></i>
+              <p class="text-light" style="font-size: 11px">Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+            <i class="bi bi-list-task  fs-1"></i>
+            <p class="text-normal" style="font-size: 11px;">Apointments</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+            <i class="bi bi-receipt  fs-1"></i>
+            <p class="text-normal" style="font-size: 11px;">Bill of Lading</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+            <i class="bi bi-calendar2-week  fs-1"></i>
+            <p class="text-normal" style="font-size: 11px;">Boat Schedule</p>
+            </a>
+          </li>
+          <li>
+            <div class="dropdown dropend">
+              <a
+              href="#"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+              data-bs-toggle="dropdown"
+                aria-expanded="false"
+            >
+            <i class="bi bi-patch-check fs-1"></i>
+            <p class="text-normal" style="font-size: 11px;">Authentication</p>
+            </a>
+            <ul class="dropdown-menu text-small ms-1 shadow">
+              <li><a class="dropdown-item ps-4" href="#">Account</a></li>
+            </ul>
+            </div>
+            
+          </li>
+        </ul>
+        <div class="dropdown border-top">
+          <a
+            href="#"
+            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://github.com/mdo.png"
+              alt="mdo"
+              width="24"
+              height="24"
+              class="rounded-circle"
+            />
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Sidebar -->
+
     <!-- /Sidebar -->
 
     <!-- Main content -->
-    <main class="main-content" id="main-content">
-      <!-- Toggle Button within the main content area -->
-      <button class="btn mb-3 d-md-none" onclick="toggleSidebar()">☰</button>
-      <div class="content-title">
-        <p class="d-grid fw-bold">WELCOME BACK! <span class="h3">ianazupardo@gmail.com</span></p>
-      </div>
-      <!-- cardholders -->
-      <main class="card-grid">
-        <a href="bill-of-lading.html" class="link-names-grid">
-          <div class="appointment-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Bill of Lading</h4>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Cargo</h6>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="manifest.html" class="link-names-grid">
-          <div class="manifest-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Inventory</h4>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Tally Sheet
-                </h6>
-                <p class="card-text">Date</p>
-                <p class="card-text">Total</p>
-                <p class="card-text">Duration</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="users.html" class="link-names-grid">
-          <div class="user-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">History</h4>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Latest Update
-                </h6>
-                <p class="card-text"></p>
-                <p>jaljfioieggefgoihfeefugjuw</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="users.html" class="link-names-grid">
-          <div class="user-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">History</h4>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Latest Update
-                </h6>
-                <p class="card-text"></p>
-                <p>jaljfioieggefgoihfeefugjuw</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="users.html" class="link-names-grid">
-          <div class="user-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">History</h4>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
-                  Latest Update
-                </h6>
-                <p class="card-text"></p>
-                <p>jaljfioieggefgoihfeefugjuw</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="users.html" class="link-names-grid">
-          <div class="user-card">
-            <div class="card">
-              <div class="card-bg3">
-                <div class="card-body">
-                  <h4 class="card-title">History</h4>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    Latest Update
-                  </h6>
-                  <p class="card-text"></p>
-                  <p>jaljfioieggefgoihfeefugjuw</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </main>
-    </main>
+    <main></main>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
-    <script>
-      // Function to toggle sidebar and overlay visibility
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        const overlay = document.getElementById("overlay");
-
-        // Toggle sidebar visibility
-        sidebar.classList.toggle("sidebar-hidden");
-
-        // Toggle overlay visibility
-        if (overlay.style.display === "block") {
-          overlay.style.display = "none";
-        } else {
-          overlay.style.display = "block";
-        }
-      }
-
-      // Ensure sidebar and overlay states on resize
-      window.addEventListener("resize", function () {
-        const sidebar = document.getElementById("sidebar");
-        const overlay = document.getElementById("overlay");
-
-        if (window.innerWidth >= 768) {
-          // Show sidebar and hide overlay on larger screens
-          sidebar.classList.remove("sidebar-hidden");
-          overlay.style.display = "none";
-        } else {
-          // Hide sidebar and show toggle button on smaller screens
-          sidebar.classList.add("sidebar-hidden");
-        }
-      });
-    </script>
   </body>
 </html>
