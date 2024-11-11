@@ -1,0 +1,166 @@
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f3f3f3;
+    height: 100%;
+  }
+
+  .container {
+    display:inline-flex;
+    max-width: 5000px;
+    height: 90vh;
+  }
+
+
+  .sidebar {
+    width: 210px; 
+    font-weight:650;
+    background-color: #ffffff;
+    color: #11386b;
+    padding: 20px;
+    Box-shadow: 5px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    position: fixed;
+    top:80px;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #11386b;
+  }
+
+  .sidebar a:hover {
+    background-color: #ffffff;
+    transform: scale(1.1); 
+    transition: transform 0.2s ease; 
+    Box-shadow: 0 3px 8px 0 rgba(85, 83, 83, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 9px;
+  }
+
+  .header {
+    background: linear-gradient(to right, #194772,#7ac5cf);
+    color: white;
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content:space-between;
+    position: fixed;
+    top: 0;
+  }
+  h1{
+    font-size: 30px;
+    margin-left: 1%;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+    align-self: center;
+  }
+
+  h2 {
+    padding-right: 15px;
+    font-size: 18px;
+  }
+
+  h3 {
+    padding-right: 15px;
+    font-size: 10px;
+    font-weight: 5;
+  }
+
+  .admin {
+    margin-left: 45pc;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .card-menu{
+   
+    margin-left: 13pc;
+    margin-top: 5pc;
+    width: 1110px;
+    max-width: 5000px;
+    height: max-content;
+    max-height: 1000pc;
+    border-radius: 5px;
+    display: inline;
+    position: relative;
+    position: static;
+   
+
+  }
+  .appointment-card,.manifest-card, .user-card{
+    display: inline-flex;
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    Box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    background-color: white;
+   }
+  
+  .appointment-info,.manifest-info, .user-card{
+    margin-bottom: 20px;
+  }
+  .appointment-card h2 {
+    color: rgb(3, 110, 211);
+    margin-top: 0;
+  }
+  .appointment-info p {
+    margin-bottom: 10px;
+  }
+  .manifest-card h2{
+    color: rgb(3, 110, 211);
+    margin-top: 0;
+  }
+  .manifest-info p {
+    margin-bottom: 10px;
+    text-align:center;
+  }
+
+  .user-card h2{
+    color: rgb(3, 110, 211);
+    margin-top: 0;
+  }
+  .user-info p {
+    margin-bottom: 10px;
+    text-align:center;
+  }
+  
+  .appointment-info span {
+    font-weight: bold;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  .header {
+    background-image: linear-gradient(to right,#285c7e, #60cdff);
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+  }
+  
+  .approved {
+    color: green;
+  }
+  
+  .pendings {
+    color: #FF5733;
+  }
+  
+  .available {
+    color: #2196F3;
+  }
+
+ 

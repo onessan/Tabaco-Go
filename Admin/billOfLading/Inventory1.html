@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>TABACO GO</title>
+    <link rel="stylesheet" href="Inventory1.css">
+</head>
+
+<body>
+    <div class="main">
+      <div class="header" style="height: 80px; ">
+        <h1 style="margin-top: auto; margin-bottom: auto; font-weight: bold;">TABACO GO</h1>
+        <!-- <p>Tabaco City Port</p> -->
+        <div class="admin"> 
+          Admin_01
+        </div>
+      </div>
+
+        <div class="container">
+            <div class="sidebar">
+              <p style="text-align:left; font-weight: 300;">Admin Navigation</p>
+        
+              <a href="http://127.0.0.1:5500/dashBoard/adminDash1.html">
+                <i class="fa-solid fa-table-columns" style="margin-right: 10px; font-size: 19px;"></i> Dashboard
+              </a>
+              <a href="http://127.0.0.1:5500/sales/sales.html">
+                <i class="fa-solid fa-book-open" style="margin-right: 10px; font-size: 18px;"></i> Sales
+              </a>
+              <a href="http://127.0.0.1:5500/appointments/appointments.html">
+                <i class="fa-solid fa-book-open" style="margin-right: 10px; font-size: 18px;"></i> Appointments
+              </a>
+              <a href="http://127.0.0.1:5500/billOfLading/Inventory1.html">
+                <i class="fa-solid fa-clipboard-list" style="margin-right: 15px; font-size: 20px;"></i>Bill of Lading
+              </a>
+              <a href="http://127.0.0.1:5500/boatSched/navigator.html">
+                <i class="fa-solid fa-ship" style="margin-right: 5px; font-size: 20px;"></i> Boat Scheduling
+              </a>
+              <a href="http://127.0.0.1:5500/announcement/announcement.html">
+                <i class="fa-solid fa-ship" style="margin-right: 5px; font-size: 20px;"></i> Announcement
+            </a>
+              <div class="dropdown btn-sm" style="margin-top: 1pc;"></div>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                style="background-color: white; border: none; color: #11386b; font-weight: 600; font-size: 15px;">
+                <i class="fa-solid fa-users" style="margin-right: 5px; font-size: 18px;"></i>Authentication
+                </button>
+                <ul class="dropdown-menu" style="border: none;font-size: 14px;">
+                  
+                <a href="http://127.0.0.1:5500/authentication/users.html">
+                  <i class="fa-solid fa-user" style="margin-right: 8px; font-size: 18px;"></i> System User</a>
+                <a href="http://127.0.0.1:5500/authentication/account.html">
+                  <i class="fa-solid fa-user-gear" style="margin-right: 8px; font-size: 18px;"></i>Account Settings</a> 
+                  <a href="#" id="logout-link">
+                    <i class="fa-solid fa-right-from-bracket" style="margin-right: 8px; font-size: 19px;"></i> Log Out</a>
+              </ul>
+              </div>
+
+            <div class="container-cargo">
+              <br>
+                    <h2 style="text-align: left; color: #1f4981; font-weight:bold;">Cargo </h2>
+                    <p style="color: #1f4981; text-align:left; margin-bottom: 0; ">Cargo List</p>
+                    <br>
+                <!-- Tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#cargo-new" style="color:#11386b; font-weight: 600; ">
+                          <i class="fa-solid fa-circle-plus" style="font-size: 16px; margin: 5px;"></i>
+                          Add New Cargo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#cargo-info" style="color:#11386b; font-weight: 600;">
+                          <i class="fa-solid fa-file-lines" style="font-size: 15px; margin: 5px;"></i>
+                          Cargo Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#cargo-inventory"style="color:#11386b; font-weight: 600;">
+                          <i class="fa-solid fa-table-list" style="font-size: 15px; margin: 5px;"></i>
+                          Cargo Inventory</a>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content">
+                    
+                      
+                      <!-- NEW CARGO Tab -->
+                      <div class="tab-pane container active" id="cargo-new">
+                        <div class="scrollable-div">
+                          <br>
+                          <form class="row-cols-lg-auto">
+                            <input type="number" class="form-control" id="numCargo" placeholder="Number Of Cargo" oninput="generateFields()">
+                          </form>
+                          <br>
+                          <p style="font-weight: bold;">Cargo Information</p>
+                      
+                          <!-- Container for dynamically generated fields -->
+                          <div id="cargoContainer"></div>
+                      
+                          <br>
+                          <!-- Warning Message -->
+                          <p id="warningMessage" style="color: red; display: none;">Please fill out all required fields.</p>
+                      
+                          <!-- Buttons (Save/Cancel) -->
+                          <div class="col-12" id="formButtons" style="display:none;">
+                            <button type="button" class="btn btn-primary" style="background-color: rgb(5, 84, 255); width: 10pc; height: 25px; padding-bottom: 1pc; padding-top: 0; margin-top: 33px;" onclick="saveForm()">Save</button>
+                            <button type="button" class="btn btn-secondary" style="width: 10pc; height: 25px; padding-bottom: 1pc; padding-top: 0; margin-top: 33px;" onclick="cancelForm()">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                    <!-- Cargo-info Tab -->
+                    <div class="tab-pane container fade" id="cargo-info">
+                        <br>
+                        <div class="content-info" style="margin-top: 0;">
+                            <div class="scrollable-div">
+                            <div>
+                                <!-- filtering
+                                <div class="filter-container">
+                                    <div class="filter-item">
+                                        <label for="filterBy">Filter By:</label>
+                                        <select id="filterBy" class="form-control" style="height: 30px;">
+                                            <option>Value</option>
+                                            <option>Date</option>
+                                            <option>Option 2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <label for="dateFrom">Filter Date From:</label>
+                                        <input type="date" id="dateFrom" class="form-control" value="" style="height: 30px;">
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <label for="dateTo">Filter Date To:</label>
+                                        <input type="date" id="dateTo" class="form-control" value="" style="height: 30px;">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary filter-button" style="height: 30px; margin-top: 37px;">
+                                        <i class="bi bi-search"></i> Filter Data
+                                    </button>
+                                </div> -->
+                                
+                                <table class="table  table-striped table-hover " >
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Vessel</th>
+                                            <th>Voyage Number</th>
+                                            <th>Shipper</th>
+                                            <th>Date</th>
+                                            <th>Consignee</th>
+                                            <th>Cargo Destination</th>
+                                            <th>Description</th>
+                                            <th>Qty</th>
+                                            <th>Value</th>
+                                            <th>Weight Measurement</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                          <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+
+                            <div>
+                                <p style="float: left;">Showing 10 out of 600 entries</p>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination pagination-sm justify-content-end">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARGO INVENTORY Tab -->
+                    <div class="tab-pane container fade" id="cargo-inventory">
+                        <div class="content-new" >
+                            <br>
+                            
+                                <!-- <form class="row row-cols-lg-auto g-3 align-items-center" >
+
+                                    <div class="col-12 d-flex justify-content-center">
+                                <div>
+                                    <label class="Vessel" for="Vessel">Vessel</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="Vessel" placeholder="---" style="width: 21pc; margin-right: 40px; height: 30px;">
+                                    </div>
+                                </div>
+                            </div>
+                                  
+                                    <div class="col-12">
+                                        <label class="voyage-number" for="inlineFormInputGroupUsername">Voyage Number</label>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="---" style="width: 21pc; height: 30px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <button type="Clear" class="btn btn-primary" style="background-color: rgb(255, 255, 255); border-color: #b3b3b3; color: #acacac; width: 9pc; height: 25px; padding-bottom: 1pc; padding-top: 0; margin-top: 32px; ">Clear</button>
+                                    </div>
+                                  </form>
+                            <br>
+                                  <form class="row row-cols-lg-auto g-3 align-items-center">
+                                    <div class="col-12">
+                                      <label class="shipper" for="Shipper">Shipper</label>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" id="Shipper" placeholder="---" style="width: 21pc; margin-right: 40px;height: 30px;">
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="col-12">
+                                      <label class="Date" for="Calendar">Date</label>
+                                      <div class="input-group">
+                                          <input type="date" class="form-control" id="Calendar" style="width: 21pc;height: 30px;">
+                                      </div>
+                                  </div>
+                                  </form>
+                            <br>
+                                  <form class="row row-cols-lg-auto g-3 align-items-center">
+                                    <div class="col-12">
+                                      <label class="Consignee" for="Consignee">Consignee</label>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" id="Consignee" placeholder="---" style="width: 21pc; margin-right: 40px; height: 30px;">
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="col-12">
+                                        <label class="Destination" for="destination">Destination</label>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" id="destination" placeholder="---"  style="width: 21pc; height: 30px;">
+                                        </div>
+                                    </div>
+                                  </form>
+                            <br><br><br>
+                                  <form class="row row-cols-lg-auto g-3 align-items-center">
+                                    <div class="col-12">
+                                      <label class="quantity" for="quantity">Quantity</label>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" id="quantity" placeholder="---" style="width: 15pc; height: 30px;">
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="col-12">
+                                        <label class="Description" for="Description">Description of the Article</label>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" id="Description" placeholder="---" style="width: 30pc; height: 30px;">
+                                        </div>
+                                    </div>
+                                  </form>
+                                 
+                            
+                                  <form class="row row-cols-lg-auto g-3 align-items-center">
+                                    <div class="col-12">
+                                      <label class="Value" for="value">Value</label>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" id="value" placeholder="---" style="width: 11pc; height: 30px;">
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="col-12">
+                                        <label class="Weigh" for="weigh">Weigh Measurement</label>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" id="weigh" placeholder="---" style="width: 11pc; height: 30px;">
+                                        </div>
+                                    </div>
+                            
+                                    <div class="col-12">
+                                      <label class="total" for="Total">Total</label>
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" id="Total" placeholder="---" style="width: 11pc; height: 30px;  ">
+                                      </div>
+                                  </div>
+                            
+                                    <div class="col-12">
+                                      <button type="Save" class="btn btn-primary"   style="background-color: rgb(114, 114, 114); border-color: #b3b3b3; width: 10pc; height: 25px; padding-bottom: 1pc; padding-top: 0; margin-top: 60px;" disabled>Save</button>
+                                      <p style="font-size: 13.8px;">Restricted for this account </p>
+                                    </div>
+                                  </form> -->
+                                  <div class="filter-container">
+                                    <div class="filter-item">
+                                        <label for="filterBy">Filter By:</label>
+                                        <select id="filterBy" class="form-control" style="height: 30px;">
+                                            <option>Value</option>
+                                            <option>Date</option>
+                                            <option>Vessel Name</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="filter-item">
+                                        <label for="dateFrom">Filter Date From:</label>
+                                        <input type="date" id="dateFrom" class="form-control" value="" style="height: 30px;">
+                                    </div>
+    
+                                    <div class="filter-item">
+                                        <label for="dateTo">Filter Date To:</label>
+                                        <input type="date" id="dateTo" class="form-control" value="" style="height: 30px;">
+                                    </div>
+    
+                                    <button type="submit" class="btn btn-primary filter-button" style="height: 30px; margin-top: 37px;">
+                                        <i class="bi bi-search"></i> Filter Data
+                                    </button>
+                                </div>
+    
+                                <table class="table table-striped table-hover" >
+                                    <thead >
+                                        <tr>
+                                            <th>Bill of Lading ID</th>
+                                            <th>Cargo ID</th>
+                                            <th>Vessel</th>
+                                            <th>Voyage Number</th>
+                                            <th>Shipper</th>
+                                            <th>Date</th>
+                                            <th>Consignee</th>
+                                            <th>Cargo Destination</th>
+                                            <th>Description of Article</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div>
+                                  <p style="float: left; margin-top: 10px;">Showing 10 out of 600 entries</p>
+                                  <nav aria-label="Page navigation">
+                                      <ul class="pagination pagination-sm justify-content-end" style="margin-top: 25px;">
+                                          <li class="page-item">
+                                              <a class="page-link" href="#" aria-label="Previous">
+                                                  <span aria-hidden="true">&laquo;</span>
+                                              </a>
+                                          </li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item">
+                                              <a class="page-link" href="#" aria-label="Next">
+                                                  <span aria-hidden="true">&raquo;</span>
+                                              </a>
+                                          </li>
+                                      </ul>
+                                  </nav>
+                              </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function generateFields() {
+          let numCargo = document.getElementById('numCargo').value;
+          let container = document.getElementById('cargoContainer');
+          let formButtons = document.getElementById('formButtons');
+          container.innerHTML = '';  // Clear previous fields
+          document.getElementById('warningMessage').style.display = 'none';  // Hide warning message
+  
+          if (numCargo > 0) {
+              for (let i = 1; i <= numCargo; i++) {
+                  let section = document.createElement('div');
+                  section.className = 'cargo-section';
+                  section.innerHTML = `
+                      <br>
+                      <p style="font-weight: bold;">Cargo Information Set ${i}</p>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Vessel Name" name="vesselName${i}" required>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Voyage Number" name="voyageNumber${i}" required>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Shipper" name="shipper${i}" required>
+                        </div>
+                        <div class="col">
+                          <input type="date" class="form-control" placeholder="Date" name="date${i}" required>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Consignee" name="consignee${i}" required>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Destination" name="destination${i}" required>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Quantity" name="quantity${i}" required>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Comments" name="comments${i}">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Value" name="value${i}" required>
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Weight Measurement" name="weightMeasurement${i}" required>
+                        </div>
+                      </div>
+                  `;
+                  container.appendChild(section);
+              }
+              formButtons.style.display = 'block';  // Show Save and Cancel buttons
+          } else {
+              formButtons.style.display = 'none';  // Hide buttons if no valid number is entered
+          }
+      }
+  
+      // Function to handle save (submitting the form)
+      function saveForm() {
+          let container = document.getElementById('cargoContainer');
+          let inputs = container.getElementsByTagName('input');
+          let allFilled = true;
+  
+          // Check if all required fields are filled
+          for (let input of inputs) {
+              if (input.hasAttribute('required') && input.value.trim() === '') {
+                  allFilled = false;
+                  break;
+              }
+          }
+  
+          if (allFilled) {
+              alert("Form Saved Successfully!");
+              document.getElementById('warningMessage').style.display = 'none';
+              document.getElementById('cargoContainer').innerHTML = ''; // Clear dynamically generated fields
+              document.getElementById('numCargo').value = ''; // Clear the input box
+              document.getElementById('formButtons').style.display = 'none'; // Hide Save and Cancel buttons
+          } else {
+              document.getElementById('warningMessage').style.display = 'block';  // Show warning message
+          }
+      }
+  
+      // Function to handle cancel (clearing the form)
+      function cancelForm() {
+          let confirmCancel = confirm("Are you sure you want to cancel?");
+          if (confirmCancel) {
+              document.getElementById('cargoContainer').innerHTML = '';  // Clear dynamically generated fields
+              document.getElementById('numCargo').value = '';  // Clear the input box
+              document.getElementById('formButtons').style.display = 'none';  // Hide Save and Cancel buttons
+              document.getElementById('warningMessage').style.display = 'none';  // Hide warning message
+          }
+      }
+  </script>
+
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Log Out</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to log out?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('logout-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        var logoutModal = new bootstrap.Modal(document.getElementById('logoutModal'));
+        logoutModal.show();
+      });
+    </script>
+</body>
+
+</html>
