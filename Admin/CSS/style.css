@@ -94,7 +94,7 @@ tabaco-go {
 }
 
 /* Text Color */
-.text-dark-blue{
+.text-dark-blue {
   color: rgb(20 65 105);
 }
 .text-semi-dark-blue {
@@ -107,6 +107,28 @@ tabaco-go {
 .text-dark-grey {
   color: rgb(88 112 130);
 }
+.text-green {
+  color: rgb(4 195 5);
+}
+/* Side Bar Collapsable*/
+
+#sidebar.sidebar-collapsed {
+  width: 80px;
+  transition: width 0.3s;
+}
+
+#sidebar.sidebar-expanded {
+  width: 280px;
+  transition: width 0.3s;
+}
+
+/* Adjust inner elements for collapsed state */
+#sidebar.sidebar-collapsed .nav-link p,
+#sidebar.sidebar-collapsed .nav-link i {
+  display: none;
+}
+
+/* /Side Bar Collpasable*/
 
 /* Contents-Holder*/
 .main-content {
@@ -115,14 +137,14 @@ tabaco-go {
 }
 
 /* Media query for screens 767px wide or smaller - Small Screen or "sm" in Bootstrap */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .main-content {
-    padding-left: 80px;
+    padding-left: 60px;
   }
 }
 
 /* Media query for screens wider than 768px - Medium Screen or "md" in Bootstrap*/
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .main-content {
     padding-left: 285px;
   }
@@ -133,7 +155,7 @@ tabaco-go {
 
 /* Admin - Dashboard */
 .admin-dashboard-container {
-  padding: 0px 30px;
+  padding: 0px 10px;
 }
 
 .dashboard-card-length {

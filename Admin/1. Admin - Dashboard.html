@@ -109,7 +109,7 @@
     <!-- Sidebar -->
 
     <!-- Full Sidebar for Desktop -->
-    <nav class="d-none d-md-block">
+    <nav class="d-none d-lg-block">
       <div
         class="position-fixed d-flex flex-column p-3 bg-body-tertiary"
         style="height: 100%; width: 280px"
@@ -249,13 +249,14 @@
     <!-- /Full Sidebar -->
 
     <!-- Mobile Sidebar Collapsible Navigation -->
-    <nav class="d-md-none">
+    <nav class="d-lg-none">
       <div
         class="z-1 position-fixed bottom-0 d-flex flex-column bg-body-tertiary"
-        style="height: 96%; width: 4.9rem; top: 38px"
+        style="height: 96%; width: 3.7rem; top: 38px"
       >
         <ul
           class="nav nav-pills nav-flush flex-column mb-auto text-center mt-5"
+          style="font-size: 8px; font-weight: 400"
         >
           <li class="nav-item">
             <!-- Mobile Dashboard icon -->
@@ -268,7 +269,7 @@
               style="background-color: rgb(35 100 151)"
             >
               <i class="bi bi-speedometer2 fs-1"></i>
-              <p style="font-size: 11px">Dashboard</p>
+              <p>Dashboard</p>
             </a>
           </li>
           <!-- Mobile links for other sections -->
@@ -278,7 +279,7 @@
               class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-graph-up fs-1"></i>
-              <p style="font-size: 11px">Sales</p>
+              <p>Sales</p>
             </a>
           </li>
           <li>
@@ -287,7 +288,7 @@
               class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-list-task fs-1"></i>
-              <p style="font-size: 11px">Appointments</p>
+              <p>Appointments</p>
             </a>
           </li>
           <li>
@@ -296,7 +297,7 @@
               class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-receipt-cutoff fs-1"></i>
-              <p style="font-size: 11px">Bill of Ladings</p>
+              <p>Bill of Ladings</p>
             </a>
           </li>
           <li>
@@ -305,7 +306,7 @@
               class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-calendar2-week fs-1"></i>
-              <p style="font-size: 10px">Boat Scheduling</p>
+              <p>Boat Scheduling</p>
             </a>
           </li>
           <li>
@@ -314,7 +315,7 @@
               class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-megaphone fs-1"></i>
-              <p style="font-size: 11px">Announcement</p>
+              <p>Announcement</p>
             </a>
           </li>
           <!-- Authentication dropdown in mobile view -->
@@ -327,7 +328,7 @@
                 aria-expanded="false"
               >
                 <i class="bi bi-people fs-1"></i>
-                <p class="text-normal" style="font-size: 11px">Account</p>
+                <p class="text-normal">Account</p>
               </a>
               <ul class="dropdown-menu border border-1 text-small ms-1">
                 <li>
@@ -381,108 +382,212 @@
 
     <!-- Main content -->
     <main class="main-content">
-      <div class="admin-dashboard-container">
-        <div class="container-md dashboard-card-length">
-          <div class="row mt-3">
+      <div class="container admin-dashboard-container">
+        <div class="">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-3">
             <!-- Card 1: Appointments Overview -->
-            <div class="col-lg-6">
+            <div class="col dashboard-card-lengt mb-3">
               <a class="nav-link" href="3. Admin - Appointments.html">
                 <div
-                  class="card rounded-3 shadow-lg border-0 mb-5"
-                  style="height: 300px"
+                  class="card rounded-3 shadow-lg border-0 bg-body-tertiary"
+                  style="height: 200px"
                 >
                   <div class="card-body">
                     <!-- Title of Card 1 -->
                     <div>
-                      <h4 class="fw-normal fs-5">Appointments</h4>
+                      <h4 class="fw-normal" style="font-size: 11px">
+                        Appointments
+                      </h4>
                     </div>
                     <!-- Table displaying appointment details and status -->
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <!-- Total and approved appointments -->
-                          <th
-                            class="float-end fst-italic"
-                            style="color: rgb(35 100 151); font-size: 50px"
-                          >
-                            98/<span class="fs-3" style="color: rgb(88 112 130)"
-                              >170</span
-                            >
-                          </th>
-                          <th
-                            class="fs-3 fst-italic pb-3"
-                            style="color: rgb(0 195 5)"
-                          >
-                            APPROVED
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <!-- Pending appointments count -->
-                          <td
-                            class="d-flex justify-content-end fst-italic fs-2 fw-semibold py-0"
-                          >
-                            23
-                          </td>
-                          <td class="fst-italic fs-4 fw-normal py-1">
-                            PENDING/s
-                          </td>
-                        </tr>
-                        <tr>
-                          <!-- Seat capacity information -->
-                          <td
-                            class="float-end fst-italic fs-2 fw-semibold py-0"
-                          >
-                            200
-                          </td>
-                          <td class="fst-italic fs-5 fw-normal py-2">
-                            Seat Capacity
-                          </td>
-                        </tr>
-                        <tr>
-                          <!-- Ship and schedule details -->
-                          <td class="pt-4 pb-0">M/V Titanic II</td>
-                          <td class="float-end fs-6 pt-4 pb-0">
-                            9AM - Nov 11, 2024
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div
+                      class="d-flex align-items-center justify-content-center pt-1"
+                    >
+                      <h3 class="fw-bold text-semi-dark-blue">
+                        98/<span
+                          class="h5 link-body-emphasis d-inline-block align-items-center"
+                          >170</span
+                        >
+                      </h3>
+                      <h5 class="ps-2 fw-bold text-green">APPROVED</h5>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <h5 class="fw-semibold" style="padding-left: 33px">23</h5>
+                      <h6 class="ps-2">PENDINGS/s</h6>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center fw-bold"
+                    >
+                      <h5 class="fw-semibold" style="padding-left: 33px">
+                        200
+                      </h5>
+                      <h6 class="ps-2">Seat Capacity</h6>
+                    </div>
+                    <div class="row pt-3">
+                      <div class="col-6">
+                        <h6 style="font-size: 12px">M/V Titanic II</h6>
+                      </div>
+                      <div class="col-6 d-flex justify-content-end">
+                        <h6 style="font-size: 10px">9AM - Nov. 13, 2024</h6>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </a>
             </div>
 
             <!-- Card 2: Latest Manifest Record -->
-            <div class="col-lg-6">
+            <div class="col">
               <a
                 class="nav-link"
                 href="3. Admin - Appointments.html#manifest-tab"
               >
                 <div
-                  class="card rounded-3 shadow-lg border-0 mb-5"
-                  style="height: 300px"
+                  class="card rounded-3 shadow-lg border-0 mb-3 bg-body-tertiary"
+                  style="height: 200px"
                 >
                   <div class="card-body">
                     <!-- Title of Card 2 -->
                     <div>
-                      <h4 class="fw-normal fs-5">Manifest</h4>
+                      <h4 class="fw-normal" style="font-size: 11px">
+                        Manifest
+                      </h4>
                     </div>
                     <div>
                       <!-- Latest manifestation record details -->
                       <h6
-                        class="d-flex justify-content-center pt-5 mt-4 fw-normal"
+                        class="d-flex justify-content-center pt-4 fw-normal"
+                        style="font-size: 11px"
                       >
                         LATEST MANIFESTATION RECORD
+                      </h6>
+                      <h2 class="d-flex justify-content-center fw-bold">
+                        <p
+                          style="
+                            background-image: linear-gradient(
+                              to right,
+                              rgb(20 65 105),
+                              hsl(190deg 41% 67%)
+                            );
+                            color: transparent;
+                            background-clip: text;
+                            margin-bottom: 0px;
+                          "
+                        >
+                          M/V TITANIC II
+                        </p>
+                      </h2>
+                      <h6
+                        class="d-flex justify-content-center pt-4 mt-4 fw-normal"
+                        style="font-size: 12px"
+                      >
+                        9AM - Nov 11, 2024
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Sales Card -->
+            <div class="col">
+              <a
+                class="nav-link"
+                href="3. Admin - Appointments.html#manifest-tab"
+              >
+                <div
+                  class="card rounded-3 shadow-lg border-0 mb-3 bg-body-tertiary"
+                  style="height: 200px"
+                >
+                  <div class="card-body">
+                    <!-- Title of Card 2 -->
+                    <div>
+                      <h4 class="fw-normal" style="font-size: 11px">Sales</h4>
+                    </div>
+                    <div>
+                      <!-- Latest manifestation record details -->
+                      <h6
+                        class="d-flex justify-content-center pt-4 fw-normal"
+                        style="font-size: 11px"
+                      >
+                        LATEST SALES RECORD
                       </h6>
                       <h2
                         class="d-flex justify-content-center fw-bold text-semi-dark-blue"
                       >
-                        M/V TITANIC II
+                        <p
+                          style="
+                            background-image: linear-gradient(
+                              to right,
+                              rgb(20 65 105),
+                              hsl(190deg 41% 67%)
+                            );
+                            color: transparent;
+                            background-clip: text;
+                            margin-bottom: 0px;
+                          "
+                        >
+                          P 3,858.00
+                        </p>
                       </h2>
                       <h6
-                        class="d-flex justify-content-center mt-5 pt-4 fw-normal"
+                        class="d-flex justify-content-center pt-4 mt-4 fw-normal"
+                        style="font-size: 12px"
+                      >
+                        9AM - Nov 11, 2024
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- User Card -->
+            <div class="col">
+              <a
+                class="nav-link"
+                href="3. Admin - Appointments.html#manifest-tab"
+              >
+                <div
+                  class="card rounded-3 shadow-lg border-0 mb-3 bg-body-tertiary"
+                  style="height: 200px"
+                >
+                  <div class="card-body">
+                    <!-- Title of Card 2 -->
+                    <div>
+                      <h4 class="fw-normal" style="font-size: 11px">Users</h4>
+                    </div>
+                    <div>
+                      <!-- Latest manifestation record details -->
+                      <h6
+                        class="d-flex justify-content-center pt-4 fw-normal"
+                        style="font-size: 11px"
+                      >
+                        LATEST NUMBER OF USERS
+                      </h6>
+                      <h2
+                        class="d-flex justify-content-center fw-bold text-semi-dark-blue"
+                      >
+                        <p
+                          class="h1 fw-bold"
+                          style="
+                            background-image: linear-gradient(
+                              to right,
+                              rgb(20 65 105),
+                              hsl(190deg 41% 67%)
+                            );
+                            color: transparent;
+                            background-clip: text;
+                            margin-bottom: 0px;
+                          "
+                        >
+                          5
+                        </p>
+                      </h2>
+                      <h6
+                        class="d-flex justify-content-center pt-4 mt-3 fw-normal"
+                        style="font-size: 12px"
                       >
                         9AM - Nov 11, 2024
                       </h6>
@@ -499,6 +604,5 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
-    
   </body>
 </html>
