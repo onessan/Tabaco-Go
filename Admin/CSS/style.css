@@ -1,6 +1,8 @@
 body {
   padding-top: 60px;
   font-family: Barlow;
+  padding: 0px;
+  font-weight: 500;
 }
 header {
   font-family: Nunito;
@@ -92,6 +94,9 @@ tabaco-go {
 }
 
 /* Text Color */
+.text-dark-blue{
+  color: rgb(20 65 105);
+}
 .text-semi-dark-blue {
   color: rgb(35 100 151);
 }
@@ -102,17 +107,11 @@ tabaco-go {
 .text-dark-grey {
   color: rgb(88 112 130);
 }
-/* Adjusted for Sidebar*/
-body {
-  padding: 0px;
-  font-weight: 500;
-}
-/* /Adjusted for Sidebar*/
 
 /* Contents-Holder*/
 .main-content {
   height: 100%;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 /* Media query for screens 767px wide or smaller - Small Screen or "sm" in Bootstrap */
@@ -133,11 +132,15 @@ body {
 /* Bellow are for the Contents -------------------------------------------------*/
 
 /* Admin - Dashboard */
-.admin-container {
+.admin-dashboard-container {
   padding: 0px 30px;
 }
 
-.card-length {
+.dashboard-card-length {
   max-width: 800px;
 }
 /* /Admin - Dashboard */
+
+/* Admin - Salse */
+
+/* /Admin - Salse */
