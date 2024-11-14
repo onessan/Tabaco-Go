@@ -111,21 +111,8 @@ tabaco-go {
   color: rgb(4 195 5);
 }
 /* Side Bar Collapsable*/
-
-#sidebar.sidebar-collapsed {
-  width: 80px;
-  transition: width 0.3s;
-}
-
-#sidebar.sidebar-expanded {
-  width: 280px;
-  transition: width 0.3s;
-}
-
-/* Adjust inner elements for collapsed state */
-#sidebar.sidebar-collapsed .nav-link p,
-#sidebar.sidebar-collapsed .nav-link i {
-  display: none;
+#sidebarToggle {
+  z-index: 2000; /* Ensures the button is above other elements */
 }
 
 /* /Side Bar Collpasable*/
