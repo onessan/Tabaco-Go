@@ -92,6 +92,7 @@ tabaco-go {
 .bg-dark-grey {
   background-color: rgb(88 112 130);
 }
+.bg-orange
 
 /* Text Color */
 .text-dark-blue {
@@ -172,6 +173,31 @@ tr {
   --bs-table-hover-bg: rgb(134 193 205);
 }
 /* Table Hover Color*/
+
+/* Sticky Column & Row */
+
+/* Make the last column sticky */
+th.sticky-right-1,
+td.sticky-right-1 {
+  position: sticky;
+  right: 0; /* Last column on the right */
+  z-index: 1030; /* High z-index to stay above other content */
+}
+
+th.sticky-right-2,
+td.sticky-right-2 {
+  position: sticky;
+  right: 45px; /* Adjusted to match the width of the last column */
+  z-index: 1030;
+}
+
+/* Optional: Sticky header */
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+/* Sticky Column & Row */
 
 /* Bellow are for the Contents -------------------------------------------------*/
 
