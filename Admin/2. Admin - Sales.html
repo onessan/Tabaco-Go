@@ -232,10 +232,7 @@
               height="32"
               class="rounded-circle me-0"
             />
-            <p
-              class="m-0 ps-2"
-              style="font-size: 11px"
-            >
+            <p class="m-0 ps-2" style="font-size: 11px">
               nessonbrecia24@gmail.com
             </p>
           </a>
@@ -370,11 +367,11 @@
     <!-- Main content -->
     <main class="main-content">
       <div class="container-flex sales-container px-4 px-lg-5">
-        <h4 class="fw-bold fs-5 pt-2 pb-3 text-dark-blue">SALES LIST</h4>
+        <h4 class="fw-bold fs-5 pt-2 pb-4">SALES LIST</h4>
 
-        <!-- filtering -->
-        <div class="row g-3 fs-6 h6">
-          <div class="col-md-6 col-lg-3">
+        <!-- Data Filtering by Date -->
+        <div class="row g-3" style="max-width: 1000px">
+          <div class="col-md-4">
             <div class="filter-item" style="font-size: 13px">
               <label for="dateFrom" class="pb-1">Filter Date From:</label>
               <input
@@ -387,21 +384,19 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-4">
             <div class="filter-item" style="font-size: 13px">
-              <label for="filterBy" class="pb-1">Filter By:</label>
-              <select
-                id="filterBy"
+              <label for="dateFrom" class="pb-1">Filter Date To:</label>
+              <input
+                type="date"
+                id="dateFrom"
                 class="form-control"
+                value=""
                 style="font-size: 13px"
-              >
-                <option>Value</option>
-                <option>Date</option>
-                <option>Option 2</option>
-              </select>
+              />
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 d-grid pt-3">
+          <div class="col-md-4 d-grid pt-3">
             <button
               type="submit"
               class="btn btn-primary filter-button mt-1"
@@ -415,9 +410,10 @@
             </button>
           </div>
         </div>
+        <!-- /Data Filtering by Date -->
 
         <br />
-
+        <!-- Table -->
         <table class="table table-striped mt-3" style="font-size: 13px">
           <thead>
             <tr>
@@ -490,6 +486,9 @@
             </tr>
           </tbody>
         </table>
+        <!-- /Table -->
+
+        <!-- Table Footer -->
         <div class="row">
           <div class="col-7 pt-1">
             <p style="font-size: 12px">Showing 10 out of 0 entries.</p>
@@ -526,9 +525,12 @@
             </nav>
           </div>
         </div>
+        <!-- /Table Footer -->
+
+        <!-- Button group of Export CSV | Export PDF | Print Report -->
         <div class="row pt-3 pb-5">
-          <div class="col-lg-6"></div>
-          <div class="col-lg-6 d-grid">
+          <div class="col-lg-6 col-xxl-8"></div>
+          <div class="col-lg-6 col-xxl-4 d-grid">
             <div class="btn-group" role="group" aria-label="Download">
               <button
                 type="button"
@@ -564,8 +566,10 @@
             </div>
           </div>
         </div>
+        <!-- /Button group of Export CSV | Export PDF | Print Report -->
       </div>
     </main>
+    <!-- /Main content -->
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
