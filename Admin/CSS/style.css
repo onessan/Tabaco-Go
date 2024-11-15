@@ -142,6 +142,37 @@ tabaco-go {
 }
 /* /Contents-Holder*/
 
+/* Nav Tabs Responsive Size*/
+/* Default styles for larger screens */
+
+.text-mobile-sm {
+  font-size: 13px;
+}
+/* Smaller styles for mobile screens */
+@media (max-width: 576px) {
+  .text-mobile-sm {
+    font-size: 9px; /* Smaller font size */
+  }
+}
+
+.text-mobile-md {
+  font-size: 13px;
+}
+/* Smaller styles for mobile screens */
+@media (max-width: 576px) {
+  .text-mobile-md {
+    font-size: 11px; /* Smaller font size */
+  }
+}
+
+/* /Nav Tabs Responsive Size*/
+
+/* Table Hover Color*/
+tr {
+  --bs-table-hover-bg: rgb(134 193 205);
+}
+/* Table Hover Color*/
+
 /* Bellow are for the Contents -------------------------------------------------*/
 
 /* Admin - Dashboard */
