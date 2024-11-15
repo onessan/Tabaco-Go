@@ -104,7 +104,6 @@
         </div>
       </div>
     </header>
-    <!-- /Header -->
 
     <!-- Sidebar -->
 
@@ -112,7 +111,7 @@
     <nav class="d-none d-lg-block">
       <div
         class="position-fixed d-flex flex-column p-3 bg-body-tertiary"
-        style="height: 100%; width: 280px"
+        style="height: 100%; width: 280px;"
       >
         <!-- Sidebar navigation items -->
         <hr />
@@ -216,43 +215,35 @@
           </li>
         </ul>
         <hr />
-        <!-- User profile and sign-out option -->
-        <div class="dropdown">
+        <!-- User profile and Gmail -->
+        <div class="">
           <a
             href="#"
-            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none"
           >
             <img
               src="https://github.com/onessan.png"
               alt=""
               width="32"
               height="32"
-              class="rounded-circle me-2"
+              class="rounded-circle me-0"
             />
             <p
-              class="d-flex align-items-center justify-content-center m-0 ps-2"
+              class="m-0 ps-2"
+              style="font-size: 11px"
             >
-              Nesson Brecia
+              nessonbrecia24@gmail.com
             </p>
           </a>
-          <ul class="dropdown-menu text-small shadow ms-4 mb-4">
-            <li><a class="dropdown-item" href="#">System Users</a></li>
-            <li><a class="dropdown-item" href="#">Account Settings</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
         </div>
       </div>
     </nav>
-    <!-- /Full Sidebar -->
 
     <!-- Mobile Sidebar Collapsible Navigation -->
     <nav class="d-lg-none">
       <div
         class="z-1 position-fixed bottom-0 d-flex flex-column bg-body-tertiary"
-        style="height: 96%; width: 3.7rem; top: 38px"
+        style="height: 96%; width: 3.7rem; top: 38px; transition: width 0.3s"
       >
         <ul
           class="nav nav-pills nav-flush flex-column mb-auto text-center mt-5"
@@ -350,29 +341,20 @@
             </div>
           </li>
         </ul>
-        <!-- User profile and settings in mobile sidebar -->
-        <div class="dropdown border-top">
+        <!-- User profile Picture-->
+        <div class="border-top">
           <a
             href="#"
-            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none"
           >
             <img
-              src="https://github.com/mdo.png"
+              src="https://github.com/onessan.png"
               alt="mdo"
-              width="24"
-              height="24"
+              width="30"
+              height="30"
               class="rounded-circle"
             />
           </a>
-          <ul class="dropdown-menu text-small shadow">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
         </div>
       </div>
     </nav>
@@ -383,7 +365,7 @@
     <!-- Main content -->
     <main class="main-content">
       <div class="container admin-dashboard-container">
-        <div class="">
+        <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-3">
             <!-- Card 1: Appointments Overview -->
             <div class="col dashboard-card-lengt mb-3">

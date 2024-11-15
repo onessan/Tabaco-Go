@@ -41,7 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Admin - Bill of Ladings</title>
+    <title>Admin - Dashboard</title>
   </head>
   <body>
     <!-- Header  -->
@@ -104,15 +104,13 @@
         </div>
       </div>
     </header>
-    <!-- /Header -->
 
     <!-- Sidebar -->
-
     <!-- Full Sidebar for Desktop -->
-    <nav class="d-none d-lg-block">
+    <nav class="d-none d-lg-block sidebar" id="sidebar">
       <div
         class="position-fixed d-flex flex-column p-3 bg-body-tertiary"
-        style="height: 100%; width: 280px"
+        style="height: 100%; width: 280px; transition: width 0.3s"
       >
         <!-- Sidebar navigation items -->
         <hr />
@@ -120,8 +118,16 @@
           <li>
             <!-- Dashboard link with background gradient -->
             <a
-              href="1. Admin - Dashboard.html"
-              class="nav-link link-body-emphasis"
+              href="#"
+              class="nav-link text-light"
+              aria-current="page"
+              style="
+                background-image: linear-gradient(
+                  to right,
+                  rgb(20 65 105),
+                  hsl(190deg 41% 67%)
+                );
+              "
             >
               <i class="bi bi-speedometer2 pe-2"></i>
               Dashboard
@@ -144,16 +150,8 @@
           </li>
           <li>
             <a
-              href="#"
-              class="nav-link text-light"
-              aria-current="page"
-              style="
-                background-image: linear-gradient(
-                  to right,
-                  rgb(20 65 105),
-                  hsl(190deg 41% 67%)
-                );
-              "
+              href="4. Admin - Bill of Ladings.html"
+              class="nav-link link-body-emphasis"
             >
               <i class="bi bi-receipt-cutoff pe-2"></i>
               Bill of Ladings
@@ -216,36 +214,36 @@
           </li>
         </ul>
         <hr />
-        <!-- User profile and Gmail -->
+        <!-- User profile and sign-out option -->
         <div class="">
           <a
             href="#"
             class="d-flex align-items-center link-body-emphasis text-decoration-none"
           >
             <img
-              src="https://github.com/onessan.png"
+              src="https://github.com/pitzzahh.png"
               alt=""
               width="32"
               height="32"
               class="rounded-circle me-0"
             />
             <p
-              class="m-0 ps-2"
+              class="d-flexalign-items-center justify-content-center m-0 ps-2"
               style="font-size: 11px"
             >
-              nessonbrecia24@gmail.com
+              devinebiscocho@gmail.com
             </p>
           </a>
         </div>
       </div>
     </nav>
-    <!-- /Full Sidebar -->
+    <!-- Full Sidebar for Desktop -->
 
     <!-- Mobile Sidebar Collapsible Navigation -->
-    <nav class="d-lg-none">
+    <nav class="d-lg-none sidebar-mobile" id="sidebarMobile">
       <div
         class="z-1 position-fixed bottom-0 d-flex flex-column bg-body-tertiary"
-        style="height: 96%; width: 3.7rem; top: 38px"
+        style="height: 96%; width: 3.7rem; top: 38px; transition: width 0.3s"
       >
         <ul
           class="nav nav-pills nav-flush flex-column mb-auto text-center mt-5"
@@ -254,8 +252,12 @@
           <li class="nav-item">
             <!-- Mobile Dashboard icon -->
             <a
-              href="1. Admin - Dashboard.html"
-              class="nav-link link-secondary p-0 border-bottom rounded-0"
+              href="#"
+              class="nav-link p-0 border-bottom rounded-0 text-light"
+              aria-current="page"
+              data-bs-placement="right"
+              data-bs-original-title="Home"
+              style="background-color: rgb(35 100 151)"
             >
               <i class="bi bi-speedometer2 fs-1"></i>
               <p>Dashboard</p>
@@ -282,12 +284,8 @@
           </li>
           <li>
             <a
-              href="#"
-              class="nav-link p-0 border-bottom rounded-0 text-light"
-              aria-current="page"
-              data-bs-placement="right"
-              data-bs-original-title="Home"
-              style="background-color: rgb(35 100 151)"
+              href="4. Admin - Bill of Ladings.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-receipt-cutoff fs-1"></i>
               <p>Bill of Ladings</p>
@@ -343,14 +341,14 @@
             </div>
           </li>
         </ul>
-        <!-- User profile Picture-->
+        <!-- User profile and settings in mobile sidebar -->
         <div class="border-top">
           <a
             href="#"
             class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none"
           >
             <img
-              src="https://github.com/onessan.png"
+              src="https://github.com/pitzzahh.png"
               alt="mdo"
               width="30"
               height="30"
@@ -360,14 +358,20 @@
         </div>
       </div>
     </nav>
-    <!-- /Mobile Sidebar -->
-
+    <!-- /Mobile Sidebar Collapsible Navigation -->
     <!-- /Sidebar -->
 
     <!-- Main content -->
     <main class="main-content">
-      <div class="bill-of-ladings-container"></div>
+      <div class="container admin-dashboard-containe">
+        <div>
+          <!-- Main content code Starts Here -->
+
+          <!-- Main content code Ends Here -->
+        </div>
+      </div>
     </main>
+    <!-- /Main content -->
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
