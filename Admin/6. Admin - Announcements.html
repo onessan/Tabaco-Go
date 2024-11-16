@@ -371,7 +371,216 @@
 
     <!-- Main content -->
     <main class="main-content">
-      <div class="admin-announcements-container"></div>
+      <div class="admin-announcements-container container-flex px-4 px-lg-5">
+        <h4 class="fw-bold fs-5 pt-2 pb-1">ANNOUNCEMENTS LIST</h4>
+
+        <!-- Search Bar for Table with Button -->
+        <div class="row g-2 pt-4">
+          <div class="col-8 d-flex align-items-center">
+            <div class="input-group">
+              <!-- Search input -->
+              <input
+                type="text"
+                class="form-control text-mobile-sm rounded-0"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-icon"
+                style="height: 27px; max-width: 200px; font-size: 9px"
+              />
+              <span
+                class="input-group-text rounded-0 d-flex justify-content-center"
+                id="search-icon"
+                style="height: 27px; width: 35px"
+              >
+                <i class="bi bi-search text-mobile-sm"></i>
+              </span>
+            </div>
+          </div>
+          <div class="col-4 float-end d-flex justify-content-end">
+            <button
+              class="btn bg-semi-dark-blue text-white text-nowrap text-mobile-sm border-1 fw-semibold"
+            >
+              <i class="bi bi-plus-square-dotted text-mobile-sm pe-1"></i>
+
+              New Annnouncement
+            </button>
+          </div>
+        </div>
+        <!-- /Search Bar for Table with Button -->
+
+        <!-- Table -->
+        <div class="table-responsive text-nowrap">
+          <table class="table table-striped table-hover mt-3 text-mobile-md">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Announcement Title</th>
+                <th>Announcement Details</th>
+                <th>Date</th>
+                <th>User ID</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 12px">
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /Table -->
+
+        <!-- /Table -->
+        <!-- Table Footer -->
+        <div class="row pt-1">
+          <div class="col-7 pt-1">
+            <p class="text-mobile-sm">Showing 10 out of 0 entries.</p>
+          </div>
+          <div class="col-5">
+            <nav aria-label="page navigation">
+              <ul class="pagination pagination-sm d-flex justify-content-end">
+                <li class="page-item">
+                  <a
+                    href="#"
+                    class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                    >Previous</a
+                  >
+                </li>
+                <li class="page-item">
+                  <a
+                    href="#"
+                    class="page-link border border-1 link-body-emphasis mx-1 px-3 text-mobile-sm"
+                    >1</a
+                  >
+                </li>
+                <li class="page-item">
+                  <a
+                    href="#"
+                    class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                    aria-label="Next"
+                    >Next</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /Table Footer -->
+
+        <!-- Button group of Export CSV | Export PDF | Print Report -->
+        <div class="row pt-3 pb-5">
+          <div class="col-lg-6 col-xxl-8"></div>
+          <div class="col-lg-6 col-xxl-4 d-grid">
+            <div class="btn-group" role="group" aria-label="Download">
+              <button
+                type="button"
+                class="btn btn-primary py-1 text-mobile-md"
+                style="background-color: #1f4981; border: none; margin-right: 0"
+              >
+                Export CSV
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary text-mobile-md"
+                style="
+                  background-color: rgb(35 100 151);
+                  border: none;
+
+                  margin-right: 0;
+                "
+              >
+                Export PDF
+              </button>
+              <button
+                type="button"
+                class="btn btn-success text-mobile-md"
+                style="border: none"
+                ;
+              >
+                Print Report
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- /Button group of Export CSV | Export PDF | Print Report -->
+      </div>
     </main>
 
     <!-- Bootstrap JS and dependencies -->

@@ -111,6 +111,10 @@ tabaco-go {
 .text-green {
   color: rgb(4 195 5);
 }
+.text-yellow{
+  color: rgb(255 198 42);
+}
+
 /* Side Bar Collapsable*/
 .sidebar.collapsed {
   width: 0;
