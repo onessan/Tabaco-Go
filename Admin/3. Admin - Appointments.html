@@ -364,7 +364,10 @@
 
     <!-- Main content -->
     <main class="main-content">
-      <div class="admin-appointments-container container-flex pt-2 px-4 px-lg-5">
+      <div
+        class="admin-appointments-container container-flex pt-2 px-4 px-lg-5"
+      >
+        <h4 class="fw-bold fs-5 pt-2 pb-4">MANIFEST AND APPOINTMENTS</h4>
         <!-- Navagation tabs -->
         <div class="nav-tabs-wrapper">
           <ul class="nav nav-tabs text-mobile-sm" id="myTab" role="tablist">
@@ -425,6 +428,30 @@
             aria-labelledby="appointment-tab"
             tabindex="0"
           >
+            <!-- Search Bar for Table -->
+            <div class="row g-2 pt-5">
+              <div class="col-12 d-flex align-items-center">
+                <div class="input-group">
+                  <!-- Search input -->
+                  <input
+                    type="text"
+                    class="form-control text-mobile-sm rounded-0"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-icon"
+                    style="height: 27px; max-width: 200px; font-size: 9px"
+                  />
+                  <span
+                    class="input-group-text rounded-0 d-flex justify-content-center"
+                    id="search-icon"
+                    style="height: 27px; width: 35px"
+                  >
+                    <i class="bi bi-search text-mobile-sm"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /Search Bar for Table -->
             <div class="table-responsive text-nowrap">
               <table
                 class="table table-striped table-hover mt-3 text-mobile-md"
@@ -657,6 +684,30 @@
             aria-labelledby="paid-online-tab"
             tabindex="0"
           >
+            <!-- Search Bar for Table -->
+            <div class="row g-2 pt-5">
+              <div class="col-12 d-flex align-items-center">
+                <div class="input-group">
+                  <!-- Search input -->
+                  <input
+                    type="text"
+                    class="form-control text-mobile-sm rounded-0"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-icon"
+                    style="height: 27px; max-width: 200px; font-size: 9px"
+                  />
+                  <span
+                    class="input-group-text rounded-0 d-flex justify-content-center"
+                    id="search-icon"
+                    style="height: 27px; width: 35px"
+                  >
+                    <i class="bi bi-search text-mobile-sm"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /Search Bar for Table -->
             <div class="table-responsive text-nowrap text-mobile-md">
               <table class="table table-hover table-striped mt-3">
                 <thead>
@@ -883,10 +934,34 @@
             </div>
             <!-- /Data Filtering by Date -->
 
+            <!-- Search Bar for Table -->
+            <div class="row g-2 pt-5">
+              <div class="col-12 d-flex align-items-center">
+                <div class="input-group">
+                  <!-- Search input -->
+                  <input
+                    type="text"
+                    class="form-control text-mobile-sm rounded-0"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-icon"
+                    style="height: 27px; max-width: 200px; font-size: 9px"
+                  />
+                  <span
+                    class="input-group-text rounded-0 d-flex justify-content-center"
+                    id="search-icon"
+                    style="height: 27px; width: 35px"
+                  >
+                    <i class="bi bi-search text-mobile-sm"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /Search Bar for Table -->
             <br />
             <div class="table-responsive text-nowrap">
               <table
-                class="table table-striped table-hover mt-3 text-mobile-md"
+                class="table table-striped table-hover mt-0 text-mobile-md"
               >
                 <thead>
                   <tr>
