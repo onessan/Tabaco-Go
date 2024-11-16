@@ -60,7 +60,7 @@
           <div class="">
             <a href="#" class="navbar-brand">
               <h1
-                class="h1 tabaco-go"
+                class="h2 tabaco-go ps-lg-4"
                 style="font-family: nunito; font-weight: 700"
               >
                 TABACO GO
@@ -69,10 +69,10 @@
           </div>
 
           <div
-            class="text-white"
+            class="text-white ps-lg-4"
             style="
               margin: -40px 0px 0px 0px;
-              font-size: 10px;
+              font-size: 8px;
               letter-spacing: 5px;
               padding-left: 2px;
             "
@@ -81,25 +81,33 @@
           </div>
         </div>
       </div>
-      <div class="justify-content-end pe-4 py-4">
+      <div class="justify-content-end pe-4 py-0">
         <div class="">
           <div class="btn-group">
-            <button
-              class="btn btn-secondary btn-sm rounded-start-5"
-              data-bs-theme-value="dark"
-            >
-              <span class="">
-                <i class="bi bi-moon text-light"></i>
-              </span>
-            </button>
-            <button
-              class="btn btn-light btn-sm rounded-end-5"
-              data-bs-theme-value="light"
-            >
-              <span class="">
-                <i class="bi bi-brightness-high-fill text-secondary"></i>
-              </span>
-            </button>
+            <!-- Dark Mode Toggle -->
+            <div class="btn-group">
+              <button
+                class="btn btn-secondary btn-sm rounded-start-5 ps-1 pe-1"
+                data-bs-theme-value="dark"
+              >
+                <span class="">
+                  <i
+                    class="bi bi-moon text-light d-flex align-items-center"
+                  ></i>
+                </span>
+              </button>
+              <button
+                class="btn btn-light btn-sm rounded-end-5 ps-1 pe-1"
+                data-bs-theme-value="light"
+              >
+                <span class="">
+                  <i
+                    class="bi bi-brightness-high-fill text-secondary d-flex align-items-center"
+                  ></i>
+                </span>
+              </button>
+            </div>
+            <!-- /Dark Mode Toggle -->
           </div>
         </div>
       </div>
@@ -116,7 +124,7 @@
       >
         <!-- Sidebar navigation items -->
         <hr />
-        <ul class="nav nav-pills flex-column mb-auto mt-5">
+        <ul class="nav nav-pills flex-column mb-auto mt-3">
           <li>
             <!-- Dashboard link with background gradient -->
             <a
@@ -245,7 +253,7 @@
         style="height: 96%; width: 3.7rem; top: 38px"
       >
         <ul
-          class="nav nav-pills nav-flush flex-column mb-auto text-center mt-5"
+          class="nav nav-pills nav-flush flex-column mb-auto text-center mt-2"
           style="font-size: 8px; font-weight: 400"
         >
           <li class="nav-item">
@@ -735,6 +743,7 @@
               </div>
             </div>
             <!-- /Search Bar for Table -->
+            <!-- Table -->
             <div class="table-responsive text-nowrap">
               <table
                 class="table table-striped table-hover mt-3 text-mobile-md"
@@ -883,6 +892,7 @@
                 </tbody>
               </table>
             </div>
+            <!-- /Table -->
 
             <!-- Table Footer -->
             <div class="row pt-1">
@@ -972,5 +982,7 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+
+    <!-- Styling -->
   </body>
 </html>

@@ -18,17 +18,17 @@ tabaco-go {
 }
 @media (min-width: 576px) {
   .online-booking {
-    letter-spacing: 6.5px;
+    letter-spacing: 5.4px;
   }
 }
 @media (min-width: 768px) {
   .online-booking {
-    letter-spacing: 7.4px;
+    letter-spacing: 6.2px;
   }
 }
 @media (min-width: 992px) {
   .online-booking {
-    letter-spacing: 9px;
+    letter-spacing: 7.2px;
   }
 }
 
@@ -125,7 +125,7 @@ tabaco-go {
 /* Contents-Holder*/
 .main-content {
   height: 100%;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 /* Media query for screens 767px wide or smaller - Small Screen or "sm" in Bootstrap */
@@ -198,6 +198,10 @@ th {
   z-index: 1030;
 }
 /* Sticky Column & Row */
+
+/* Theme Mode CSS */
+
+/* /Theme Mode CSS */
 
 /* Bellow are for the Contents -------------------------------------------------*/
 
