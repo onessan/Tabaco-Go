@@ -711,6 +711,30 @@
             aria-labelledby="paid-online-tab"
             tabindex="0"
           >
+            <!-- Search Bar for Table -->
+            <div class="row g-2 pt-5">
+              <div class="col-12 d-flex align-items-center">
+                <div class="input-group">
+                  <!-- Search input -->
+                  <input
+                    type="text"
+                    class="form-control text-mobile-sm rounded-0"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-icon"
+                    style="height: 27px; max-width: 200px; font-size: 9px"
+                  />
+                  <span
+                    class="input-group-text rounded-0 d-flex justify-content-center"
+                    id="search-icon"
+                    style="height: 27px; width: 35px"
+                  >
+                    <i class="bi bi-search text-mobile-sm"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /Search Bar for Table -->
             <div class="table-responsive text-nowrap">
               <table
                 class="table table-striped table-hover mt-3 text-mobile-md"
@@ -726,7 +750,7 @@
                     <th>Date Scheduled</th>
                     <th>Ordinary Fair Price</th>
                     <th>Aircon Fair Price</th>
-                    <th>Status</th>
+                    <th class="sticky-right-1">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -740,7 +764,13 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td class="sticky-right-1">
+                      <p
+                        class="mb-0 px-2 d-flex justify-content-center text-bg-info rounded-2"
+                      >
+                        Departed
+                      </p>
+                    </td>
                   </tr>
                   <tr>
                     <td>2</td>
