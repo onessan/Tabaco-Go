@@ -111,7 +111,7 @@ tabaco-go {
 .text-green {
   color: rgb(4 195 5);
 }
-.text-yellow{
+.text-yellow {
   color: rgb(255 198 42);
 }
 
@@ -129,20 +129,21 @@ tabaco-go {
 /* Contents-Holder*/
 .main-content {
   height: 100%;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
-/* Media query for screens 767px wide or smaller - Small Screen or "sm" in Bootstrap */
+/* Media query for screens 91px wide or smaller - Small Screen or "sm" in Bootstrap */
 @media (max-width: 991px) {
   .main-content {
     padding-left: 60px;
   }
 }
 
-/* Media query for screens wider than 768px - Medium Screen or "md" in Bootstrap*/
+/* Media query for screens wider than 992px - Medium Screen or "md" in Bootstrap*/
 @media (min-width: 992px) {
   .main-content {
     padding-left: 285px;
+    padding-top: 70px;
   }
 }
 /* /Contents-Holder*/
