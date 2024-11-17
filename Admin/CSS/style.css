@@ -175,7 +175,7 @@ tabaco-go {
 
 /* Table Hover Color*/
 tr {
-  --bs-table-hover-bg: rgb(134 193 205);
+  --bs-table-hover-bg: rgb(162, 199, 206);
 }
 /* Table Hover Color*/
 
@@ -204,9 +204,16 @@ th {
 }
 /* Sticky Column & Row */
 
-/* Theme Mode CSS */
 
-/* /Theme Mode CSS */
+@media (min-width: 576px){
+  /* Search Bar*/
+.adaptive-search-bar{
+  max-width: 200px;
+}
+}
+
+
+/* /Search Bar */
 
 /* Bellow are for the Contents -------------------------------------------------*/
 

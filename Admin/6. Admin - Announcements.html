@@ -376,16 +376,16 @@
 
         <!-- Search Bar for Table with Button -->
         <div class="row g-2 pt-4">
-          <div class="col-8 d-flex align-items-center">
+          <div class="col-sm-8 d-flex align-items-center">
             <div class="input-group">
               <!-- Search input -->
               <input
                 type="text"
-                class="form-control text-mobile-sm rounded-0"
+                class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="search-icon"
-                style="height: 27px; max-width: 200px; font-size: 9px"
+                style="height: 27px;  font-size: 9px"
               />
               <span
                 class="input-group-text rounded-0 d-flex justify-content-center"
@@ -396,7 +396,7 @@
               </span>
             </div>
           </div>
-          <div class="col-4 float-end d-flex justify-content-end">
+          <div class="col-sm-4 float-end d-flex justify-content-end">
             <button
               class="btn bg-semi-dark-blue text-white text-nowrap text-mobile-sm border-1 fw-semibold"
             >
@@ -414,90 +414,119 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Announcement Title</th>
-                <th>Announcement Details</th>
+                <th style="min-width: 250px">Announcement Title</th>
+                <th style="min-width: 250px">Announcement Details</th>
                 <th>Date</th>
                 <th>User ID</th>
-                <th>Action</th>
+                <th class="sticky-right-1">Action</th>
               </tr>
             </thead>
-            <tbody style="font-size: 12px">
+            <tbody>
               <tr>
                 <td>1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, ducimus. Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Facilis, corrupti.
+                </td>
+                <td class="text-wrap" style="max-width: 250px">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, ducimus. Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Facilis, corrupti.
+                </td>
+                <td>Nov 17, 2014</td>
+                <td>7276-11172024</td>
+                <td class="text-wrap py-0 my-0 ms-auto sticky-right-1 pb-0">
+                  <button class="btn  d-inline-block  w-100">
+                    <!-- Edit Button -->
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                  <button class="btn d-inline-block w-100 text-danger pt-0">
+                    <!-- Delete Button -->
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
               </tr>
               <tr>
                 <td>2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Error, ea.
+                </td>
+                <td class="text-wrap" style="max-width: 250px">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Incidunt rem iusto dolorum hic aspernatur delectus, porro
+                  aliquam repudiandae nostrum. Facere aspernatur, aperiam quas
+                  et ipsum impedit aut doloribus error vero.
+                </td>
+                <td>Nov 17, 2014</td>
+                <td>7276-11172024</td>
+                <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                  <button class="btn btn-sm d-inline-block w-100">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </td>
               </tr>
               <tr>
                 <td>3</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>4</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>5</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>6</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>7</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>8</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>9</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>10</td>
-                <td></td>
-                <td></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
+                <td class="text-wrap" style="max-width: 250px"></td>
                 <td></td>
                 <td></td>
                 <td></td>
