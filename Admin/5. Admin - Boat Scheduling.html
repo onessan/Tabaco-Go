@@ -202,18 +202,24 @@
                 class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
               >
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     System Users
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     Account Settings
                   </a>
                 </li>
-                <li>
+                <li></li>
                 <li>
                   <a href="#" class="nav-link link-body-emphasis pt-0">
                     <i class="bi bi-box-arrow-left pe-2"></i>
@@ -331,12 +337,18 @@
               </a>
               <ul class="dropdown-menu border border-1 text-small ms-1">
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     System User
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     Account Settings
                   </a>
                 </li>
@@ -373,19 +385,21 @@
     <!-- Main content -->
     <main class="main-content">
       <div class="admin-boat-scheduling-container container-flex px-4 px-lg-5">
-        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-4">BOAT SCHEDULING AND INFORMATION</h4>
+        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-4">
+          BOAT SCHEDULING AND INFORMATION
+        </h4>
         <!-- Navagation tabs -->
         <div class="nav-tabs-wrapper">
           <ul class="nav nav-tabs text-mobile-sm" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link active link-body-emphasis text-nowrap"
-                id="appointment-tab"
+                id="boarding-tab"
                 data-bs-toggle="tab"
-                data-bs-target="#appointment-tab-pane"
+                data-bs-target="#boarding-tab-pane"
                 type="button"
                 role="tab"
-                aria-controls="appointment-tab-pane"
+                aria-controls="boarding-tab-pane"
                 aria-selected="true"
               >
                 Boarding Vessel
@@ -394,12 +408,12 @@
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link link-body-emphasis text-nowrap"
-                id="paid-online-tab"
+                id="departed-tab"
                 data-bs-toggle="tab"
-                data-bs-target="#paid-online-tab-pane"
+                data-bs-target="#departed-tab-pane"
                 type="button"
                 role="tab"
-                aria-controls="paid-online-tab-pane"
+                aria-controls="departed-tab-pane"
                 aria-selected="false"
               >
                 Departed Vessel
@@ -415,9 +429,9 @@
           <!-- Boarding Vessels Tab -->
           <div
             class="tab-pane fade show active"
-            id="appointment-tab-pane"
+            id="boarding-tab-pane"
             role="tabpanel"
-            aria-labelledby="appointment-tab"
+            aria-labelledby="boarding-tab"
             tabindex="0"
           >
             <!-- Search Bar for Table with Button -->
@@ -442,7 +456,9 @@
                   </span>
                 </div>
               </div>
-              <div class="col-sm-4 float-end d-flex justify-content-end pt-2 pt-sm-0">
+              <div
+                class="col-sm-4 float-end d-flex justify-content-end pt-2 pt-sm-0"
+              >
                 <button
                   class="btn bg-semi-dark-blue text-white text-nowrap text-mobile-md border-1 fw-semibold"
                 >
@@ -470,10 +486,14 @@
                     <th>Ordinary Fair Price</th>
                     <th>Aircon Fair Price</th>
                     <th class="sticky-right-2">
-                      <p class="d-flex justify-content-center p-0 m-0">Status</p>
+                      <p class="d-flex justify-content-center p-0 m-0">
+                        Status
+                      </p>
                     </th>
                     <th class="sticky-right-1">
-                      <p class="d-flex justify-content-center p-0 m-0">Action</p>
+                      <p class="d-flex justify-content-center p-0 m-0">
+                        Action
+                      </p>
                     </th>
                   </tr>
                 </thead>
@@ -719,9 +739,9 @@
           <!-- Departed Vessel Tab -->
           <div
             class="tab-pane fade"
-            id="paid-online-tab-pane"
+            id="departed-tab-pane"
             role="tabpanel"
-            aria-labelledby="paid-online-tab"
+            aria-labelledby="departed-tab"
             tabindex="0"
           >
             <!-- Search Bar for Table -->
@@ -764,7 +784,9 @@
                     <th>Date Scheduled</th>
                     <th>Ordinary Fair Price</th>
                     <th>Aircon Fair Price</th>
-                    <th class="sticky-right-1 d-flex justify-content-center">Status</th>
+                    <th class="sticky-right-1 d-flex justify-content-center">
+                      Status
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
