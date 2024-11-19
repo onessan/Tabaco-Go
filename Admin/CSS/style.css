@@ -212,6 +212,18 @@ th {
 }
 /* /Search Bar */
 
+/* Custom style to make disabled form-select transparent */
+.form-select:disabled,
+label[for="gender-label"] {
+  background-color: transparent !important;
+  opacity: 1 !important; /* Optional: Ensures full opacity */
+  pointer-events: none; /* Ensures the element is still non-interactive */
+}
+
+/* Change Password Button*/
+
+/* Change Password Button*/
+
 /*Floating Form Control*/
 
 /*Floating Form Control*/

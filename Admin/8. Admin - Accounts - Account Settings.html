@@ -366,97 +366,553 @@
     <!-- /Sidebar -->
 
     <!-- Main content -->
-    <main class="main-content">
+    <main class="main-content z-n1">
       <div class="admin-accounts-container container-flex px-4 px-lg-5">
         <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-4">ACCOUNT SETTINGS</h4>
-        <div class="container text-mobile-md">
-          <div class="mb-3 row">
-            <label
-              for="staticEmail"
-              class="col-xl-2 col-form-label pb-1 mb-0 mb-sm-1"
-              >Email</label
-            >
-            <div class="col-xl-10">
-              <input
-                type="text"
-                readonly
-                class="form-control-plaintext text-mobile-md py-1 mt-0 mt-sm-1"
-                id="staticEmail"
-                value="nessonbrecia24@gmail.com"
-                style="max-width: 350px"
-              />
+        <!-- Account Settings & Password Management -->
+        <!-- Email & Role-->
+        <div class="container text-mobile-md pb-2">
+          <div class="row">
+            <div class="col-md-6 col-xl-4">
+              <div class="form-floating mb-3 z-0" style="max-width: 284px">
+                <input
+                  type="email"
+                  readonly
+                  class="form-control-plaintext text-mobile-md"
+                  id="email"
+                  placeholder="name@example.com"
+                  value="nessonbrecia24@gmail.com"
+                />
+                <label for="email" class="text-mobile-md z-0"
+                  >Email Address:</label
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="form-floating mb-3 z-0" style="max-width: 284px">
+                <input
+                  type="role"
+                  readonly
+                  class="form-control-plaintext text-mobile-md"
+                  id="role"
+                  placeholder="Admin"
+                  value="Admin"
+                />
+                <label for="role" class="text-mobile-md z-0">Role:</label>
+              </div>
             </div>
           </div>
-          <div class="mb-3 row">
-            <label
-              for="staticEmail"
-              class="col-xl-2 col-form-label pb-1 mb-0 mb-sm-1"
-              >Role</label
-            >
-            <div class="col-xl-10">
-              <input
-                type="text"
-                readonly
-                class="form-control-plaintext text-mobile-md py-1 mt-0 mt-sm-1"
-                id="staticEmail"
-                value="Admin"
-                style="max-width: 350px"
-              />
+          <!-- /Email & Role-->
+
+          <!-- Change Password Section -->
+          <div class="container text-mobile-md">
+            <div class="row">
+              <!-- Column for Current Password -->
+              <div class="col-md-6 col-xl-4">
+                <div class="mb-3 row">
+                  <!-- Label for current password input -->
+                  <label
+                    for="inputPassword"
+                    class="col-12 col-form-label pb-1 mb-0"
+                    style="font-size: 12px"
+                  >
+                    Current Password:
+                  </label>
+                  <div class="col-12">
+                    <!-- Current password input field -->
+                    <input
+                      type="password"
+                      class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
+                      id="inputPassword"
+                      style="max-width: 350px"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column for New and Confirm Password -->
+              <div class="col-md-6 col-xl-8">
+                <div class="row">
+                  <!-- Column for New Password -->
+                  <div class="col-md-12 col-xl-6">
+                    <div class="mb-3 row">
+                      <!-- Label for new password input -->
+                      <label
+                        for="inputPassword"
+                        class="col-12 col-form-label pb-1 mb-0"
+                        style="font-size: 12px"
+                      >
+                        New Password:
+                      </label>
+                      <div class="col-12">
+                        <!-- New password input field -->
+                        <input
+                          type="password"
+                          class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
+                          id="inputPassword"
+                          style="max-width: 350px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Column for Confirm Password -->
+                  <div class="col-md-12 col-xl-6">
+                    <div class="mb-3 row">
+                      <label
+                        for="inputPassword"
+                        class="col-12 col-form-label pb-1 mb-0"
+                        style="font-size: 12px"
+                      >
+                        Confirm Password:
+                      </label>
+                      <div class="col-12">
+                        <input
+                          type="password"
+                          class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
+                          id="inputPassword"
+                          style="max-width: 350px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Buttons for canceling or submitting the password change -->
+            <div class="pt-3 d-flex justify-content-end">
+              <div
+                class="d-flex justify-content-end"
+                role="group"
+                style="width: 230px"
+              >
+                <button
+                  class="btn btn-sm bg-body-tertiary text-mobile-md me-1"
+                  style="width: 130px"
+                >
+                  Cancel
+                </button>
+                <button
+                  class="btn btn-sm btn-secondary text-mobile-md"
+                  style="width: 180px"
+                  data-bs-toggle="modal"
+                  data-bs-target="#save-password"
+                >
+                  Change Password
+                </button>
+
+                <!--  Modal for Save Password -->
+                <div
+                  class="modal fade"
+                  id="save-password"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header border-0">
+                        <button
+                          type="button"
+                          class="btn-close text-mobile-md"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body text-mobile-md">
+                        <div class="container mb-3">
+                          <i
+                            class="bi bi-exclamation-octagon fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                          ></i>
+
+                          <p
+                            class="d-flex align-items-center justify-content-center fw-semibold m-0"
+                          >
+                            Confirm Change Password?
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="modal-footer border-0 d-flex justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn bg-body-tertiary text-mobile-md"
+                          data-bs-dismiss="modal"
+                          style="width: 100px"
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          type="button"
+                          id="update-password-btn"
+                          class="btn btn-success text-mobile-md"
+                          style="width: 100px"
+                          data-bs-dismiss="modal"
+                        >
+                          Confirm
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal for Save Password -->
+              </div>
             </div>
           </div>
-          <br />
-          <div class="mb-3 row">
-            <label
-              for="inputPassword"
-              class="col-xl-2 col-form-label pb-1 mb-0 mb-sm-1"
-              >Current Password</label
-            >
-            <div class="col-xl-10">
-              <input
-                type="password"
-                class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
-                id="inputPassword"
-                style="max-width: 350px"
-              />
+          <!-- /Change Password Section -->
+        </div>
+        <!-- /Account Settings & Password Management -->
+
+        <h4 class="fw-bold fs-5 mt-4 pt-2 pt-sm-3 pt-lg-0 pb-4">
+          PERSONAL INFORMATION
+        </h4>
+        <!-- Personal Information -->
+        <div class="container pe-3 mb-5">
+          <!-- Personal Information -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+              <div class="container text-mobile-md">
+                <div class="form-floating mb-3 z-0">
+                  <input
+                    type="text"
+                    class="form-control-plaintext text-mobile-md"
+                    id="first-name"
+                    placeholder="Nesson"
+                    value="Nesson"
+                    readonly
+                  />
+                  <label for="first-name text-mobile-md z-0">First Name:</label>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="container text-mobile-md">
+                <div class="form-floating mb-3 z-0">
+                  <input
+                    type="text"
+                    class="form-control-plaintext text-mobile-md"
+                    id="last-name"
+                    placeholder="Brecia"
+                    value="Brecia"
+                    readonly
+                  />
+                  <label for="last-name text-mobile-md">Last Name:</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="container text-mobile-md z-0">
+                <div class="form-floating mb-3 z-0">
+                  <select
+                    class="form-select border-0 text-mobile-md"
+                    aria-label="Default select example"
+                    id="gender-select"
+                    disabled
+                    style="background-color: gba(0, 0, 0, 0.5)"
+                  >
+                    <option selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Prefer not to say</option>
+                  </select>
+                  <label id="gender-label" for="gender-select text-mobile-md"
+                    >Gender:</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="container text-mobile-md">
+                <div class="form-floating mb-3 z-0">
+                  <input
+                    type="text"
+                    class="form-control-plaintext text-mobile-md"
+                    id="sufix"
+                    placeholder="N/A"
+                    value="N/A"
+                    readonly
+                  />
+                  <label for="sufix text-mobile-md">Sufix:</label>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="container text-mobile-md">
+                <div class="form-floating mb-3 z-0">
+                  <input
+                    type="date"
+                    id="dateFrom"
+                    class="form-control-plaintext text-mobile-sm"
+                    value="2001-08-24"
+                    readonly
+                  />
+                  <label for="first-name text-mobile-md">Birthday:</label>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="mb-3 row">
-            <label
-              for="inputPassword"
-              class="col-xl-2 col-form-label pb-1 mb-0 mb-sm-1"
+          <div class="pt-3 d-flex justify-content-end">
+            <button
+              class="btn btn-sm bg-body-tertiary me-1 d-grid text-mobile-md"
+              style="min-width: 230px"
+              data-bs-toggle="modal"
+              data-bs-target="#edit-data"
             >
-              New Password</label
-            >
-            <div class="col-xl-10">
-              <input
-                type="password"
-                class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
-                id="inputPassword"
-                style="max-width: 350px"
-              />
-            </div>
+              Edit Data
+            </button>
           </div>
-          <div class="mb-3 row">
-            <label
-              for="inputPassword"
-              class="col-xl-2 col-form-label pb-1 mb-0 mb-sm-1"
-              >Confirm Password</label
-            >
-            <div class="col-xl-10">
-              <input
-                type="password"
-                class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
-                id="inputPassword"
-                style="max-width: 350px"
-              />
+        </div>
+        <!-- /Personal Information -->
+
+        <!--  Modal for Edit Data -->
+        <div class="modal fade" id="edit-data" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">
+                  UPDATING PERSONAL INFORMATION
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container pe-3 mb-5">
+                  <!-- Personal Information -->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="first-name"
+                            placeholder="Nesson"
+                            value="Nesson"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >First Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="last-name"
+                            placeholder="Brecia"
+                            value="Brecia"
+                          />
+                          <label for="last-name text-mobile-md"
+                            >Last Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="gender-select"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Prefer not to say</option>
+                          </select>
+                          <label
+                            id="gender-label"
+                            for="gender-select text-mobile-md"
+                            >Gender:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="sufix"
+                            placeholder="N/A"
+                            value="N/A"
+                          />
+                          <label for="sufix text-mobile-md">Sufix:</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="date"
+                            id="dateFrom"
+                            class="form-control text-mobile-sm"
+                            value="2001-08-24"
+                          />
+                          <label for="first-name text-mobile-md"
+                            >Birthday:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 150px"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success text-mobile-md"
+                  style="width: 150px"
+                  data-bs-target="#update-personal-information"
+                  data-bs-toggle="modal"
+                >
+                  Update
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <!--  /Modal for Edit Data -->
+
+        <!--  Modal for Update Personal Information -->
+        <div
+          class="modal fade"
+          id="update-personal-information"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-info-circle fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0"
+                  >
+                    Update Personal Information?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0 d-flex justify-content-center">
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  style="width: 100px"
+                  data-bs-target="#edit-data"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+                <button
+                  type="button"
+                  id="personal-information-btn"
+                  class="btn btn-success text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 100px"
+                >
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Modal for Update Personal Information -->
+        <!--/ Modal for Edit Data -->
       </div>
+
+      <!-- Toast Code -->
+      <!-- Toast for Password Changed -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="password-update">
+          <div class="toast-header text-bg-success text-mobile-md">
+            <div class="me-auto">Admin</div>
+            <small>Just Now</small>
+          </div>
+          <div class="toast-body text-bg-success text-mobile-md">
+            Password Updated Successfully
+          </div>
+        </div>
+      </div>
+      <!-- /Toast for Password Changed -->
+
+      <!-- Toast for Password Changed -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="personal-information-update">
+          <div class="toast-header text-bg-info text-mobile-md">
+            <div class="me-auto">Admin</div>
+            <small>Just Now</small>
+          </div>
+          <div class="toast-body text-bg-info text-mobile-md">
+            Personal Information Updated Successfully
+          </div>
+        </div>
+      </div>
+      <!-- /Toast for Password Changed -->
+      <!-- /Toast Code -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      // Set the default value programmatically
+      document.getElementById("gender-select").value = "male";
+    </script>
+    <script>
+      const toastTrigger1 = document.querySelector("#update-password-btn");
+      const toast1 = document.querySelector("#password-update");
+
+      if (toastTrigger1) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast1);
+
+        toastTrigger1.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const toastTrigger2 = document.querySelector("#personal-information-btn");
+      const toast2 = document.querySelector("#personal-information-update");
+
+      if (toastTrigger2) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast2);
+
+        toastTrigger2.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
   </body>
 </html>
