@@ -374,34 +374,40 @@
         <div class="container text-mobile-md pb-2">
           <div class="row">
             <div class="col-md-6 col-xl-4">
-              <div class="form-floating mb-3 z-0" style="max-width: 284px">
+              <div class="form-floating mb-3 z-0">
                 <input
                   type="email"
-                  readonly
                   class="form-control-plaintext text-mobile-md"
                   id="email"
-                  placeholder="name@example.com"
+                  placeholder="nessonbrecia24@gmail.com"
                   value="nessonbrecia24@gmail.com"
                 />
-                <label for="email" class="text-mobile-md z-0"
+                <label for="first-name text-mobile-md z-0"
                   >Email Address:</label
                 >
               </div>
             </div>
             <div class="col-md-6 col-xl-4">
               <div class="form-floating mb-3 z-0" style="max-width: 284px">
-                <input
-                  type="role"
-                  readonly
-                  class="form-control-plaintext text-mobile-md"
-                  id="role"
-                  placeholder="Admin"
-                  value="Admin"
-                />
-                <label for="role" class="text-mobile-md z-0">Role:</label>
+                <select
+                  class="form-select text-mobile-md border-0"
+                  aria-label="Default select example"
+                  id="role-select"
+                  disabled
+                  style="background-color: gba(0, 0, 0, 0.5)"
+                >
+                  <option selected>Select Role</option>
+                  <option value="admin">Admin</option>
+                  <option value="head-checker">Head Checker</option>
+                  <option value="cashier">Cashier</option>
+                </select>
+                <label id="role-label" for="role-select text-mobile-md"
+                  >Role:</label
+                >
               </div>
             </div>
           </div>
+
           <!-- /Email & Role-->
 
           <!-- Change Password Section -->
@@ -500,65 +506,64 @@
                 >
                   Change Password
                 </button>
-
-                <!--  Modal for Save Password -->
-                <div
-                  class="modal fade"
-                  id="save-password"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header border-0">
-                        <button
-                          type="button"
-                          class="btn-close text-mobile-md"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body text-mobile-md">
-                        <div class="container mb-3">
-                          <i
-                            class="bi bi-exclamation-octagon fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
-                          ></i>
-
-                          <p
-                            class="d-flex align-items-center justify-content-center fw-semibold m-0"
-                          >
-                            Confirm Change Password?
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="modal-footer border-0 d-flex justify-content-center"
-                      >
-                        <button
-                          type="button"
-                          class="btn bg-body-tertiary text-mobile-md"
-                          data-bs-dismiss="modal"
-                          style="width: 100px"
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          type="button"
-                          id="update-password-btn"
-                          class="btn btn-success text-mobile-md"
-                          style="width: 100px"
-                          data-bs-dismiss="modal"
-                        >
-                          Confirm
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modal for Save Password -->
               </div>
             </div>
           </div>
+          <!--  Modal for Save Password -->
+          <div
+            class="modal fade"
+            id="save-password"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <button
+                    type="button"
+                    class="btn-close text-mobile-md"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-mobile-md">
+                  <div class="container mb-3">
+                    <i
+                      class="bi bi-exclamation-octagon fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                    ></i>
+
+                    <p
+                      class="d-flex align-items-center justify-content-center fw-semibold m-0"
+                    >
+                      Confirm Change Password?
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="modal-footer border-0 d-flex justify-content-center"
+                >
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-dismiss="modal"
+                    style="width: 100px"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    id="update-password-btn"
+                    class="btn btn-danger text-mobile-md"
+                    style="width: 100px"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Modal for Save Password -->
           <!-- /Change Password Section -->
         </div>
         <!-- /Account Settings & Password Management -->
@@ -600,7 +605,21 @@
                 </div>
               </div>
             </div>
-
+            <div class="col">
+              <div class="container text-mobile-md">
+                <div class="form-floating mb-3 z-0">
+                  <input
+                    type="text"
+                    class="form-control-plaintext text-mobile-md"
+                    id="sufix"
+                    placeholder="N/A"
+                    value="N/A"
+                    readonly
+                  />
+                  <label for="sufix text-mobile-md">Sufix:</label>
+                </div>
+              </div>
+            </div>
             <div class="col">
               <div class="container text-mobile-md z-0">
                 <div class="form-floating mb-3 z-0">
@@ -622,21 +641,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="container text-mobile-md">
-                <div class="form-floating mb-3 z-0">
-                  <input
-                    type="text"
-                    class="form-control-plaintext text-mobile-md"
-                    id="sufix"
-                    placeholder="N/A"
-                    value="N/A"
-                    readonly
-                  />
-                  <label for="sufix text-mobile-md">Sufix:</label>
-                </div>
-              </div>
-            </div>
+
             <div class="col">
               <div class="container text-mobile-md">
                 <div class="form-floating mb-3 z-0">
@@ -682,6 +687,50 @@
               </div>
               <div class="modal-body text-mobile-md">
                 <div class="container pe-3 mb-5">
+                  <!-- Uneditable Section -->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="email"
+                            class="form-control-plaintext text-mobile-md"
+                            id="email"
+                            placeholder="nessonbrecia24@gmail.com"
+                            value="nessonbrecia24@gmail.com"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >Email Address:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md border-0"
+                            aria-label="Default select example"
+                            id="role-select"
+                            disabled
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option selected>Select Role</option>
+                            <option value="admin">Admin</option>
+                            <option value="head-checker">Head Checker</option>
+                            <option value="cashier">Cashier</option>
+                          </select>
+                          <label
+                            id="role-label"
+                            for="role-select text-mobile-md"
+                            >Role:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Uneditable Section -->
+                  <br />
                   <!-- Personal Information -->
                   <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
                     <div class="col">
@@ -716,7 +765,20 @@
                         </div>
                       </div>
                     </div>
-
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="sufix"
+                            placeholder="N/A"
+                            value="N/A"
+                          />
+                          <label for="sufix text-mobile-md">Sufix:</label>
+                        </div>
+                      </div>
+                    </div>
                     <div class="col">
                       <div class="container text-mobile-md z-0">
                         <div class="form-floating mb-3 z-0">
@@ -739,20 +801,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="container text-mobile-md">
-                        <div class="form-floating mb-3 z-0">
-                          <input
-                            type="text"
-                            class="form-control text-mobile-md"
-                            id="sufix"
-                            placeholder="N/A"
-                            value="N/A"
-                          />
-                          <label for="sufix text-mobile-md">Sufix:</label>
-                        </div>
-                      </div>
-                    </div>
+
                     <div class="col">
                       <div class="container text-mobile-md">
                         <div class="form-floating mb-3 z-0">
@@ -782,7 +831,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn btn-success text-mobile-md"
+                  class="btn btn-info text-mobile-md"
                   style="width: 150px"
                   data-bs-target="#update-personal-information"
                   data-bs-toggle="modal"
@@ -815,7 +864,7 @@
               <div class="modal-body text-mobile-md">
                 <div class="container mb-3">
                   <i
-                    class="bi bi-info-circle fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                    class="bi bi-info-circle fs-1 text-info d-flex justify-content-center align-items-center pb-3"
                   ></i>
 
                   <p
@@ -838,7 +887,7 @@
                 <button
                   type="button"
                   id="personal-information-btn"
-                  class="btn btn-success text-mobile-md"
+                  class="btn btn-info text-mobile-md"
                   data-bs-dismiss="modal"
                   style="width: 100px"
                 >
@@ -849,7 +898,7 @@
           </div>
         </div>
         <!--/ Modal for Update Personal Information -->
-        
+
         <!--/ Modal for Edit Data -->
       </div>
 
@@ -869,7 +918,7 @@
       </div>
       <!-- /Toast for Password Changed -->
 
-      <!-- Toast for Password Changed -->
+      <!-- Toast for Personal Information Changed -->
       <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div class="toast" id="personal-information-update">
           <div class="toast-header text-bg-info text-mobile-md">
@@ -881,7 +930,7 @@
           </div>
         </div>
       </div>
-      <!-- /Toast for Password Changed -->
+      <!-- /Toast for Personal Information Changed -->
 
       <!-- /Toast Code -->
     </main>
@@ -892,6 +941,10 @@
     <script>
       // Set the default value programmatically
       document.getElementById("gender-select").value = "male";
+    </script>
+    <script>
+      // Set the default value programmatically
+      document.getElementById("role-select").value = "admin";
     </script>
     <script>
       const toastTrigger1 = document.querySelector("#update-password-btn");
