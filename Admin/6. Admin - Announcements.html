@@ -202,18 +202,24 @@
                 class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
               >
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     System Users
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     Account Settings
                   </a>
                 </li>
-                <li>
+                <li></li>
                 <li>
                   <a href="#" class="nav-link link-body-emphasis pt-0">
                     <i class="bi bi-box-arrow-left pe-2"></i>
@@ -331,12 +337,18 @@
               </a>
               <ul class="dropdown-menu border border-1 text-small ms-1">
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     System User
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     Account Settings
                   </a>
                 </li>
@@ -373,41 +385,45 @@
     <!-- Main content -->
     <main class="main-content">
       <div class="admin-announcements-container container-flex px-4 px-lg-5">
-        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-1">ANNOUNCEMENTS LIST</h4>
+        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-1">
+          ANNOUNCEMENTS LIST
+        </h4>
 
         <!-- Search Bar for Table with Button -->
-            <div class="row g-2 pt-4">
-              <div class="col-sm-8 d-flex align-items-center">
-                <div class="input-group">
-                  <!-- Search input -->
-                  <input
-                    type="text"
-                    class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-icon"
-                    style="height: 27px; font-size: 9px"
-                  />
-                  <span
-                    class="input-group-text rounded-0 d-flex justify-content-center"
-                    id="search-icon"
-                    style="height: 27px; width: 35px"
-                  >
-                    <i class="bi bi-search text-mobile-md"></i>
-                  </span>
-                </div>
-              </div>
-              <div class="col-sm-4 float-end d-flex justify-content-end pt-2 pt-sm-0">
-                <button
-                  class="btn bg-danger text-white text-nowrap text-mobile-md border-1 fw-semibold"
-                >
-                  <i class="bi bi-plus-square-dotted text-mobile-sm pe-1"></i>
-
-                  Add New Announcement
-                </button>
-              </div>
+        <div class="row g-2 pt-4">
+          <div class="col-sm-8 d-flex align-items-center">
+            <div class="input-group">
+              <!-- Search input -->
+              <input
+                type="text"
+                class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-icon"
+                style="height: 27px; font-size: 9px"
+              />
+              <span
+                class="input-group-text rounded-0 d-flex justify-content-center"
+                id="search-icon"
+                style="height: 27px; width: 35px"
+              >
+                <i class="bi bi-search text-mobile-md"></i>
+              </span>
             </div>
-            <!-- /Search Bar for Table with Button -->
+          </div>
+          <div
+            class="col-sm-4 float-end d-flex justify-content-end pt-2 pt-sm-0"
+          >
+            <button
+              class="btn bg-danger text-white text-nowrap text-mobile-md border-1 fw-semibold"
+            >
+              <i class="bi bi-plus-square-dotted text-mobile-sm pe-1"></i>
+
+              Add New Announcement
+            </button>
+          </div>
+        </div>
+        <!-- /Search Bar for Table with Button -->
 
         <!-- Table -->
         <div class="table-responsive text-nowrap">
@@ -419,7 +435,9 @@
                 <th style="min-width: 250px">Announcement Details</th>
                 <th>Date</th>
                 <th>User ID</th>
-                <th class="sticky-right-1 d-flex justify-content-center">Action</th>
+                <th class="sticky-right-1">
+                  <p class="d-flex justify-content-center p-0 m-0">Action</p>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -542,7 +560,6 @@
         </div>
         <!-- /Table -->
 
-        <!-- /Table -->
         <!-- Table Footer -->
         <div class="row pt-1">
           <div class="col-7 pt-1">

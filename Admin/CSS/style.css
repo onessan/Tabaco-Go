@@ -162,7 +162,7 @@ tabaco-go {
 }
 
 .text-mobile-md {
-  font-size: 13px;
+  font-size: 13px !important; /* Override if needed */
 }
 /* Smaller styles for mobile screens */
 @media (max-width: 576px) {
@@ -204,16 +204,17 @@ th {
 }
 /* Sticky Column & Row */
 
-
-@media (min-width: 576px){
+@media (min-width: 576px) {
   /* Search Bar*/
-.adaptive-search-bar{
-  max-width: 200px;
+  .adaptive-search-bar {
+    max-width: 200px;
+  }
 }
-}
-
-
 /* /Search Bar */
+
+/*Floating Form Control*/
+
+/*Floating Form Control*/
 
 /* Bellow are for the Contents -------------------------------------------------*/
 
