@@ -92,7 +92,9 @@ tabaco-go {
 .bg-dark-grey {
   background-color: rgb(88 112 130);
 }
-.bg-orange
+.bg-yellow {
+  background-color: rgb(255 198 42);
+}
 
 /* Text Color */
 .text-dark-blue {
