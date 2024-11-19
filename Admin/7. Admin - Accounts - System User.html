@@ -941,7 +941,9 @@
                     </div>
                   </div>
                   <br />
-                  <h6 class="ps-2 pb-1" style="font-size: 12px;">PERSONAL INFORMATION</h3>
+                  <h6 class="ps-2 pb-1" style="font-size: 12px">
+                    PERSONAL INFORMATION:
+                  </h6>
                   <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
                     <div class="col">
                       <div class="container text-mobile-md">
@@ -1039,10 +1041,10 @@
                   type="button"
                   class="btn btn-success text-mobile-md"
                   style="width: 150px"
-                  data-bs-target="#update-personal-information"
+                  data-bs-target="#confirm-add-staff"
                   data-bs-toggle="modal"
                 >
-                  Update
+                  Add
                 </button>
               </div>
             </div>
@@ -1050,10 +1052,10 @@
         </div>
         <!--  /Modal for Add Staff -->
 
-        <!--  Modal for Update Personal Information -->
+        <!--  Modal for Confirm Add Staff -->
         <div
           class="modal fade"
-          id="update-personal-information"
+          id="confirm-add-staff"
           tabindex="-1"
           aria-hidden="true"
         >
@@ -1072,12 +1074,24 @@
                   <i
                     class="bi bi-info-circle fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
                   ></i>
-
                   <p
-                    class="d-flex align-items-center justify-content-center fw-semibold m-0"
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
                   >
-                    Update Personal Information?
+                    ADD NEW STAFF?
                   </p>
+                  <div
+                    class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
+                  >
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="check-add-staff"
+                      value="option1"
+                    />
+                    <label for="check-add-staff" class="form-chechk-label ps-2"
+                      >Confirm that the Email Adress and Role are correct</label
+                    >
+                  </div>
                 </div>
               </div>
               <div class="modal-footer border-0 d-flex justify-content-center">
@@ -1085,14 +1099,14 @@
                   type="button"
                   class="btn bg-body-tertiary text-mobile-md"
                   style="width: 100px"
-                  data-bs-target="#edit-data"
+                  data-bs-target="#add-staff"
                   data-bs-toggle="modal"
                 >
                   Back
                 </button>
                 <button
                   type="button"
-                  id="personal-information-btn"
+                  id="add-staff-confirm-btn"
                   class="btn btn-success text-mobile-md"
                   data-bs-dismiss="modal"
                   style="width: 100px"
@@ -1103,14 +1117,39 @@
             </div>
           </div>
         </div>
-        <!--/ Modal for Update Personal Information -->
+        <!--/ Modal for Confirm Add Staff -->
 
         <!--/ Modal for Edit Data -->
+        <!-- Toast for Staff Added -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="add-staff-confirm">
+            <div class="toast-header text-bg-success text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-success text-mobile-md">
+              New staff sdded successfully
+            </div>
+          </div>
+        </div>
+        <!-- /Toast for Staff Added -->
       </div>
     </main>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      const toastTrigger1 = document.querySelector("#add-staff-confirm-btn");
+      const toast1 = document.querySelector("#add-staff-confirm");
+
+      if (toastTrigger1) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast1);
+
+        toastTrigger1.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
   </body>
 </html>
