@@ -416,6 +416,8 @@
           >
             <button
               class="btn btn-danger text-nowrap text-mobile-md border-1 fw-semibold"
+              data-bs-toggle="modal"
+              data-bs-target="#add-new-announcement"
             >
               <i class="bi bi-plus-square-dotted text-mobile-sm pe-1"></i>
 
@@ -633,10 +635,280 @@
         </div>
         <!-- /Button group of Export CSV | Export PDF | Print Report -->
       </div>
+
+      <!--  Modal for Add Staff -->
+      <div
+        class="modal fade"
+        id="add-new-announcement"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0 text-mobile-md">
+              <h4 class="container fw-bold fs-6">ADD NEW ANNOUNCEMENT</h4>
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container pe-3 mb-1">
+                <!-- Personal Information -->
+
+                <div class="row row-cols-1 g-3 px-2">
+                  <div class="col">
+                    <div class="form-floating text-mobile-md">
+                      <textarea
+                        class="form-control text-mobile-md"
+                        placeholder="Leave the Title here"
+                        id="annnouncements-title"
+                      ></textarea>
+                      <label for="annnouncements-title"
+                        >Announcement Title:</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating text-mobile-md">
+                      <textarea
+                        class="form-control text-mobile-md"
+                        placeholder="Leave the details here"
+                        id="announcements-details"
+                        style="height: 100px"
+                      ></textarea>
+                      <label for="announcements-details"
+                        >Announcement Details:</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                  <div class="col">
+                    <div class="container text-mobile-md z-0">
+                      <div class="form-floating mb-3 z-0">
+                        <select
+                          class="form-select text-mobile-md"
+                          aria-label="Default select example"
+                          id="durationSelect"
+                          onchange="handleDurationChange()"
+                          style="background-color: gba(0, 0, 0, 0.5)"
+                        >
+                          <option value="1hour" selected>1 Hour</option>
+                          <option value="2hour">2 Hours</option>
+                          <option value="6hour">6 Hours</option>
+                          <option value="12hour">12 Hours</option>
+                          <option value="custom">Custom Duration</option>
+                        </select>
+                        <label
+                          id="durationSelect"
+                          for="durationSelect-select text-mobile-md"
+                          >Announcement Duration:</label
+                        >
+                      </div>
+                      <!-- Floating custom duration input -->
+                      <div
+                        class="form-floating d-none pb-4"
+                        id="customDurationContainer"
+                      >
+                        <input
+                          type="datetime-local"
+                          class="form-control"
+                          id="customDuration"
+                          placeholder="Set custom duration"
+                        />
+                        <label for="customDuration">Set Custom Duration</label>
+                      </div>
+                      <!-- /Floating custom duration input -->
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="container text-mobile-md z-0">
+                      <div class="form-floating mb-3 z-0">
+                        <select
+                          class="form-select text-mobile-md"
+                          aria-label="Default select example"
+                          id="announcements-type"
+                          style="background-color: gba(0, 0, 0, 0.5)"
+                        >
+                          <option value="normal" selected>Normal</option>
+                          <option value="important">Important</option>
+                          <option value="Urgent">Urgent</option>
+                        </select>
+                        <label
+                          id="announcements-type-label"
+                          for="announcements-type text-mobile-md"
+                          >Announcement Type:</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" modal-footer border-0" style="margin-right: 30px;">
+              <button
+                type="button"
+                class="btn bg-body-tertiary text-mobile-md"
+                data-bs-dismiss="modal"
+                style="width: 150px"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-warning text-mobile-md"
+                style="width: 150px"
+                data-bs-target="#confirm-add-new-announcement"
+                data-bs-toggle="modal"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  /Modal for Add Staff -->
+
+      <!--  Modal for Confirm Add Staff -->
+      <div
+        class="modal fade"
+        id="confirm-add-new-announcement"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-info-circle fs-1 text-success d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                >
+                  ADD NEW STAFF?
+                </p>
+                <div
+                  class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
+                >
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="check-add-new-announcement"
+                    value="option1"
+                  />
+                  <label
+                    for="check-add-new-announcement"
+                    class="form-chechk-label ps-2"
+                    >Confirm that the Email Adress and Role are correct</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn bg-body-tertiary text-mobile-md"
+                style="width: 100px"
+                data-bs-target="#add-new-announcement"
+                data-bs-toggle="modal"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                id="add-new-announcement-confirm-btn"
+                class="btn btn-success text-mobile-md"
+                onclick="submitDuration()"
+                data-bs-dismiss="modal"
+                style="width: 100px"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Modal for Confirm Add Staff -->
+
+      <!-- Toast for Staff Added -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="add-new-announcement-confirm">
+          <div class="toast-header text-bg-warning text-mobile-md">
+            <div class="me-auto">Admin</div>
+            <small>Just Now</small>
+          </div>
+          <div class="toast-body text-bg-warning text-mobile-md fw-normal">
+            New staff added successfully.
+          </div>
+        </div>
+      </div>
+      <!-- /Toast for Staff Added -->
+
+      <!-- /Modal -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      function handleDurationChange() {
+        const durationSelect = document.getElementById("durationSelect");
+        const customDurationContainer = document.getElementById(
+          "customDurationContainer"
+        );
+        if (durationSelect.value === "custom") {
+          customDurationContainer.classList.remove("d-none");
+        } else {
+          customDurationContainer.classList.add("d-none");
+        }
+      }
+
+      function submitDuration() {
+        const durationSelect = document.getElementById("durationSelect");
+        const customDuration = document.getElementById("customDuration");
+        const result = document.getElementById(
+          "add-new-announcement-confirm-btn"
+        );
+
+        if (durationSelect.value === "custom") {
+          const customValue = customDuration.value;
+          if (customValue) {
+            result.textContent = `Selected Custom Duration: ${customValue}`;
+          } else {
+            result.textContent = "Please select a custom date/time.";
+          }
+        } else {
+          result.textContent = `Selected Duration: ${durationSelect.value} Hour(s)`;
+        }
+      }
+    </script>
+    <script>
+      const toastTrigger1 = document.querySelector("#update-password-btn");
+      const toast1 = document.querySelector("#password-update");
+
+      if (toastTrigger1) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast1);
+
+        toastTrigger1.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
   </body>
 </html>
