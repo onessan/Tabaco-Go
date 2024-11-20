@@ -415,7 +415,7 @@
             class="col-sm-4 float-end d-flex justify-content-end pt-2 pt-sm-0"
           >
             <button
-              class="btn btn-danger text-nowrap text-mobile-md border-1 fw-semibold"
+              class="btn btn-success text-nowrap text-mobile-md border-1 fw-semibold"
               data-bs-toggle="modal"
               data-bs-target="#add-new-announcement"
             >
@@ -458,11 +458,19 @@
                 <td>Nov 17, 2014</td>
                 <td>7276-11172024</td>
                 <td class="text-wrap py-0 my-0 ms-auto sticky-right-1 pb-0">
-                  <button class="btn d-inline-block w-100">
+                  <button
+                    class="btn d-inline-block w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#edit-announcement"
+                  >
                     <!-- Edit Button -->
                     <i class="bi bi-pencil-square"></i>
                   </button>
-                  <button class="btn d-inline-block w-100 text-danger pt-0">
+                  <button
+                    class="btn d-inline-block w-100 text-danger pt-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#delete-announcement"
+                  >
                     <!-- Delete Button -->
                     <i class="bi bi-trash"></i>
                   </button>
@@ -483,11 +491,19 @@
                 <td>Nov 17, 2014</td>
                 <td>7276-11172024</td>
                 <td class="text-wrap py-0 my-0 ms-auto sticky-right-1 pb-0">
-                  <button class="btn d-inline-block w-100">
+                  <button
+                    class="btn d-inline-block w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#edit-announcement"
+                  >
                     <!-- Edit Button -->
                     <i class="bi bi-pencil-square"></i>
                   </button>
-                  <button class="btn d-inline-block w-100 text-danger pt-0">
+                  <button
+                    class="btn d-inline-block w-100 text-danger pt-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#delete-announcement"
+                  >
                     <!-- Delete Button -->
                     <i class="bi bi-trash"></i>
                   </button>
@@ -636,7 +652,8 @@
         <!-- /Button group of Export CSV | Export PDF | Print Report -->
       </div>
 
-      <!--  Modal for Add Staff -->
+      <!-- Modals -->
+      <!--  Add Announcement -->
       <div
         class="modal fade"
         id="add-new-announcement"
@@ -645,7 +662,7 @@
       >
         <div class="modal-dialog modal-xl modal-dialog-centered">
           <div class="modal-content">
-            <div class="modal-header border-0 text-mobile-md">
+            <div class="modal-header border-0 text-mobile-md fw-semibold">
               <h4 class="container fw-bold fs-6">ADD NEW ANNOUNCEMENT</h4>
               <button
                 type="button"
@@ -656,13 +673,11 @@
             </div>
             <div class="modal-body text-mobile-md">
               <div class="container pe-3 mb-1">
-                <!-- Personal Information -->
-
                 <div class="row row-cols-1 g-3 px-2">
                   <div class="col">
                     <div class="form-floating text-mobile-md">
                       <textarea
-                        class="form-control text-mobile-md"
+                        class="form-control text-mobile-md fw-semibold"
                         placeholder="Leave the Title here"
                         id="annnouncements-title"
                       ></textarea>
@@ -752,7 +767,7 @@
                 </div>
               </div>
             </div>
-            <div class=" modal-footer border-0" style="margin-right: 30px;">
+            <div class="modal-footer border-0" style="margin-right: 30px">
               <button
                 type="button"
                 class="btn bg-body-tertiary text-mobile-md"
@@ -763,7 +778,7 @@
               </button>
               <button
                 type="button"
-                class="btn btn-warning text-mobile-md"
+                class="btn btn-success text-mobile-md"
                 style="width: 150px"
                 data-bs-target="#confirm-add-new-announcement"
                 data-bs-toggle="modal"
@@ -774,9 +789,9 @@
           </div>
         </div>
       </div>
-      <!--  /Modal for Add Staff -->
+      <!--  /Add Announcement -->
 
-      <!--  Modal for Confirm Add Staff -->
+      <!--  Confirm Add Announcement -->
       <div
         class="modal fade"
         id="confirm-add-new-announcement"
@@ -796,71 +811,338 @@
             <div class="modal-body text-mobile-md">
               <div class="container mb-3">
                 <i
-                  class="bi bi-info-circle fs-1 text-success d-flex justify-content-center align-items-center pb-3"
+                  class="bi bi-megaphone fs-1 text-success d-flex justify-content-center align-items-center pb-3"
                 ></i>
                 <p
                   class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
                 >
-                  ADD NEW STAFF?
+                  ADD NEW ANNOUNCEMENT?
                 </p>
-                <div
-                  class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="add-new-announcement-confirm-btn"
+                  class="btn btn-success text-mobile-md"
+                  data-bs-dismiss="modal"
+                  onclick="submitDuration()"
                 >
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="check-add-new-announcement"
-                    value="option1"
-                  />
-                  <label
-                    for="check-add-new-announcement"
-                    class="form-chechk-label ps-2"
-                    >Confirm that the Email Adress and Role are correct</label
-                  >
+                  Confirm
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#add-new-announcement"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Confirm Add Announcement -->
+
+      <!--  Edit Announcement -->
+      <div
+        class="modal fade"
+        id="edit-announcement"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0 text-mobile-md">
+              <h4 class="container fw-bold fs-6">UPDATE ANNOUNCEMENT</h4>
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container pe-3 mb-1">
+                <!-- Personal Information -->
+
+                <div class="row row-cols-1 g-3 px-2">
+                  <div class="col">
+                    <div class="form-floating text-mobile-md">
+                      <textarea
+                        class="form-control text-mobile-md fw-semibold"
+                        placeholder="Leave the Title here"
+                        id="annnouncements-title"
+                      >
+Lorem ipsum, dolor sit</textarea
+                      >
+                      <label for="annnouncements-title"
+                        >Announcement Title:</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating text-mobile-md">
+                      <textarea
+                        class="form-control text-mobile-md"
+                        placeholder="Leave the details here"
+                        id="announcements-details"
+                        style="height: 100px"
+                      >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate iste repellat consequuntur mollitia cumque iure ex. Unde maxime aspernatur fugiat minima distinctio perferendis aut ad non. Obcaecati, doloremque animi.</textarea
+                      >
+                      <label for="announcements-details"
+                        >Announcement Details:</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                  <div class="col">
+                    <div class="container text-mobile-md z-0">
+                      <div class="form-floating mb-3 z-0">
+                        <select
+                          class="form-select text-mobile-md"
+                          aria-label="Default select example"
+                          id="durationSelect"
+                          onchange="handleDurationChange()"
+                          style="background-color: gba(0, 0, 0, 0.5)"
+                        >
+                          <option value="1hour" selected>1 Hour</option>
+                          <option value="2hour">2 Hours</option>
+                          <option value="6hour">6 Hours</option>
+                          <option value="12hour">12 Hours</option>
+                          <option value="custom">Custom Duration</option>
+                        </select>
+                        <label
+                          id="durationSelect"
+                          for="durationSelect-select text-mobile-md"
+                          >Announcement Duration:</label
+                        >
+                      </div>
+                      <!-- Floating custom duration input -->
+                      <div
+                        class="form-floating d-none pb-4"
+                        id="customDurationContainer"
+                      >
+                        <input
+                          type="datetime-local"
+                          class="form-control"
+                          id="customDuration"
+                          placeholder="Set custom duration"
+                        />
+                        <label for="customDuration">Set Custom Duration</label>
+                      </div>
+                      <!-- /Floating custom duration input -->
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="container text-mobile-md z-0">
+                      <div class="form-floating mb-3 z-0">
+                        <select
+                          class="form-select text-mobile-md"
+                          aria-label="Default select example"
+                          id="announcements-type"
+                          style="background-color: gba(0, 0, 0, 0.5)"
+                        >
+                          <option value="normal" selected>Normal</option>
+                          <option value="important">Important</option>
+                          <option value="Urgent">Urgent</option>
+                        </select>
+                        <label
+                          id="announcements-type-label"
+                          for="announcements-type text-mobile-md"
+                          >Announcement Type:</label
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="modal-footer border-0 d-flex justify-content-center">
+            <div class="modal-footer border-0" style="margin-right: 30px">
               <button
                 type="button"
                 class="btn bg-body-tertiary text-mobile-md"
-                style="width: 100px"
-                data-bs-target="#add-new-announcement"
-                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+                style="width: 150px"
               >
-                Back
+                Cancel
               </button>
               <button
                 type="button"
-                id="add-new-announcement-confirm-btn"
-                class="btn btn-success text-mobile-md"
-                onclick="submitDuration()"
-                data-bs-dismiss="modal"
-                style="width: 100px"
+                class="btn btn-info text-mobile-md"
+                style="width: 150px"
+                data-bs-target="#confirm-update-announcement"
+                data-bs-toggle="modal"
               >
-                Confirm
+                Update
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!--/ Modal for Confirm Add Staff -->
+      <!--  /Edit Announcement -->
 
-      <!-- Toast for Staff Added -->
-      <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="add-new-announcement-confirm">
-          <div class="toast-header text-bg-warning text-mobile-md">
-            <div class="me-auto">Admin</div>
-            <small>Just Now</small>
-          </div>
-          <div class="toast-body text-bg-warning text-mobile-md fw-normal">
-            New staff added successfully.
+      <!--  Confirm Update Announcement -->
+      <div
+        class="modal fade"
+        id="confirm-update-announcement"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-cloud-arrow-up fs-1 text-info d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                >
+                  UPDATE ANNOUNCEMENT?
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="update-announcement-confirm-btn"
+                  class="btn btn-info text-mobile-md"
+                  data-bs-dismiss="modal"
+                  onclick="submitDuration()"
+                >
+                  Confirm
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#add-new-announcement"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- /Toast for Staff Added -->
+      <!--/ Confirm Update Announcement -->
 
-      <!-- /Modal -->
+      <!--  Delete Announcement -->
+      <div
+        class="modal fade"
+        id="delete-announcement"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-exclamation-diamond fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                >
+                  DELETE ANNOUNCEMENT?
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="delete-announcement-btn"
+                  class="btn btn-danger text-mobile-md"
+                  data-bs-dismiss="modal"
+                >
+                  Confirm
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#add-new-announcement"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Delete Announcement -->
+      <!-- /Modals -->
+
+      <!-- Toast -->
+      <!-- New Announcement -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="add-new-announcement-confirm">
+          <div class="toast-header text-bg-success text-mobile-md">
+            <div class="me-auto">Admin</div>
+            <small>Just Now</small>
+          </div>
+          <div class="toast-body text-bg-success text-mobile-md fw-normal">
+            New Announcement added successfully.
+          </div>
+        </div>
+      </div>
+      <!-- /New Announcement -->
+
+      <!-- Update Annpuncement -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="update-announcement-confirm">
+          <div class="toast-header text-bg-info text-mobile-md">
+            <div class="me-auto">Admin</div>
+            <small>Just Now</small>
+          </div>
+          <div class="toast-body text-bg-info text-mobile-md fw-normal">
+            Announcement updated successfully.
+          </div>
+        </div>
+      </div>
+      <!-- /Update Annpuncement -->
+
+      <!-- Delete Annpuncement -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="delete-announcement-confirm">
+          <div class="toast-header text-bg-danger text-mobile-md">
+            <div class="me-auto">Admin</div>
+            <small>Just Now</small>
+          </div>
+          <div class="toast-body text-bg-danger text-mobile-md fw-normal">
+            Announcement deleted successfully.
+          </div>
+        </div>
+      </div>
+      <!-- /Delete Annpuncement -->
+      <!-- Toast -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
@@ -899,13 +1181,41 @@
       }
     </script>
     <script>
-      const toastTrigger1 = document.querySelector("#update-password-btn");
-      const toast1 = document.querySelector("#password-update");
+      const toastTrigger1 = document.querySelector(
+        "#add-new-announcement-confirm-btn"
+      );
+      const toast1 = document.querySelector("#add-new-announcement-confirm");
 
       if (toastTrigger1) {
         const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast1);
 
         toastTrigger1.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const toastTrigger2 = document.querySelector(
+        "#update-announcement-confirm-btn"
+      );
+      const toast2 = document.querySelector("#update-announcement-confirm");
+
+      if (toastTrigger2) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast2);
+
+        toastTrigger2.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const toastTrigger3 = document.querySelector("#delete-announcement-btn");
+      const toast3 = document.querySelector("#delete-announcement-confirm");
+
+      if (toastTrigger3) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast3);
+
+        toastTrigger3.addEventListener("click", () => {
           toastBoootstrap.show();
         });
       }
