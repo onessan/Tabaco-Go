@@ -674,30 +674,34 @@
               </div>
               <div class="modal-body text-mobile-md">
                 <div class="container pe-3 mb-1">
-                  <div class="row row-cols-1 g-3 px-2">
+                  <div class="row row-cols-1 g-3">
                     <div class="col">
-                      <div class="form-floating text-mobile-md">
-                        <textarea
-                          class="form-control text-mobile-md fw-semibold"
-                          placeholder="Leave the Title here"
-                          id="annnouncements-title"
-                        ></textarea>
-                        <label for="annnouncements-title"
-                          >Announcement Title:</label
-                        >
+                      <div class="container text-mobile-md">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control text-mobile-md fw-semibold"
+                            placeholder="Leave the Title here"
+                            id="annnouncements-title"
+                          ></textarea>
+                          <label for="annnouncements-title"
+                            >Announcement Title:</label
+                          >
+                        </div>
                       </div>
                     </div>
                     <div class="col">
-                      <div class="form-floating text-mobile-md">
-                        <textarea
-                          class="form-control text-mobile-md"
-                          placeholder="Leave the details here"
-                          id="announcements-details"
-                          style="height: 100px"
-                        ></textarea>
-                        <label for="announcements-details"
-                          >Announcement Details:</label
-                        >
+                      <div class="container text-mobile-md">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control text-mobile-md"
+                            placeholder="Leave the details here"
+                            id="announcements-details"
+                            style="height: 100px"
+                          ></textarea>
+                          <label for="announcements-details"
+                            >Announcement Details:</label
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -770,25 +774,36 @@
                   </div>
                 </div>
               </div>
-              <div class="modal-footer border-0" style="margin-right: 30px">
-                <button
-                  type="button"
-                  class="btn bg-body-tertiary text-mobile-md"
-                  data-bs-dismiss="modal"
-                  style="width: 150px"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-success text-mobile-md"
-                  style="width: 150px"
-                  data-bs-target="#confirm-add-new-announcement"
-                  data-bs-toggle="modal"
-                  onclick="submitDuration()"
-                >
-                  Add
-                </button>
+              <div class="modal-footer border-0">
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col"></div>
+                    <div class="col">
+                      <div class="row cols-2 g-2">
+                        <div class="col d-grid">
+                          <button
+                            type="button"
+                            class="btn bg-body-tertiary text-mobile-md"
+                            data-bs-dismiss="modal"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                        <div class="col d-grid">
+                          <button
+                            type="button"
+                            class="btn btn-success text-mobile-md"
+                            data-bs-target="#confirm-add-new-announcement"
+                            data-bs-toggle="modal"
+                            onclick="submitDuration()"
+                          >
+                            Add
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -872,34 +887,38 @@
                 <div class="container pe-3 mb-1">
                   <!-- Personal Information -->
 
-                  <div class="row row-cols-1 g-3 px-2">
+                  <div class="row row-cols-1 g-3">
                     <div class="col">
-                      <div class="form-floating text-mobile-md">
-                        <textarea
-                          class="form-control text-mobile-md fw-semibold"
-                          placeholder="Leave the Title here"
-                          id="annnouncements-title"
-                        >
+                      <div class="container text-mobile-md">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control text-mobile-md fw-semibold"
+                            placeholder="Leave the Title here"
+                            id="annnouncements-title"
+                          >
 Lorem ipsum, dolor sit</textarea
-                        >
-                        <label for="annnouncements-title"
-                          >Announcement Title:</label
-                        >
+                          >
+                          <label for="annnouncements-title"
+                            >Announcement Title:</label
+                          >
+                        </div>
                       </div>
                     </div>
                     <div class="col">
-                      <div class="form-floating text-mobile-md">
-                        <textarea
-                          class="form-control text-mobile-md"
-                          placeholder="Leave the details here"
-                          id="announcements-details"
-                          style="height: 100px"
-                        >
+                      <div class="container text-mobile-md">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control text-mobile-md"
+                            placeholder="Leave the details here"
+                            id="announcements-details"
+                            style="height: 100px"
+                          >
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate iste repellat consequuntur mollitia cumque iure ex. Unde maxime aspernatur fugiat minima distinctio perferendis aut ad non. Obcaecati, doloremque animi.</textarea
-                        >
-                        <label for="announcements-details"
-                          >Announcement Details:</label
-                        >
+                          >
+                          <label for="announcements-details"
+                            >Announcement Details:</label
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -972,24 +991,35 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate iste 
                   </div>
                 </div>
               </div>
-              <div class="modal-footer border-0" style="margin-right: 30px">
-                <button
-                  type="button"
-                  class="btn bg-body-tertiary text-mobile-md"
-                  data-bs-dismiss="modal"
-                  style="width: 150px"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-info text-mobile-md"
-                  style="width: 150px"
-                  data-bs-target="#confirm-update-announcement"
-                  data-bs-toggle="modal"
-                >
-                  Update
-                </button>
+              <div class="modal-footer border-0">
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col"></div>
+                    <div class="col">
+                      <div class="row cols-2 g-2">
+                        <div class="col d-grid">
+                          <button
+                            type="button"
+                            class="btn bg-body-tertiary text-mobile-md"
+                            data-bs-dismiss="modal"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                        <div class="col d-grid">
+                          <button
+                            type="button"
+                            class="btn btn-info text-mobile-md"
+                            data-bs-target="#confirm-update-announcement"
+                            data-bs-toggle="modal"
+                          >
+                            Update
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
