@@ -1284,7 +1284,7 @@
                   <p
                     class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
                   >
-                    DO YOU WANT TO CONFIRM ADDING THIS TO THE SCHEDULE?
+                    CONFIRM ADDING THIS TO THE SCHEDULE?
                   </p>
                   <div
                     class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
@@ -1502,7 +1502,8 @@
                         <div class="d-grid text-mobile-md">
                           <button
                             class="btn border-danger text-danger text-mobile-md"
-                            id="candel-schedule-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirm-cancel-vessel-schedule"
                           >
                             Cancel this Schedule
                           </button>
@@ -1514,7 +1515,8 @@
                         <div class="d-grid text-mobile-md">
                           <button
                             class="btn border-secondary text-secondary text-mobile-md"
-                            id="remove-schedule-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirm-remove-vessel-schedule"
                           >
                             Remove this Schedule
                           </button>
@@ -1592,7 +1594,7 @@
                 <div class="d-grid vstack gap-2">
                   <button
                     type="button"
-                    id="update-vessel-info-info-btn"
+                    id="update-vessel-info-btn"
                     class="btn btn-info text-mobile-md"
                     data-bs-dismiss="modal"
                   >
@@ -1612,6 +1614,114 @@
           </div>
         </div>
         <!--/ Confirm Update Vessel Schedule -->
+
+        <!--  Confirm Cancel Vessel Schedule -->
+        <div
+          class="modal fade"
+          id="confirm-cancel-vessel-schedule"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-cloud-arrow-up fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                  >
+                    CANCEL THIS VESSEL SCHEDULE?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="cancel-vessel-schedule-btn"
+                    class="btn btn-danger text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#edit-vessel-schedule"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Confirm Cancel Vessel Schedule -->
+
+        <!--  Confirm Remove Vessel Schedule -->
+        <div
+          class="modal fade"
+          id="confirm-remove-vessel-schedule"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-exclamation-triangle fs-1 d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                  >
+                    REMOVE THIS VESSEL SCHEDULE?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="remove-vessel-schedule-btn"
+                    class="btn btn-secondary text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#edit-vessel-schedule"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Confirm Remove Vessel Schedule -->
       </div>
       <!-- /Modal Container -->
 
@@ -1625,7 +1735,7 @@
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-warning text-mobile-md fw-normal">
-              The new vessel schedule has been added successfully.
+              New vessel schedule has been added successfully.
             </div>
           </div>
         </div>
@@ -1633,17 +1743,45 @@
 
         <!-- Update Vessel Schedule -->
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
-          <div class="toast" id="update-vessel-info-info">
+          <div class="toast" id="update-vessel-info">
             <div class="toast-header text-bg-info text-mobile-md">
               <div class="me-auto">Admin</div>
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-info text-mobile-md fw-normal">
-              Vessel chedule and information updated successfully.
+              Vessel schedule and information updated successfully.
             </div>
           </div>
         </div>
         <!-- /Update Vessel Schedule -->
+
+        <!-- Cancel Vessel Schedule -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="cancel-vessel-schedule">
+            <div class="toast-header text-bg-danger text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-danger text-mobile-md fw-normal">
+              Vessel schedule canceled successfully.
+            </div>
+          </div>
+        </div>
+        <!-- /Cancel Vessel Schedule -->
+
+        <!-- Cancel Vessel Schedule -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="remove-vessel-schedule">
+            <div class="toast-header text-bg-secondary text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-secondary text-mobile-md fw-normal">
+              Vessel schedule canceled successfully.
+            </div>
+          </div>
+        </div>
+        <!-- /Cancel Vessel Schedule -->
       </div>
       <!-- Toast Container -->
     </main>
@@ -1679,15 +1817,41 @@
       }
     </script>
     <script>
-      const toastTrigger2 = document.querySelector(
-        "#update-vessel-info-info-btn"
-      );
-      const toast2 = document.querySelector("#update-vessel-info-info");
+      const toastTrigger2 = document.querySelector("#update-vessel-info-btn");
+      const toast2 = document.querySelector("#update-vessel-info");
 
       if (toastTrigger2) {
         const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast2);
 
         toastTrigger2.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const toastTrigger3 = document.querySelector(
+        "#cancel-vessel-schedule-btn"
+      );
+      const toast3 = document.querySelector("#cancel-vessel-schedule");
+
+      if (toastTrigger3) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast3);
+
+        toastTrigger3.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const toastTrigger4 = document.querySelector(
+        "#remove-vessel-schedule-btn"
+      );
+      const toast4 = document.querySelector("#remove-vessel-schedule");
+
+      if (toastTrigger4) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast4);
+
+        toastTrigger4.addEventListener("click", () => {
           toastBoootstrap.show();
         });
       }
