@@ -201,19 +201,30 @@
                 class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
               >
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     System Users
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     Account Settings
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="#"
+                    class="nav-link link-body-emphasis pt-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sign-out"
+                  >
                     <i class="bi bi-box-arrow-left pe-2"></i>
                     Sign Out
                   </a>
@@ -328,17 +339,28 @@
               </a>
               <ul class="dropdown-menu border border-1 text-small ms-1">
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     System User
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     Account Settings
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="#"
+                    class="nav-link link-secondary dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sign-out"
+                  >
                     Sign Out
                   </a>
                 </li>
@@ -369,9 +391,7 @@
 
     <!-- Main content -->
     <main class="main-content mb-5">
-      
       <div class="admin-dashboard-container container">
-        
         <div class="container pt-sm-3 pt-lg-0">
           <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-3">
             <!-- Card 1: Appointments Overview -->
@@ -392,7 +412,9 @@
                     <div
                       class="d-flex align-items-center justify-content-center pt-1"
                     >
-                      <h3 class="fw-bold text-semi-dark-blue fws-bold fst-italic ">
+                      <h3
+                        class="fw-bold text-semi-dark-blue fws-bold fst-italic"
+                      >
                         98<span
                           class="h3 link-body-emphasis d-inline-block align-items-center text-secondary"
                           >/</span
@@ -591,6 +613,55 @@
           </div>
         </div>
       </div>
+
+      <!-- Sign Out Modal -->
+      <div class="modal fade" id="sign-out" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-emoji-frown fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                >
+                  ARE YOU SURE TO SIGN OUT?
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="sign-out-confirm"
+                  class="btn btn-danger text-mobile-md"
+                  data-bs-dismiss="modal"
+                >
+                  Sign Out
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign Out Modal -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->

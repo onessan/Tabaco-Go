@@ -221,7 +221,9 @@
                 </li>
                 <li></li>
                 <li>
-                  <a href="#" class="nav-link link-body-emphasis pt-0">
+                  <a href="#" class="nav-link link-body-emphasis pt-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#sign-out">
                     <i class="bi bi-box-arrow-left pe-2"></i>
                     Sign Out
                   </a>
@@ -353,7 +355,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link link-secondary dropdown-item">
+                  <a href="#" class="nav-link link-secondary dropdown-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#sign-out">
                     Sign Out
                   </a>
                 </li>
@@ -1145,6 +1149,55 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate iste 
         <!-- /Delete Annpuncement -->
       </div>
       <!-- Toast Container -->
+
+      <!-- Sign Out Modal -->
+      <div class="modal fade" id="sign-out" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-emoji-frown fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                >
+                  ARE YOU SURE TO SIGN OUT?
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="sign-out-confirm"
+                  class="btn btn-danger text-mobile-md"
+                  data-bs-dismiss="modal"
+                >
+                  Sign Out
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign Out Modal -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
