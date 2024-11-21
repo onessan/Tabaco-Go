@@ -460,11 +460,11 @@
                 class="col-sm-4 float-end d-flex justify-content-end pt-2 pt-sm-0"
               >
                 <button
-                  class="btn bg-semi-dark-blue text-white text-nowrap text-mobile-md border-1 fw-semibold"
-                >
-                  <i class="bi bi-plus-square-dotted text-mobile-sm pe-1"
+                  class="btn btn-success text-white text-nowrap text-mobile-md border-1 fw-semibold"
                   data-bs-toggle="modal"
-                  data-bs-target="#new-schedule"></i>
+                  data-bs-target="#add-schedule"
+                >
+                  <i class="bi bi-plus-square-dotted text-mobile-sm pe-1"></i>
 
                   Add New Schedule
                 </button>
@@ -481,7 +481,7 @@
                     <th>#</th>
                     <th>Vessel No.</th>
                     <th>Vessel Name</th>
-                    <th>Departed Time</th>
+                    <th>Departure Time</th>
                     <th>Destination</th>
                     <th>Capacity</th>
                     <th>Date Scheduled</th>
@@ -1007,7 +1007,441 @@
         <!-- /Tabs Contents -->
       </div>
 
-      
+      <!-- Modal Container -->
+      <div class="modal-container">
+        <!--  Add New Schedule -->
+        <div
+          class="modal fade"
+          id="add-schedule"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">ADD TRIP SCHEDULE</h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md pt-0">
+                <div class="container pe-3 mb-5">
+                  <br />
+
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="first-name"
+                            placeholder="Fisrt Name"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >First Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="last-name"
+                            placeholder="Last Name"
+                          />
+                          <label for="last-name text-mobile-md"
+                            >Last Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="sufix"
+                            placeholder="eg. Jr."
+                          />
+                          <label for="sufix text-mobile-md">Sufix:</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="gender-select"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Prefer not to say</option>
+                          </select>
+                          <label
+                            id="gender-label"
+                            for="gender-select text-mobile-md"
+                            >Gender:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="date"
+                            id="dateFrom"
+                            class="form-control text-mobile-sm"
+                          />
+                          <label for="first-name text-mobile-md"
+                            >Birthday:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 150px"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success text-mobile-md"
+                  style="width: 150px"
+                  data-bs-target="#confirm-add-staff"
+                  data-bs-toggle="modal"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  /Add New Schedule -->
+
+        <!-- Confirm Add Staff -->
+        <div
+          class="modal fade"
+          id="confirm-add-staff"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-info-circle fs-1 text-success d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                  >
+                    ADD NEW STAFF?
+                  </p>
+                  <div
+                    class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
+                  >
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="check-add-staff"
+                      value="option1"
+                    />
+                    <label for="check-add-staff" class="form-chechk-label ps-2"
+                      >Confirm that the Email Adress and Role are correct</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="add-staff-confirm-btn"
+                    class="btn btn-success text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#add-staff"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/Confirm Add Staff -->
+
+        <!-- Edit Staff Information -->
+        <div
+          class="modal fade"
+          id="edit-staff"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">EDIT STAFF INFORMATION</h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container pe-3 mb-5">
+                  <!-- Personal Information -->
+
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="email"
+                            class="form-control-plaintext text-mobile-md"
+                            id="email"
+                            placeholder="name@example.com"
+                            value="nessonbrecia24@gmail.com"
+                            readonly
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >Email:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0 border-0">
+                          <select
+                            class="form-select text-mobile-md border-0"
+                            aria-label="Default select example"
+                            id="role-select"
+                            disabled
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option>Select Role</option>
+                            <option value="admin" selected>Admin</option>
+                            <option value="head-checker">Head Checker</option>
+                            <option value="cashier">Cashier</option>
+                          </select>
+                          <label
+                            id="role-label"
+                            for="role-select text-mobile-md"
+                            >Role:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <h6 class="ps-2 pb-1" style="font-size: 12px">
+                    PERSONAL INFORMATION:
+                  </h6>
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="first-name"
+                            placeholder="Fisrt Name"
+                            value="Nesson"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >First Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="last-name"
+                            placeholder="Last Name"
+                            value="Brecia"
+                          />
+                          <label for="last-name text-mobile-md"
+                            >Last Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="sufix"
+                            placeholder="eg. Jr."
+                            value="N/A"
+                          />
+
+                          <label for="sufix text-mobile-md">Sufix:</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="gender-select"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option>Select Gender</option>
+                            <option value="male" selected>Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Prefer not to say</option>
+                          </select>
+                          <label
+                            id="gender-label"
+                            for="gender-select text-mobile-md"
+                            >Gender:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="date"
+                            id="dateFrom"
+                            class="form-control text-mobile-sm"
+                            value="2001-08-24"
+                          />
+                          <label for="first-name text-mobile-md"
+                            >Birthday:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 150px"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-info text-mobile-md"
+                  style="width: 150px"
+                  data-bs-target="#confirm-update-staff-info"
+                  data-bs-toggle="modal"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Edit Staff Information -->
+
+        <!--  Confirm Edit Staff Information -->
+        <div
+          class="modal fade"
+          id="confirm-update-staff-info"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-cloud-arrow-up fs-1 text-info d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                  >
+                    EDIT THIS STAFF INFIORMATION?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="update-staff-info-btn"
+                    class="btn btn-info text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#edit-staff"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Confirm Edit Staff Information -->
+      </div>
+      <!-- /Modal Container -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
