@@ -555,61 +555,7 @@
                   </div>
                 </div>
               </div>
-              <!--  Modal for Save Password -->
-              <div
-                class="modal fade"
-                id="save-password"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header border-0">
-                      <button
-                        type="button"
-                        class="btn-close text-mobile-md"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body text-mobile-md">
-                      <div class="container mb-3">
-                        <i
-                          class="bi bi-exclamation-octagon fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
-                        ></i>
 
-                        <p
-                          class="d-flex align-items-center justify-content-center fw-semibold m-0"
-                        >
-                          Confirm Change Password?
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="modal-footer border-0 d-flex justify-content-center"
-                    >
-                      <button
-                        type="button"
-                        class="btn bg-body-tertiary text-mobile-md"
-                        data-bs-dismiss="modal"
-                        style="width: 100px"
-                      >
-                        Cancel
-                      </button>
-                      <button
-                        type="button"
-                        id="update-password-btn"
-                        class="btn btn-danger text-mobile-md"
-                        style="width: 100px"
-                        data-bs-dismiss="modal"
-                      >
-                        Confirm
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /Modal for Save Password -->
               <!-- /Change Password Section -->
             </div>
             <!-- /Account Settings & Password Management -->
@@ -728,247 +674,298 @@
             <!-- /Personal Information -->
             <!-- Personal Information Tab -->
           </div>
+        </div>
+      </div>
 
-          <!--  Modal for Edit Personal Data -->
-          <div
-            class="modal fade"
-            id="edit-data"
-            tabindex="-1"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header border-0 text-mobile-md">
-                  <h4 class="container fw-bold fs-6">
-                    UPDATING PERSONAL INFORMATION
-                  </h4>
+      <!-- Modal Container -->
+      <div class="modal-container">
+        <!--  Modal for Save Password -->
+        <div
+          class="modal fade"
+          id="save-password"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-exclamation-octagon fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0"
+                  >
+                    Confirm Change Password?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
                   <button
                     type="button"
-                    class="btn-close text-mobile-md"
+                    id="update-password-btn"
+                    class="btn btn-danger text-mobile-md"
                     data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-mobile-md">
-                  <div class="container pe-3 mb-5">
-                    <!-- Uneditable Section -->
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-                      <div class="col">
-                        <div class="container text-mobile-md">
-                          <div class="form-floating mb-3 z-0">
-                            <input
-                              type="email"
-                              class="form-control-plaintext text-mobile-md"
-                              id="email"
-                              placeholder="nessonbrecia24@gmail.com"
-                              value="nessonbrecia24@gmail.com"
-                            />
-                            <label for="first-name text-mobile-md z-0"
-                              >Email Address:</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="container text-mobile-md z-0">
-                          <div class="form-floating mb-3 z-0">
-                            <select
-                              class="form-select text-mobile-md border-0"
-                              aria-label="Default select example"
-                              id="role-select"
-                              disabled
-                              style="background-color: gba(0, 0, 0, 0.5)"
-                            >
-                              <option selected>Select Role</option>
-                              <option value="admin">Admin</option>
-                              <option value="head-checker">Head Checker</option>
-                              <option value="cashier">Cashier</option>
-                            </select>
-                            <label
-                              id="role-label"
-                              for="role-select text-mobile-md"
-                              >Role:</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /Uneditable Section -->
-                    <br />
-                    <!-- Personal Information -->
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-                      <div class="col">
-                        <div class="container text-mobile-md">
-                          <div class="form-floating mb-3 z-0">
-                            <input
-                              type="text"
-                              class="form-control text-mobile-md"
-                              id="first-name"
-                              placeholder="Nesson"
-                              value="Nesson"
-                            />
-                            <label for="first-name text-mobile-md z-0"
-                              >First Name:</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="container text-mobile-md">
-                          <div class="form-floating mb-3 z-0">
-                            <input
-                              type="text"
-                              class="form-control text-mobile-md"
-                              id="last-name"
-                              placeholder="Brecia"
-                              value="Brecia"
-                            />
-                            <label for="last-name text-mobile-md"
-                              >Last Name:</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="container text-mobile-md">
-                          <div class="form-floating mb-3 z-0">
-                            <input
-                              type="text"
-                              class="form-control text-mobile-md"
-                              id="sufix"
-                              placeholder="N/A"
-                              value="N/A"
-                            />
-                            <label for="sufix text-mobile-md">Sufix:</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="container text-mobile-md z-0">
-                          <div class="form-floating mb-3 z-0">
-                            <select
-                              class="form-select text-mobile-md"
-                              aria-label="Default select example"
-                              id="gender-select"
-                              style="background-color: gba(0, 0, 0, 0.5)"
-                            >
-                              <option selected>Select Gender</option>
-                              <option value="male">Male</option>
-                              <option value="female">Female</option>
-                              <option value="others">Prefer not to say</option>
-                            </select>
-                            <label
-                              id="gender-label"
-                              for="gender-select text-mobile-md"
-                              >Gender:</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col">
-                        <div class="container text-mobile-md">
-                          <div class="form-floating mb-3 z-0">
-                            <input
-                              type="date"
-                              id="dateFrom"
-                              class="form-control text-mobile-sm"
-                              value="2001-08-24"
-                            />
-                            <label for="first-name text-mobile-md"
-                              >Birthday:</label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer border-0">
+                  >
+                    Confirm
+                  </button>
                   <button
                     type="button"
                     class="btn bg-body-tertiary text-mobile-md"
                     data-bs-dismiss="modal"
-                    style="width: 150px"
                   >
                     Cancel
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-info text-mobile-md"
-                    style="width: 150px"
-                    data-bs-target="#update-personal-information"
-                    data-bs-toggle="modal"
-                  >
-                    Update
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <!--  /Modal for Edit Personal Data -->
+        </div>
+        <!-- /Modal for Save Password -->
 
-          <!--  Modal for Update Personal Information -->
-          <div
-            class="modal fade"
-            id="update-personal-information"
-            tabindex="-1"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header border-0">
-                  <button
-                    type="button"
-                    class="btn-close text-mobile-md"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-mobile-md">
-                  <div class="container mb-3">
-                    <i
-                      class="bi bi-info-circle fs-1 text-info d-flex justify-content-center align-items-center pb-3"
-                    ></i>
+        <!--  Modal for Edit Personal Data -->
+        <div class="modal fade" id="edit-data" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">
+                  UPDATING PERSONAL INFORMATION
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container pe-3 mb-5">
+                  <!-- Uneditable Section -->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="email"
+                            class="form-control-plaintext text-mobile-md"
+                            id="email"
+                            placeholder="nessonbrecia24@gmail.com"
+                            value="nessonbrecia24@gmail.com"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >Email Address:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md border-0"
+                            aria-label="Default select example"
+                            id="role-select"
+                            disabled
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option selected>Select Role</option>
+                            <option value="admin">Admin</option>
+                            <option value="head-checker">Head Checker</option>
+                            <option value="cashier">Cashier</option>
+                          </select>
+                          <label
+                            id="role-label"
+                            for="role-select text-mobile-md"
+                            >Role:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Uneditable Section -->
+                  <br />
+                  <!-- Personal Information -->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="first-name"
+                            placeholder="Nesson"
+                            value="Nesson"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >First Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="last-name"
+                            placeholder="Brecia"
+                            value="Brecia"
+                          />
+                          <label for="last-name text-mobile-md"
+                            >Last Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="sufix"
+                            placeholder="N/A"
+                            value="N/A"
+                          />
+                          <label for="sufix text-mobile-md">Sufix:</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="gender-select"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Prefer not to say</option>
+                          </select>
+                          <label
+                            id="gender-label"
+                            for="gender-select text-mobile-md"
+                            >Gender:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
 
-                    <p
-                      class="d-flex align-items-center justify-content-center fw-semibold m-0"
-                    >
-                      Update Personal Information?
-                    </p>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="date"
+                            id="dateFrom"
+                            class="form-control text-mobile-sm"
+                            value="2001-08-24"
+                          />
+                          <label for="first-name text-mobile-md"
+                            >Birthday:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div
-                  class="modal-footer border-0 d-flex justify-content-center"
+              </div>
+              <div class="modal-footer border-0">
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 150px"
                 >
-                  <button
-                    type="button"
-                    class="btn bg-body-tertiary text-mobile-md"
-                    style="width: 100px"
-                    data-bs-target="#edit-data"
-                    data-bs-toggle="modal"
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-info text-mobile-md"
+                  style="width: 150px"
+                  data-bs-target="#update-personal-information"
+                  data-bs-toggle="modal"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  /Modal for Edit Personal Data -->
+
+        <!--  Modal for Update Personal Information -->
+        <div
+          class="modal fade"
+          id="update-personal-information"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-info-circle fs-1 text-info d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0"
                   >
-                    Back
-                  </button>
+                    Update Personal Information?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
                   <button
                     type="button"
                     id="personal-information-btn"
                     class="btn btn-info text-mobile-md"
                     data-bs-dismiss="modal"
-                    style="width: 100px"
                   >
                     Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#edit-data"
+                    data-bs-toggle="modal"
+                  >
+                    Back
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <!--/ Modal for Update Personal Information -->
-
-          <!--/ Modal for Edit Data -->
         </div>
+        <!--/ Modal for Update Personal Information -->
+      </div>
+      <!-- Modal Container -->
 
-        <!-- Toast Code -->
+      <!-- Toast Container -->
+      <div class="toast-container">
         <!-- Toast for Password Changed -->
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div class="toast" id="password-update">
@@ -996,8 +993,8 @@
           </div>
         </div>
         <!-- /Toast for Personal Information Changed -->
-        <!-- /Toast Code -->
       </div>
+      <!-- /Toast Container -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
