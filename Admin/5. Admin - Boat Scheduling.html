@@ -1038,11 +1038,11 @@
                           <input
                             type="text"
                             class="form-control text-mobile-md"
-                            id="first-name"
-                            placeholder="Fisrt Name"
+                            id="vessel-number"
+                            placeholder="Vessel Number"
                           />
-                          <label for="first-name text-mobile-md z-0"
-                            >First Name:</label
+                          <label for="vessel-number text-mobile-md z-0"
+                            >Vessel Number:</label
                           >
                         </div>
                       </div>
@@ -1053,46 +1053,73 @@
                           <input
                             type="text"
                             class="form-control text-mobile-md"
-                            id="last-name"
-                            placeholder="Last Name"
+                            id="vessel-name"
+                            placeholder="Vessel Name"
                           />
-                          <label for="last-name text-mobile-md"
-                            >Last Name:</label
-                          >
+                          <label for="vessel-name">Vessel Name:</label>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="container text-mobile-md">
-                        <div class="form-floating mb-3 z-0">
+                        <div class="form-floating mb-3 z-0" id="departure-time">
                           <input
-                            type="text"
+                            type="time"
                             class="form-control text-mobile-md"
-                            id="sufix"
-                            placeholder="eg. Jr."
+                            id="departure-time"
                           />
-                          <label for="sufix text-mobile-md">Sufix:</label>
+                          <label for="departure-time">Departure Time:</label>
                         </div>
                       </div>
                     </div>
                     <div class="col">
-                      <div class="container text-mobile-md z-0">
+                      <div class="container text-mobile-md">
                         <div class="form-floating mb-3 z-0">
                           <select
                             class="form-select text-mobile-md"
                             aria-label="Default select example"
-                            id="gender-select"
-                            style="background-color: gba(0, 0, 0, 0.5)"
+                            id="destination-select"
+                            onchange="toggleCustomInput()"
                           >
-                            <option selected>Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="others">Prefer not to say</option>
+                            <option selected>Select Destination</option>
+                            <option value="virac">Virac</option>
+                            <option value="san-andress">San Andress</option>
+                            <option value="custom">Custom</option>
                           </select>
-                          <label
-                            id="gender-label"
-                            for="gender-select text-mobile-md"
-                            >Gender:</label
+                          <label id="destination-label" for="destination-select"
+                            >Destination:</label
+                          >
+
+                          <!-- Custom input field, initially hidden -->
+                          <div
+                            id="custom-input-container"
+                            style="display: none"
+                          >
+                            <input
+                              type="text"
+                              class="form-control mt-2 text-mobile-md"
+                              id="custom-input"
+                              placeholder="Enter custom destination"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="passenger-capacity-input"
+                            placeholder="Input Passenger Capacity"
+                            min="20"
+                            max="9999"
+                            step="1"
+                            required
+                          />
+                          <label for="passenger-capacity-input"
+                            >Passenger Capacity:</label
                           >
                         </div>
                       </div>
@@ -1447,7 +1474,21 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      function toggleCustomInput() {
+        const select = document.getElementById("destination-select");
+        const customInputContainer = document.getElementById(
+          "custom-input-container"
+        );
 
+        // Show custom input field when "Custom" is selected, otherwise hide it
+        if (select.value === "custom") {
+          customInputContainer.style.display = "block";
+        } else {
+          customInputContainer.style.display = "none";
+        }
+      }
+    </script>
     <!-- Styling -->
   </body>
 </html>
