@@ -460,7 +460,7 @@
               <div class="container text-mobile-md">
                 <div class="row">
                   <!-- Column for Current Password -->
-                  <div class="col-md-6 col-xl-4">
+                  <div class="col-md-6 col-xl-4 pe-md-5">
                     <div class="mb-3 row">
                       <!-- Label for current password input -->
                       <label
@@ -476,7 +476,6 @@
                           type="password"
                           class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
                           id="inputPassword"
-                          style="max-width: 350px"
                         />
                       </div>
                     </div>
@@ -486,7 +485,7 @@
                   <div class="col-md-6 col-xl-8">
                     <div class="row">
                       <!-- Column for New Password -->
-                      <div class="col-md-12 col-xl-6">
+                      <div class="col-md-12 col-xl-6 pe-md-5">
                         <div class="mb-3 row">
                           <!-- Label for new password input -->
                           <label
@@ -502,14 +501,13 @@
                               type="password"
                               class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
                               id="inputPassword"
-                              style="max-width: 350px"
                             />
                           </div>
                         </div>
                       </div>
 
                       <!-- Column for Confirm Password -->
-                      <div class="col-md-12 col-xl-6">
+                      <div class="col-md-12 col-xl-6 pe-md-5">
                         <div class="mb-3 row">
                           <label
                             for="inputPassword"
@@ -523,7 +521,6 @@
                               type="password"
                               class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
                               id="inputPassword"
-                              style="max-width: 350px"
                             />
                           </div>
                         </div>
@@ -532,26 +529,32 @@
                   </div>
                 </div>
                 <!-- Buttons for canceling or submitting the password change -->
-                <div class="pt-3 d-flex justify-content-end">
-                  <div
-                    class="d-flex justify-content-end"
-                    role="group"
-                    style="width: 230px"
-                  >
-                    <button
-                      class="btn btn-sm bg-body-tertiary text-mobile-md me-1"
-                      style="width: 130px"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      class="btn btn-sm btn-secondary text-mobile-md"
-                      style="width: 180px"
-                      data-bs-toggle="modal"
-                      data-bs-target="#save-password"
-                    >
-                      Change Password
-                    </button>
+
+                <div class="pt-3">
+                  <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2">
+                      <div class="col"></div>
+                      <div class="col px-0">
+                        <div class="row cols-2 g-2">
+                          <div class="col d-grid">
+                            <button
+                              class="btn btn-sm bg-body-tertiary text-mobile-md me-1"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                          <div class="col d-grid">
+                            <button
+                              class="btn btn-sm btn-secondary text-mobile-md"
+                              data-bs-toggle="modal"
+                              data-bs-target="#save-password"
+                            >
+                              Change Password
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -661,14 +664,23 @@
                 </div>
               </div>
               <div class="pt-3 d-flex justify-content-end">
-                <button
-                  class="btn btn-sm bg-body-tertiary me-1 d-grid text-mobile-md"
-                  style="min-width: 230px"
-                  data-bs-toggle="modal"
-                  data-bs-target="#edit-data"
-                >
-                  Edit
-                </button>
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col d-grid">
+                      <button
+                        class="btn btn-sm bg-body-tertiary me-1 d-grid text-mobile-md"
+                        style="min-width: 230px"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-data"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- /Personal Information -->
@@ -849,7 +861,6 @@
                             class="form-select text-mobile-md"
                             aria-label="Default select example"
                             id="gender-select"
-                            style="background-color: gba(0, 0, 0, 0.5)"
                           >
                             <option selected>Select Gender</option>
                             <option value="male">Male</option>
@@ -871,7 +882,7 @@
                           <input
                             type="date"
                             id="dateFrom"
-                            class="form-control text-mobile-sm"
+                            class="form-control text-mobile-md"
                             value="2001-08-24"
                           />
                           <label for="first-name text-mobile-md"
