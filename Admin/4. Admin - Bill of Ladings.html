@@ -202,18 +202,24 @@
                 class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
               >
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     System Users
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-body-emphasis pt-0">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
                     <i class="bi bi-arrow-return-right pe-2"></i>
                     Account Settings
                   </a>
                 </li>
-                <li>
+                <li></li>
                 <li>
                   <a href="#" class="nav-link link-body-emphasis pt-0">
                     <i class="bi bi-box-arrow-left pe-2"></i>
@@ -331,12 +337,18 @@
               </a>
               <ul class="dropdown-menu border border-1 text-small ms-1">
                 <li>
-                  <a href="7. Admin - Accounts - System User.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     System User
                   </a>
                 </li>
                 <li>
-                  <a href="8. Admin - Accounts - Account Settings.html" class="nav-link link-secondary dropdown-item">
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
                     Account Settings
                   </a>
                 </li>
@@ -373,7 +385,9 @@
     <!-- Main content -->
     <main class="main-content mb-5">
       <div class="admin-bill-of-ladings-container container-flex px-4 px-lg-5">
-        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-1">CARGO INVENTORY REPORT</h4>
+        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-1">
+          CARGO INVENTORY REPORT
+        </h4>
 
         <!-- Data Filtering by Date -->
         <div class="row g-3 pt-3" style="max-width: 1000px">
@@ -400,7 +414,7 @@
               />
             </div>
           </div>
-          <div  class="col-md-4 d-grid pt-md-3 h-50">
+          <div class="col-md-4 d-grid pt-md-3 h-50">
             <button
               type="submit"
               class="btn btn-primary filter-button mt-md-2 text-mobile-sm"
@@ -418,25 +432,25 @@
         <!-- Search Bar for Table -->
         <div class="row g-2 pt-5">
           <div class="col-sm-8 d-flex align-items-center">
-                <div class="input-group">
-                  <!-- Search input -->
-                  <input
-                    type="text"
-                    class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="search-icon"
-                    style="height: 27px; font-size: 9px"
-                  />
-                  <span
-                    class="input-group-text rounded-0 d-flex justify-content-center"
-                    id="search-icon"
-                    style="height: 27px; width: 35px"
-                  >
-                    <i class="bi bi-search text-mobile-sm"></i>
-                  </span>
-                </div>
-              </div>
+            <div class="input-group">
+              <!-- Search input -->
+              <input
+                type="text"
+                class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-icon"
+                style="height: 27px; font-size: 9px"
+              />
+              <span
+                class="input-group-text rounded-0 d-flex justify-content-center"
+                id="search-icon"
+                style="height: 27px; width: 35px"
+              >
+                <i class="bi bi-search text-mobile-sm"></i>
+              </span>
+            </div>
+          </div>
         </div>
         <!-- /Search Bar for Table -->
         <div class="table-responsive text-nowrap">
@@ -637,6 +651,7 @@
                 type="button"
                 class="btn btn-primary py-1 text-mobile-md"
                 style="background-color: #1f4981; border: none; margin-right: 0"
+                id="exporting-as-csv-btn"
               >
                 Export CSV
               </button>
@@ -646,9 +661,9 @@
                 style="
                   background-color: rgb(35 100 151);
                   border: none;
-
                   margin-right: 0;
                 "
+                id="exporting-as-pdf-btn"
               >
                 Export PDF
               </button>
@@ -657,6 +672,7 @@
                 class="btn btn-success text-mobile-md"
                 style="border: none"
                 ;
+                id="printing-report-btn"
               >
                 Print Report
               </button>
@@ -665,10 +681,92 @@
         </div>
         <!-- /Button group of Export CSV | Export PDF | Print Report -->
       </div>
+
+      <!-- Toast for Export & Print -->
+      <div class="toast-for-export-and-print-container">
+        <!-- Exporting as CSV -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="exporting-as-csv">
+            <div class="toast-header text-bg-info text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-info text-mobile-md fw-normal">
+              Exporting as CSV
+            </div>
+          </div>
+        </div>
+        <!-- /Exporting as CSV -->
+
+        <!-- Exporting as PDF -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="exporting-as-pdf">
+            <div class="toast-header text-bg-danger text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-danger text-mobile-md fw-normal">
+              Exporting as PDF
+            </div>
+          </div>
+        </div>
+        <!-- /Exporting as PDF -->
+
+        <!-- Printing Report -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="printing-report">
+            <div class="toast-header text-bg-success text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-success text-mobile-md fw-normal">
+              Printing Report
+            </div>
+          </div>
+        </div>
+        <!-- /Printing Report -->
+      </div>
+      <!-- Toast for Export & Print -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      const exportingCSV = document.querySelector("#exporting-as-csv-btn");
+      const csv = document.querySelector("#exporting-as-csv");
+
+      if (exportingCSV) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(csv);
+
+        exportingCSV.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const exportingPDF = document.querySelector("#exporting-as-pdf-btn");
+      const pdf = document.querySelector("#exporting-as-pdf");
+
+      if (exportingPDF) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(pdf);
+
+        exportingPDF.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const printingReports = document.querySelector("#printing-report-btn");
+      const printing = document.querySelector("#printing-report");
+
+      if (printingReports) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(printing);
+
+        printingReports.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
   </body>
 </html>

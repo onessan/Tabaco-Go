@@ -1017,32 +1017,34 @@
                 <div class="btn-group" role="group" aria-label="Download">
                   <button
                     type="button"
-                    class="btn btn-primary py-1"
+                    class="btn btn-primary py-1 text-mobile-md"
                     style="
                       background-color: #1f4981;
                       border: none;
-                      font-size: 13px;
                       margin-right: 0;
                     "
+                    id="exporting-as-csv-btn"
                   >
                     Export CSV
                   </button>
                   <button
                     type="button"
-                    class="btn btn-primary"
+                    class="btn btn-primary text-mobile-md"
                     style="
                       background-color: rgb(35 100 151);
                       border: none;
-                      font-size: 13px;
                       margin-right: 0;
                     "
+                    id="exporting-as-pdf-btn"
                   >
                     Export PDF
                   </button>
                   <button
                     type="button"
-                    class="btn btn-success"
-                    style="border: none; font-size: 13px"
+                    class="btn btn-success text-mobile-md"
+                    style="border: none"
+                    ;
+                    id="printing-report-btn"
                   >
                     Print Report
                   </button>
@@ -1786,6 +1788,52 @@
         <!-- /Cancel Vessel Schedule -->
       </div>
       <!-- Toast Container -->
+
+      <!-- Toast for Export & Print -->
+      <div class="toast-for-export-and-print-container">
+        <!-- Exporting as CSV -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="exporting-as-csv">
+            <div class="toast-header text-bg-info text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-info text-mobile-md fw-normal">
+              Exporting as CSV
+            </div>
+          </div>
+        </div>
+        <!-- /Exporting as CSV -->
+
+        <!-- Exporting as PDF -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="exporting-as-pdf">
+            <div class="toast-header text-bg-danger text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-danger text-mobile-md fw-normal">
+              Exporting as PDF
+            </div>
+          </div>
+        </div>
+        <!-- /Exporting as PDF -->
+
+        <!-- Printing Report -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="printing-report">
+            <div class="toast-header text-bg-success text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-success text-mobile-md fw-normal">
+              Printing Report
+            </div>
+          </div>
+        </div>
+        <!-- /Printing Report -->
+      </div>
+      <!-- Toast for Export & Print -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
@@ -1854,6 +1902,42 @@
         const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast4);
 
         toastTrigger4.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const exportingCSV = document.querySelector("#exporting-as-csv-btn");
+      const csv = document.querySelector("#exporting-as-csv");
+
+      if (exportingCSV) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(csv);
+
+        exportingCSV.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const exportingPDF = document.querySelector("#exporting-as-pdf-btn");
+      const pdf = document.querySelector("#exporting-as-pdf");
+
+      if (exportingPDF) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(pdf);
+
+        exportingPDF.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const printingReports = document.querySelector("#printing-report-btn");
+      const printing = document.querySelector("#printing-report");
+
+      if (printingReports) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(printing);
+
+        printingReports.addEventListener("click", () => {
           toastBoootstrap.show();
         });
       }
