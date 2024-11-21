@@ -652,497 +652,507 @@
         <!-- /Button group of Export CSV | Export PDF | Print Report -->
       </div>
 
-      <!-- Modals -->
-      <!--  Add Announcement -->
-      <div
-        class="modal fade"
-        id="add-new-announcement"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header border-0 text-mobile-md fw-semibold">
-              <h4 class="container fw-bold fs-6">ADD NEW ANNOUNCEMENT</h4>
-              <button
-                type="button"
-                class="btn-close text-mobile-md"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body text-mobile-md">
-              <div class="container pe-3 mb-1">
-                <div class="row row-cols-1 g-3 px-2">
-                  <div class="col">
-                    <div class="form-floating text-mobile-md">
-                      <textarea
-                        class="form-control text-mobile-md fw-semibold"
-                        placeholder="Leave the Title here"
-                        id="annnouncements-title"
-                      ></textarea>
-                      <label for="annnouncements-title"
-                        >Announcement Title:</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-floating text-mobile-md">
-                      <textarea
-                        class="form-control text-mobile-md"
-                        placeholder="Leave the details here"
-                        id="announcements-details"
-                        style="height: 100px"
-                      ></textarea>
-                      <label for="announcements-details"
-                        >Announcement Details:</label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <br />
-                <br />
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-                  <div class="col">
-                    <div class="container text-mobile-md z-0">
-                      <div class="form-floating mb-3 z-0">
-                        <select
-                          class="form-select text-mobile-md"
-                          aria-label="Default select example"
-                          id="durationSelect"
-                          onchange="handleDurationChange()"
-                          style="background-color: gba(0, 0, 0, 0.5)"
-                        >
-                          <option value="1hour" selected>1 Hour</option>
-                          <option value="2hour">2 Hours</option>
-                          <option value="6hour">6 Hours</option>
-                          <option value="12hour">12 Hours</option>
-                          <option value="custom">Custom Duration</option>
-                        </select>
-                        <label
-                          id="durationSelect"
-                          for="durationSelect-select text-mobile-md"
-                          >Announcement Duration:</label
-                        >
-                      </div>
-                      <!-- Floating custom duration input -->
-                      <div
-                        class="form-floating d-none pb-4"
-                        id="customDurationContainer"
-                      >
-                        <input
-                          type="datetime-local"
-                          class="form-control"
-                          id="customDuration"
-                          placeholder="Set custom duration"
-                        />
-                        <label for="customDuration">Set Custom Duration</label>
-                      </div>
-                      <!-- /Floating custom duration input -->
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="container text-mobile-md z-0">
-                      <div class="form-floating mb-3 z-0">
-                        <select
-                          class="form-select text-mobile-md"
-                          aria-label="Default select example"
-                          id="announcements-type"
-                          style="background-color: gba(0, 0, 0, 0.5)"
-                        >
-                          <option value="normal" selected>Normal</option>
-                          <option value="important">Important</option>
-                          <option value="Urgent">Urgent</option>
-                        </select>
-                        <label
-                          id="announcements-type-label"
-                          for="announcements-type text-mobile-md"
-                          >Announcement Type:</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer border-0" style="margin-right: 30px">
-              <button
-                type="button"
-                class="btn bg-body-tertiary text-mobile-md"
-                data-bs-dismiss="modal"
-                style="width: 150px"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                class="btn btn-success text-mobile-md"
-                style="width: 150px"
-                data-bs-target="#confirm-add-new-announcement"
-                data-bs-toggle="modal"
-              >
-                Add
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  /Add Announcement -->
-
-      <!--  Confirm Add Announcement -->
-      <div
-        class="modal fade"
-        id="confirm-add-new-announcement"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header border-0">
-              <button
-                type="button"
-                class="btn-close text-mobile-md"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body text-mobile-md">
-              <div class="container mb-3">
-                <i
-                  class="bi bi-megaphone fs-1 text-success d-flex justify-content-center align-items-center pb-3"
-                ></i>
-                <p
-                  class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
-                >
-                  ADD NEW ANNOUNCEMENT?
-                </p>
-              </div>
-            </div>
-            <div class="modal-footer border-0">
-              <div class="d-grid vstack gap-2">
+      <!-- Modals Container-->
+      <div class="modal-container">
+        <!--  Add Announcement -->
+        <div
+          class="modal fade"
+          id="add-new-announcement"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md fw-semibold">
+                <h4 class="container fw-bold fs-6">ADD NEW ANNOUNCEMENT</h4>
                 <button
                   type="button"
-                  id="add-new-announcement-confirm-btn"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container pe-3 mb-1">
+                  <div class="row row-cols-1 g-3 px-2">
+                    <div class="col">
+                      <div class="form-floating text-mobile-md">
+                        <textarea
+                          class="form-control text-mobile-md fw-semibold"
+                          placeholder="Leave the Title here"
+                          id="annnouncements-title"
+                        ></textarea>
+                        <label for="annnouncements-title"
+                          >Announcement Title:</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-floating text-mobile-md">
+                        <textarea
+                          class="form-control text-mobile-md"
+                          placeholder="Leave the details here"
+                          id="announcements-details"
+                          style="height: 100px"
+                        ></textarea>
+                        <label for="announcements-details"
+                          >Announcement Details:</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="durationSelect"
+                            onchange="handleDurationChange()"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option value="1hour" selected>1 Hour</option>
+                            <option value="2hour">2 Hours</option>
+                            <option value="6hour">6 Hours</option>
+                            <option value="12hour">12 Hours</option>
+                            <option value="custom">Custom Duration</option>
+                          </select>
+                          <label
+                            id="durationSelect"
+                            for="durationSelect-select text-mobile-md"
+                            >Announcement Duration:</label
+                          >
+                        </div>
+                        <!-- Floating custom duration input -->
+                        <div
+                          class="form-floating d-none pb-4"
+                          id="customDurationContainer"
+                        >
+                          <input
+                            type="datetime-local"
+                            class="form-control"
+                            id="customDuration"
+                            placeholder="Set custom duration"
+                          />
+                          <label for="customDuration"
+                            >Set Custom Duration</label
+                          >
+                        </div>
+                        <!-- /Floating custom duration input -->
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="announcements-type"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option value="normal" selected>Normal</option>
+                            <option value="important">Important</option>
+                            <option value="Urgent">Urgent</option>
+                          </select>
+                          <label
+                            id="announcements-type-label"
+                            for="announcements-type text-mobile-md"
+                            >Announcement Type:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0" style="margin-right: 30px">
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 150px"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
                   class="btn btn-success text-mobile-md"
-                  data-bs-dismiss="modal"
+                  style="width: 150px"
+                  data-bs-target="#confirm-add-new-announcement"
+                  data-bs-toggle="modal"
                   onclick="submitDuration()"
                 >
-                  Confirm
-                </button>
-                <button
-                  type="button"
-                  class="btn bg-body-tertiary text-mobile-md"
-                  data-bs-target="#add-new-announcement"
-                  data-bs-toggle="modal"
-                >
-                  Back
+                  Add
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--/ Confirm Add Announcement -->
+        <!--  /Add Announcement -->
 
-      <!--  Edit Announcement -->
-      <div
-        class="modal fade"
-        id="edit-announcement"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header border-0 text-mobile-md">
-              <h4 class="container fw-bold fs-6">UPDATE ANNOUNCEMENT</h4>
-              <button
-                type="button"
-                class="btn-close text-mobile-md"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+        <!--  Confirm Add Announcement -->
+        <div
+          class="modal fade"
+          id="confirm-add-new-announcement"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-megaphone fs-1 text-success d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                  >
+                    ADD NEW ANNOUNCEMENT?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="add-new-announcement-confirm-btn"
+                    class="btn btn-success text-mobile-md"
+                    data-bs-dismiss="modal"
+                    onclick="submitDuration()"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#add-new-announcement"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="modal-body text-mobile-md">
-              <div class="container pe-3 mb-1">
-                <!-- Personal Information -->
+          </div>
+        </div>
+        <!--/ Confirm Add Announcement -->
 
-                <div class="row row-cols-1 g-3 px-2">
-                  <div class="col">
-                    <div class="form-floating text-mobile-md">
-                      <textarea
-                        class="form-control text-mobile-md fw-semibold"
-                        placeholder="Leave the Title here"
-                        id="annnouncements-title"
-                      >
+        <!--  Edit Announcement -->
+        <div
+          class="modal fade"
+          id="edit-announcement"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">UPDATE ANNOUNCEMENT</h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container pe-3 mb-1">
+                  <!-- Personal Information -->
+
+                  <div class="row row-cols-1 g-3 px-2">
+                    <div class="col">
+                      <div class="form-floating text-mobile-md">
+                        <textarea
+                          class="form-control text-mobile-md fw-semibold"
+                          placeholder="Leave the Title here"
+                          id="annnouncements-title"
+                        >
 Lorem ipsum, dolor sit</textarea
-                      >
-                      <label for="annnouncements-title"
-                        >Announcement Title:</label
-                      >
+                        >
+                        <label for="annnouncements-title"
+                          >Announcement Title:</label
+                        >
+                      </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-floating text-mobile-md">
-                      <textarea
-                        class="form-control text-mobile-md"
-                        placeholder="Leave the details here"
-                        id="announcements-details"
-                        style="height: 100px"
-                      >
+                    <div class="col">
+                      <div class="form-floating text-mobile-md">
+                        <textarea
+                          class="form-control text-mobile-md"
+                          placeholder="Leave the details here"
+                          id="announcements-details"
+                          style="height: 100px"
+                        >
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptate iste repellat consequuntur mollitia cumque iure ex. Unde maxime aspernatur fugiat minima distinctio perferendis aut ad non. Obcaecati, doloremque animi.</textarea
-                      >
-                      <label for="announcements-details"
-                        >Announcement Details:</label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <br />
-                <br />
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-                  <div class="col">
-                    <div class="container text-mobile-md z-0">
-                      <div class="form-floating mb-3 z-0">
-                        <select
-                          class="form-select text-mobile-md"
-                          aria-label="Default select example"
-                          id="durationSelect"
-                          onchange="handleDurationChange()"
-                          style="background-color: gba(0, 0, 0, 0.5)"
                         >
-                          <option value="1hour" selected>1 Hour</option>
-                          <option value="2hour">2 Hours</option>
-                          <option value="6hour">6 Hours</option>
-                          <option value="12hour">12 Hours</option>
-                          <option value="custom">Custom Duration</option>
-                        </select>
-                        <label
-                          id="durationSelect"
-                          for="durationSelect-select text-mobile-md"
-                          >Announcement Duration:</label
+                        <label for="announcements-details"
+                          >Announcement Details:</label
                         >
                       </div>
-                      <!-- Floating custom duration input -->
-                      <div
-                        class="form-floating d-none pb-4"
-                        id="customDurationContainer"
-                      >
-                        <input
-                          type="datetime-local"
-                          class="form-control"
-                          id="customDuration"
-                          placeholder="Set custom duration"
-                        />
-                        <label for="customDuration">Set Custom Duration</label>
-                      </div>
-                      <!-- /Floating custom duration input -->
                     </div>
                   </div>
+                  <br />
+                  <br />
 
-                  <div class="col">
-                    <div class="container text-mobile-md z-0">
-                      <div class="form-floating mb-3 z-0">
-                        <select
-                          class="form-select text-mobile-md"
-                          aria-label="Default select example"
-                          id="announcements-type"
-                          style="background-color: gba(0, 0, 0, 0.5)"
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="durationSelect"
+                            onchange="handleDurationChange()"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option value="1hour" selected>1 Hour</option>
+                            <option value="2hour">2 Hours</option>
+                            <option value="6hour">6 Hours</option>
+                            <option value="12hour">12 Hours</option>
+                            <option value="custom">Custom Duration</option>
+                          </select>
+                          <label
+                            id="durationSelect"
+                            for="durationSelect-select text-mobile-md"
+                            >Announcement Duration:</label
+                          >
+                        </div>
+                        <!-- Floating custom duration input -->
+                        <div
+                          class="form-floating d-none pb-4"
+                          id="customDurationContainer"
                         >
-                          <option value="normal" selected>Normal</option>
-                          <option value="important">Important</option>
-                          <option value="Urgent">Urgent</option>
-                        </select>
-                        <label
-                          id="announcements-type-label"
-                          for="announcements-type text-mobile-md"
-                          >Announcement Type:</label
-                        >
+                          <input
+                            type="datetime-local"
+                            class="form-control"
+                            id="customDuration"
+                            placeholder="Set custom duration"
+                          />
+                          <label for="customDuration"
+                            >Set Custom Duration</label
+                          >
+                        </div>
+                        <!-- /Floating custom duration input -->
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="announcements-type"
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option value="normal" selected>Normal</option>
+                            <option value="important">Important</option>
+                            <option value="Urgent">Urgent</option>
+                          </select>
+                          <label
+                            id="announcements-type-label"
+                            for="announcements-type text-mobile-md"
+                            >Announcement Type:</label
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="modal-footer border-0" style="margin-right: 30px">
-              <button
-                type="button"
-                class="btn bg-body-tertiary text-mobile-md"
-                data-bs-dismiss="modal"
-                style="width: 150px"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                class="btn btn-info text-mobile-md"
-                style="width: 150px"
-                data-bs-target="#confirm-update-announcement"
-                data-bs-toggle="modal"
-              >
-                Update
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  /Edit Announcement -->
-
-      <!--  Confirm Update Announcement -->
-      <div
-        class="modal fade"
-        id="confirm-update-announcement"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header border-0">
-              <button
-                type="button"
-                class="btn-close text-mobile-md"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body text-mobile-md">
-              <div class="container mb-3">
-                <i
-                  class="bi bi-cloud-arrow-up fs-1 text-info d-flex justify-content-center align-items-center pb-3"
-                ></i>
-                <p
-                  class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
-                >
-                  UPDATE ANNOUNCEMENT?
-                </p>
-              </div>
-            </div>
-            <div class="modal-footer border-0">
-              <div class="d-grid vstack gap-2">
+              <div class="modal-footer border-0" style="margin-right: 30px">
                 <button
                   type="button"
-                  id="update-announcement-confirm-btn"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-dismiss="modal"
+                  style="width: 150px"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
                   class="btn btn-info text-mobile-md"
-                  data-bs-dismiss="modal"
-                  onclick="submitDuration()"
-                >
-                  Confirm
-                </button>
-                <button
-                  type="button"
-                  class="btn bg-body-tertiary text-mobile-md"
-                  data-bs-target="#add-new-announcement"
+                  style="width: 150px"
+                  data-bs-target="#confirm-update-announcement"
                   data-bs-toggle="modal"
                 >
-                  Back
+                  Update
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--/ Confirm Update Announcement -->
+        <!--  /Edit Announcement -->
 
-      <!--  Delete Announcement -->
-      <div
-        class="modal fade"
-        id="delete-announcement"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header border-0">
-              <button
-                type="button"
-                class="btn-close text-mobile-md"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body text-mobile-md">
-              <div class="container mb-3">
-                <i
-                  class="bi bi-exclamation-diamond fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
-                ></i>
-                <p
-                  class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
-                >
-                  DELETE ANNOUNCEMENT?
-                </p>
-              </div>
-            </div>
-            <div class="modal-footer border-0">
-              <div class="d-grid vstack gap-2">
+        <!--  Confirm Update Announcement -->
+        <div
+          class="modal fade"
+          id="confirm-update-announcement"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
                 <button
                   type="button"
-                  id="delete-announcement-btn"
-                  class="btn btn-danger text-mobile-md"
+                  class="btn-close text-mobile-md"
                   data-bs-dismiss="modal"
-                >
-                  Confirm
-                </button>
-                <button
-                  type="button"
-                  class="btn bg-body-tertiary text-mobile-md"
-                  data-bs-target="#add-new-announcement"
-                  data-bs-toggle="modal"
-                >
-                  Back
-                </button>
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-cloud-arrow-up fs-1 text-info d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                  >
+                    UPDATE ANNOUNCEMENT?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="update-announcement-confirm-btn"
+                    class="btn btn-info text-mobile-md"
+                    data-bs-dismiss="modal"
+                    onclick="submitDuration()"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#add-new-announcement"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--/ Delete Announcement -->
-      <!-- /Modals -->
+        <!--/ Confirm Update Announcement -->
 
-      <!-- Toast -->
-      <!-- New Announcement -->
-      <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="add-new-announcement-confirm">
-          <div class="toast-header text-bg-success text-mobile-md">
-            <div class="me-auto">Admin</div>
-            <small>Just Now</small>
-          </div>
-          <div class="toast-body text-bg-success text-mobile-md fw-normal">
-            New Announcement added successfully.
+        <!--  Delete Announcement -->
+        <div
+          class="modal fade"
+          id="delete-announcement"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-exclamation-diamond fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center fw-semibold m-0 fs-6"
+                  >
+                    DELETE ANNOUNCEMENT?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="delete-announcement-btn"
+                    class="btn btn-danger text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#add-new-announcement"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!--/ Delete Announcement -->
       </div>
-      <!-- /New Announcement -->
+      <!-- /Modals Container-->
 
-      <!-- Update Annpuncement -->
-      <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="update-announcement-confirm">
-          <div class="toast-header text-bg-info text-mobile-md">
-            <div class="me-auto">Admin</div>
-            <small>Just Now</small>
-          </div>
-          <div class="toast-body text-bg-info text-mobile-md fw-normal">
-            Announcement updated successfully.
+      <!-- Toast Container -->
+      <div class="toast-container">
+        <!-- New Announcement -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="add-new-announcement-confirm">
+            <div class="toast-header text-bg-success text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-success text-mobile-md fw-normal">
+              New Announcement added successfully.
+            </div>
           </div>
         </div>
-      </div>
-      <!-- /Update Annpuncement -->
+        <!-- /New Announcement -->
 
-      <!-- Delete Annpuncement -->
-      <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="delete-announcement-confirm">
-          <div class="toast-header text-bg-danger text-mobile-md">
-            <div class="me-auto">Admin</div>
-            <small>Just Now</small>
-          </div>
-          <div class="toast-body text-bg-danger text-mobile-md fw-normal">
-            Announcement deleted successfully.
+        <!-- Update Annpuncement -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="update-announcement-confirm">
+            <div class="toast-header text-bg-info text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-info text-mobile-md fw-normal">
+              Announcement updated successfully.
+            </div>
           </div>
         </div>
+        <!-- /Update Annpuncement -->
+
+        <!-- Delete Annpuncement -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="delete-announcement-confirm">
+            <div class="toast-header text-bg-danger text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-danger text-mobile-md fw-normal">
+              Announcement deleted successfully.
+            </div>
+          </div>
+        </div>
+        <!-- /Delete Annpuncement -->
       </div>
-      <!-- /Delete Annpuncement -->
-      <!-- Toast -->
+
+      <!-- Toast Container -->
     </main>
 
     <!-- Bootstrap JS and dependencies -->
