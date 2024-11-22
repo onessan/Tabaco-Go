@@ -41,7 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Admin - Account Settings</title>
+    <title>Head Checker - Account Settings</title>
   </head>
   <body>
     <!-- Header  -->
@@ -126,33 +126,8 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto mt-3">
           <li>
-            <!-- Dashboard link with background gradient -->
             <a
-              href="1. Admin - Dashboard.html"
-              class="nav-link link-body-emphasis"
-            >
-              <i class="bi bi-speedometer2 pe-2"></i>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="2. Admin - Sales.html" class="nav-link link-body-emphasis">
-              <i class="bi bi-graph-up pe-2"></i>
-              Sales
-            </a>
-          </li>
-          <li>
-            <a
-              href="3. Admin - Appointments.html"
-              class="nav-link link-body-emphasis"
-            >
-              <i class="bi bi-list-task pe-2"></i>
-              Appointments
-            </a>
-          </li>
-          <li>
-            <a
-              href="4. Admin - Bill of Ladings.html"
+              href="1. Head Checker - Bill of Ladings.html"
               class="nav-link link-body-emphasis"
             >
               <i class="bi bi-receipt-cutoff pe-2"></i>
@@ -161,70 +136,32 @@
           </li>
           <li>
             <a
-              href="5. Admin - Vessel Scheduling.html"
-              class="nav-link link-body-emphasis"
+              href="#"
+              class="nav-link text-light"
+              aria-current="page"
+              style="
+                background-image: linear-gradient(
+                  to right,
+                  rgb(20 65 105),
+                  rgb(136 194 205)
+                );
+              "
             >
-              <i class="bi bi-calendar2-week pe-2"></i>
-              Vessel Scheduling
+              <i class="bi bi-receipt-cutoff pe-2"></i>
+              Account Settings
             </a>
           </li>
+
           <li>
             <a
-              href="6. Admin - Announcements.html"
+              href="#"
               class="nav-link link-body-emphasis"
+              data-bs-toggle="modal"
+              data-bs-target="#sign-out"
             >
-              <i class="bi bi-megaphone pe-2"></i>
-              Announcements
+              <i class="bi bi-box-arrow-left pe-2"></i>
+              Sign Out
             </a>
-          </li>
-          <!-- Dropdown menu for additional options -->
-          <li>
-            <div class="dropdown">
-              <a
-                href="#"
-                class="nav-link text-light dropdown-toggle"
-                aria-current="page"
-                style="
-                  background-image: linear-gradient(
-                    to right,
-                    rgb(20 65 105),
-                    rgb(136 194 205)
-                  );
-                "
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="false"
-                aria-expanded="false"
-              >
-                <i class="bi bi-people pe-2 pb-0"></i>
-                Account Settings
-              </a>
-              <ul
-                class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
-              >
-                <li>
-                  <a
-                    href="7. Admin - Accounts - System User.html"
-                    class="nav-link link-body-emphasis pt-0"
-                  >
-                    <i class="bi bi-arrow-repeat pe-2"></i>
-                    System Users
-                  </a>
-                </li>
-
-                <li></li>
-                <li>
-                  <a
-                    href="#"
-                    class="nav-link link-body-emphasis pt-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#sign-out"
-                  >
-                    <i class="bi bi-box-arrow-left pe-2"></i>
-                    Sign Out
-                  </a>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
         <hr />
@@ -259,38 +196,9 @@
           class="nav nav-pills nav-flush flex-column mb-auto text-center mt-2"
           style="font-size: 8px; font-weight: 400"
         >
-          <li class="nav-item">
-            <!-- Mobile Dashboard icon -->
-            <a
-              href="1. Admin - Dashboard.html"
-              class="nav-link link-secondary p-0 border-bottom rounded-0"
-            >
-              <i class="bi bi-speedometer2 fs-1"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <!-- Mobile links for other sections -->
           <li>
             <a
-              href="2. Admin - Sales.html"
-              class="nav-link link-secondary p-0 border-bottom rounded-0"
-            >
-              <i class="bi bi-graph-up fs-1"></i>
-              <p>Sales</p>
-            </a>
-          </li>
-          <li>
-            <a
-              href="3. Admin - Appointments.html"
-              class="nav-link link-secondary p-0 border-bottom rounded-0"
-            >
-              <i class="bi bi-list-task fs-1"></i>
-              <p>Appointments</p>
-            </a>
-          </li>
-          <li>
-            <a
-              href="4. Admin - Bill of Ladings.html"
+              href="1. Head Checker - Bill of Ladings.html"
               class="nav-link link-secondary p-0 border-bottom rounded-0"
             >
               <i class="bi bi-receipt-cutoff fs-1"></i>
@@ -299,59 +207,27 @@
           </li>
           <li>
             <a
-              href="5. Admin - Vessel Scheduling.html"
-              class="nav-link link-secondary p-0 border-bottom rounded-0"
+              href="#"
+              class="nav-link p-0 border-bottom rounded-0 text-light"
+              aria-current="page"
+              data-bs-placement="right"
+              data-bs-original-title="Home"
+              style="background-color: rgb(35 100 151)"
             >
-              <i class="bi bi-calendar2-week fs-1"></i>
-              <p>Vessel Scheduling</p>
+              <i class="bi bi-people fs-1"></i>
+              <p class="text-normal">Account Settings</p>
             </a>
           </li>
           <li>
             <a
-              href="6. Admin - Announcements.html"
+              href="1. Head Checker - Bill of Ladings.html"
               class="nav-link link-secondary p-0 border-bottom rounded-0"
+              data-bs-toggle="modal"
+              data-bs-target="#sign-out"
             >
-              <i class="bi bi-megaphone fs-1"></i>
-              <p>Announcement</p>
+              <i class="bi bi-box-arrow-left fs-1"></i>
+              <p>Sign Out</p>
             </a>
-          </li>
-          <!-- Authentication dropdown in mobile view -->
-          <li>
-            <div class="dropdown dropend">
-              <a
-                href="#"
-                class="nav-link p-0 border-bottom rounded-0 text-light"
-                aria-current="page"
-                data-bs-placement="right"
-                data-bs-original-title="Home"
-                style="background-color: rgb(35 100 151)"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="bi bi-people fs-1"></i>
-                <p class="text-normal">Account Settings</p>
-              </a>
-              <ul class="dropdown-menu border border-1 text-small ms-1">
-                <li>
-                  <a
-                    href="7. Admin - Accounts - System User.html"
-                    class="nav-link link-secondary dropdown-item"
-                  >
-                    System User
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="nav-link link-secondary dropdown-item"
-                    data-bs-toggle="modal"
-                    data-bs-target="#sign-out"
-                  >
-                    Sign Out
-                  </a>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
         <!-- User profile Picture-->
