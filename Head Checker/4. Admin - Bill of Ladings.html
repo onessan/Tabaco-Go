@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Fonts Awesone (Can be deleted if not used) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Barlow Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Nunito Font (replacement for Arial Rounded MT old) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin - Bill of Ladings</title>
+  </head>
+  <body>
+    <!-- Header  -->
+    <header
+      class="z-3 navbar bg-primary navbar-dark py-1 fixed-top"
+      style="
+        background-image: linear-gradient(
+          to right,
+          rgb(20 65 105),
+          rgb(136 194 205)
+        );
+      "
+    >
+      <div class="container-flex d-flex">
+        <div class="ps-4">
+          <div class="">
+            <a href="#" class="navbar-brand">
+              <h1
+                class="h2 tabaco-go ps-lg-4"
+                style="font-family: nunito; font-weight: 700"
+              >
+                TABACO GO
+              </h1>
+            </a>
+          </div>
+
+          <div
+            class="text-white ps-lg-4"
+            style="
+              margin: -40px 0px 0px 0px;
+              font-size: 8px;
+              letter-spacing: 5px;
+              padding-left: 2px;
+            "
+          >
+            <span class="online-booking">ONLINE &ensp; BOOKING</span>
+          </div>
+        </div>
+      </div>
+      <div class="justify-content-end pe-4 py-0">
+        <div class="">
+          <div class="btn-group">
+            <!-- Dark Mode Toggle -->
+            <div class="btn-group">
+              <button
+                class="btn btn-secondary btn-sm rounded-start-5 ps-1 pe-1"
+                data-bs-theme-value="dark"
+              >
+                <span class="">
+                  <i
+                    class="bi bi-moon text-light d-flex align-items-center"
+                  ></i>
+                </span>
+              </button>
+              <button
+                class="btn btn-light btn-sm rounded-end-5 ps-1 pe-1"
+                data-bs-theme-value="light"
+              >
+                <span class="">
+                  <i
+                    class="bi bi-brightness-high-fill text-secondary d-flex align-items-center"
+                  ></i>
+                </span>
+              </button>
+            </div>
+            <!-- /Dark Mode Toggle -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Sidebar -->
+
+    <!-- Full Sidebar for Desktop -->
+    <nav class="d-none d-lg-block">
+      <div
+        class="position-fixed d-flex flex-column p-3 bg-body-tertiary"
+        style="height: 100%; width: 280px"
+      >
+        <!-- Sidebar navigation items -->
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto mt-3">
+          <li>
+            <!-- Dashboard link with background gradient -->
+            <a
+              href="1. Admin - Dashboard.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-speedometer2 pe-2"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="2. Admin - Sales.html" class="nav-link link-body-emphasis">
+              <i class="bi bi-graph-up pe-2"></i>
+              Sales
+            </a>
+          </li>
+          <li>
+            <a
+              href="3. Admin - Appointments.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-list-task pe-2"></i>
+              Appointments
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link text-light"
+              aria-current="page"
+              style="
+                background-image: linear-gradient(
+                  to right,
+                  rgb(20 65 105),
+                  rgb(136 194 205)
+                );
+              "
+            >
+              <i class="bi bi-receipt-cutoff pe-2"></i>
+              Bill of Ladings
+            </a>
+          </li>
+          <li>
+            <a
+              href="5. Admin - Vessel Scheduling.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-calendar2-week pe-2"></i>
+              Vessel Scheduling
+            </a>
+          </li>
+          <li>
+            <a
+              href="6. Admin - Announcements.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-megaphone pe-2"></i>
+              Announcements
+            </a>
+          </li>
+          <!-- Dropdown menu for additional options -->
+          <li>
+            <div class="dropdown">
+              <a
+                href="#"
+                class="nav-link link-body-emphasis dropdown-toggle"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="false"
+                aria-expanded="false"
+              >
+                <i class="bi bi-people pe-2 pb-0"></i>
+                Account
+              </a>
+              <ul
+                class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
+              >
+                <li>
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
+                    <i class="bi bi-arrow-return-right pe-2"></i>
+                    System Users
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
+                    <i class="bi bi-arrow-return-right pe-2"></i>
+                    Account Settings
+                  </a>
+                </li>
+                <li></li>
+                <li>
+                  <a
+                    href="#"
+                    class="nav-link link-body-emphasis pt-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sign-out"
+                  >
+                    <i class="bi bi-box-arrow-left pe-2"></i>
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <!-- User profile and Gmail -->
+        <div class="">
+          <a
+            href="#"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none"
+          >
+            <img
+              src="https://github.com/onessan.png"
+              alt=""
+              width="32"
+              height="32"
+              class="rounded-circle me-0"
+            />
+            <p class="m-0 ps-2" style="font-size: 11px">
+              nessonbrecia24@gmail.com
+            </p>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- /Full Sidebar -->
+
+    <!-- Mobile Sidebar Collapsible Navigation -->
+    <nav class="d-lg-none">
+      <div
+        class="z-1 position-fixed bottom-0 d-flex flex-column bg-body-tertiary"
+        style="height: 96%; width: 3.7rem; top: 38px"
+      >
+        <ul
+          class="nav nav-pills nav-flush flex-column mb-auto text-center mt-2"
+          style="font-size: 8px; font-weight: 400"
+        >
+          <li class="nav-item">
+            <!-- Mobile Dashboard icon -->
+            <a
+              href="1. Admin - Dashboard.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-speedometer2 fs-1"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <!-- Mobile links for other sections -->
+          <li>
+            <a
+              href="2. Admin - Sales.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-graph-up fs-1"></i>
+              <p>Sales</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="3. Admin - Appointments.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-list-task fs-1"></i>
+              <p>Appointments</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link p-0 border-bottom rounded-0 text-light"
+              aria-current="page"
+              data-bs-placement="right"
+              data-bs-original-title="Home"
+              style="background-color: rgb(35 100 151)"
+            >
+              <i class="bi bi-receipt-cutoff fs-1"></i>
+              <p>Bill of Ladings</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="5. Admin - Vessel Scheduling.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-calendar2-week fs-1"></i>
+              <p>Vessel Scheduling</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="6. Admin - Announcements.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-megaphone fs-1"></i>
+              <p>Announcement</p>
+            </a>
+          </li>
+          <!-- Authentication dropdown in mobile view -->
+          <li>
+            <div class="dropdown dropend">
+              <a
+                href="#"
+                class="nav-link link-secondary p-0 border-bottom rounded-0"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-people fs-1"></i>
+                <p class="text-normal">Account</p>
+              </a>
+              <ul class="dropdown-menu border border-1 text-small ms-1">
+                <li>
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
+                    System User
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="8. Admin - Accounts - Account Settings.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
+                    Account Settings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="nav-link link-secondary dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sign-out"
+                  >
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- User profile Picture-->
+        <div class="border-top">
+          <a
+            href="#"
+            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none"
+          >
+            <img
+              src="https://github.com/onessan.png"
+              alt="mdo"
+              width="30"
+              height="30"
+              class="rounded-circle"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- /Mobile Sidebar -->
+
+    <!-- /Sidebar -->
+
+    <!-- Main content -->
+    <main class="main-content mb-5">
+      <div class="admin-bill-of-ladings-container container-flex px-4 px-lg-5">
+        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-1">
+          CARGO INVENTORY REPORT
+        </h4>
+
+        <!-- Data Filtering by Date -->
+        <div class="row g-3 pt-3" style="max-width: 1000px">
+          <div class="col-md-4">
+            <div class="filter-item text-mobile-sm">
+              <label for="dateFrom" class="pb-1">Filter Date From:</label>
+              <input
+                type="date"
+                id="dateFrom"
+                class="form-control text-mobile-sm"
+                value=""
+              />
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="filter-item text-mobile-sm">
+              <label for="dateFrom" class="pb-1">Filter Date To:</label>
+              <input
+                type="date"
+                id="dateFrom"
+                class="form-control text-mobile-sm"
+                value=""
+              />
+            </div>
+          </div>
+          <div class="col-md-4 d-grid pt-md-3 h-50">
+            <button
+              type="submit"
+              class="btn btn-primary filter-button mt-md-2 text-mobile-sm"
+              style="
+                background-color: rgb(35 100 151);
+                border-color: rgb(35 100 151);
+              "
+            >
+              <i class="bi bi-funnel"></i> Filter Data
+            </button>
+          </div>
+        </div>
+        <!-- /Data Filtering by Date -->
+
+        <!-- Search Bar for Table -->
+        <div class="row g-2 pt-5">
+          <div class="col-sm-8 d-flex align-items-center">
+            <div class="input-group">
+              <!-- Search input -->
+              <input
+                type="text"
+                class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-icon"
+                style="height: 27px; font-size: 9px"
+              />
+              <span
+                class="input-group-text rounded-0 d-flex justify-content-center"
+                id="search-icon"
+                style="height: 27px; width: 35px"
+              >
+                <i class="bi bi-search text-mobile-sm"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- /Search Bar for Table -->
+        <div class="table-responsive text-nowrap">
+          <table class="table table-striped table-hover mt-3 text-mobile-md">
+            <thead>
+              <tr>
+                <th class="z-1">#</th>
+                <th class="z-1">Bill of Lading ID</th>
+                <th class="z-1">Cargo ID</th>
+                <th class="z-1">Vessel</th>
+                <th class="z-1">Voyage Number</th>
+                <th class="z-1">Shipper</th>
+                <th class="z-1">Date</th>
+                <th class="z-1">Consignee</th>
+                <th class="z-1">Cargo Destination</th>
+                <th class="z-1">Descrition of Article</th>
+                <th class="z-1">Value</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 12px">
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- /Table -->
+        <!-- Table Footer -->
+        <div class="row pt-1">
+          <div class="col-7 pt-1">
+            <p class="text-mobile-sm">Showing 10 out of 0 entries.</p>
+          </div>
+          <div class="col-5">
+            <nav aria-label="page navigation">
+              <ul class="pagination pagination-sm d-flex justify-content-end">
+                <li class="page-item">
+                  <a
+                    href="#"
+                    class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                    >Previous</a
+                  >
+                </li>
+                <li class="page-item">
+                  <a
+                    href="#"
+                    class="page-link border border-1 link-body-emphasis mx-1 px-3 text-mobile-sm"
+                    >1</a
+                  >
+                </li>
+                <li class="page-item">
+                  <a
+                    href="#"
+                    class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                    aria-label="Next"
+                    >Next</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /Table Footer -->
+
+        <!-- Button group of Export CSV | Export PDF | Print Report -->
+        <div class="row pt-3 pb-5">
+          <div class="col-lg-6 col-xxl-8"></div>
+          <div class="col-lg-6 col-xxl-4 d-grid">
+            <div class="btn-group" role="group" aria-label="Download">
+              <button
+                type="button"
+                class="btn btn-primary py-1 text-mobile-md"
+                style="background-color: #1f4981; border: none; margin-right: 0"
+                id="exporting-as-csv-btn"
+              >
+                Export CSV
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary text-mobile-md"
+                style="
+                  background-color: rgb(35 100 151);
+                  border: none;
+                  margin-right: 0;
+                "
+                id="exporting-as-pdf-btn"
+              >
+                Export PDF
+              </button>
+              <button
+                type="button"
+                class="btn btn-success text-mobile-md"
+                style="border: none"
+                ;
+                id="printing-report-btn"
+              >
+                Print Report
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- /Button group of Export CSV | Export PDF | Print Report -->
+      </div>
+
+      <!-- Toast for Export & Print -->
+      <div class="toast-for-export-and-print-container">
+        <!-- Exporting as CSV -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="exporting-as-csv">
+            <div class="toast-header text-bg-info text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-info text-mobile-md fw-normal">
+              Exporting as CSV
+            </div>
+          </div>
+        </div>
+        <!-- /Exporting as CSV -->
+
+        <!-- Exporting as PDF -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="exporting-as-pdf">
+            <div class="toast-header text-bg-danger text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-danger text-mobile-md fw-normal">
+              Exporting as PDF
+            </div>
+          </div>
+        </div>
+        <!-- /Exporting as PDF -->
+
+        <!-- Printing Report -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="printing-report">
+            <div class="toast-header text-bg-success text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-success text-mobile-md fw-normal">
+              Printing Report
+            </div>
+          </div>
+        </div>
+        <!-- /Printing Report -->
+      </div>
+      <!-- Toast for Export & Print -->
+
+      <!-- Sign Out Modal -->
+      <div class="modal fade" id="sign-out" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-emoji-frown fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                >
+                  ARE YOU SURE TO SIGN OUT?
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="sign-out-confirm"
+                  class="btn btn-danger text-mobile-md"
+                  data-bs-dismiss="modal"
+                >
+                  Sign Out
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign Out Modal -->
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="JS/bootstrap.bundle.js"></script>
+    <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      const exportingCSV = document.querySelector("#exporting-as-csv-btn");
+      const csv = document.querySelector("#exporting-as-csv");
+
+      if (exportingCSV) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(csv);
+
+        exportingCSV.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const exportingPDF = document.querySelector("#exporting-as-pdf-btn");
+      const pdf = document.querySelector("#exporting-as-pdf");
+
+      if (exportingPDF) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(pdf);
+
+        exportingPDF.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const printingReports = document.querySelector("#printing-report-btn");
+      const printing = document.querySelector("#printing-report");
+
+      if (printingReports) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(printing);
+
+        printingReports.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+  </body>
+</html>

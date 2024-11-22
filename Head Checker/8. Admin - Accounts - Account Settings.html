@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Fonts Awesone (Can be deleted if not used) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Barlow Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Nunito Font (replacement for Arial Rounded MT old) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin - Account Settings</title>
+  </head>
+  <body>
+    <!-- Header  -->
+    <header
+      class="z-3 navbar bg-primary navbar-dark py-1 fixed-top"
+      style="
+        background-image: linear-gradient(
+          to right,
+          rgb(20 65 105),
+          rgb(136 194 205)
+        );
+      "
+    >
+      <div class="container-flex d-flex">
+        <div class="ps-4">
+          <div class="">
+            <a href="#" class="navbar-brand">
+              <h1
+                class="h2 tabaco-go ps-lg-4"
+                style="font-family: nunito; font-weight: 700"
+              >
+                TABACO GO
+              </h1>
+            </a>
+          </div>
+
+          <div
+            class="text-white ps-lg-4"
+            style="
+              margin: -40px 0px 0px 0px;
+              font-size: 8px;
+              letter-spacing: 5px;
+              padding-left: 2px;
+            "
+          >
+            <span class="online-booking">ONLINE &ensp; BOOKING</span>
+          </div>
+        </div>
+      </div>
+      <div class="justify-content-end pe-4 py-0">
+        <div class="">
+          <div class="btn-group">
+            <!-- Dark Mode Toggle -->
+            <div class="btn-group">
+              <button
+                class="btn btn-secondary btn-sm rounded-start-5 ps-1 pe-1"
+                data-bs-theme-value="dark"
+              >
+                <span class="">
+                  <i
+                    class="bi bi-moon text-light d-flex align-items-center"
+                  ></i>
+                </span>
+              </button>
+              <button
+                class="btn btn-light btn-sm rounded-end-5 ps-1 pe-1"
+                data-bs-theme-value="light"
+              >
+                <span class="">
+                  <i
+                    class="bi bi-brightness-high-fill text-secondary d-flex align-items-center"
+                  ></i>
+                </span>
+              </button>
+            </div>
+            <!-- /Dark Mode Toggle -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Sidebar -->
+
+    <!-- Full Sidebar for Desktop -->
+    <nav class="d-none d-lg-block">
+      <div
+        class="position-fixed d-flex flex-column p-3 bg-body-tertiary"
+        style="height: 100%; width: 280px"
+      >
+        <!-- Sidebar navigation items -->
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto mt-3">
+          <li>
+            <!-- Dashboard link with background gradient -->
+            <a
+              href="1. Admin - Dashboard.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-speedometer2 pe-2"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="2. Admin - Sales.html" class="nav-link link-body-emphasis">
+              <i class="bi bi-graph-up pe-2"></i>
+              Sales
+            </a>
+          </li>
+          <li>
+            <a
+              href="3. Admin - Appointments.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-list-task pe-2"></i>
+              Appointments
+            </a>
+          </li>
+          <li>
+            <a
+              href="4. Admin - Bill of Ladings.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-receipt-cutoff pe-2"></i>
+              Bill of Ladings
+            </a>
+          </li>
+          <li>
+            <a
+              href="5. Admin - Vessel Scheduling.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-calendar2-week pe-2"></i>
+              Vessel Scheduling
+            </a>
+          </li>
+          <li>
+            <a
+              href="6. Admin - Announcements.html"
+              class="nav-link link-body-emphasis"
+            >
+              <i class="bi bi-megaphone pe-2"></i>
+              Announcements
+            </a>
+          </li>
+          <!-- Dropdown menu for additional options -->
+          <li>
+            <div class="dropdown">
+              <a
+                href="#"
+                class="nav-link text-light dropdown-toggle"
+                aria-current="page"
+                style="
+                  background-image: linear-gradient(
+                    to right,
+                    rgb(20 65 105),
+                    rgb(136 194 205)
+                  );
+                "
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="false"
+                aria-expanded="false"
+              >
+                <i class="bi bi-people pe-2 pb-0"></i>
+                Account Settings
+              </a>
+              <ul
+                class="dropdown-menu border border-0 bg-body-tertiary text-small ms-3 mt-0 pt-0"
+              >
+                <li>
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-body-emphasis pt-0"
+                  >
+                    <i class="bi bi-arrow-repeat pe-2"></i>
+                    System Users
+                  </a>
+                </li>
+
+                <li></li>
+                <li>
+                  <a
+                    href="#"
+                    class="nav-link link-body-emphasis pt-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sign-out"
+                  >
+                    <i class="bi bi-box-arrow-left pe-2"></i>
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <hr />
+        <!-- User profile and Gmail -->
+        <div class="">
+          <a
+            href="#"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none"
+          >
+            <img
+              src="https://github.com/onessan.png"
+              alt=""
+              width="32"
+              height="32"
+              class="rounded-circle me-0"
+            />
+            <p class="m-0 ps-2" style="font-size: 11px">
+              nessonbrecia24@gmail.com
+            </p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Sidebar Collapsible Navigation -->
+    <nav class="d-lg-none">
+      <div
+        class="z-1 position-fixed bottom-0 d-flex flex-column bg-body-tertiary"
+        style="height: 96%; width: 3.7rem; top: 38px; transition: width 0.3s"
+      >
+        <ul
+          class="nav nav-pills nav-flush flex-column mb-auto text-center mt-2"
+          style="font-size: 8px; font-weight: 400"
+        >
+          <li class="nav-item">
+            <!-- Mobile Dashboard icon -->
+            <a
+              href="1. Admin - Dashboard.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-speedometer2 fs-1"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <!-- Mobile links for other sections -->
+          <li>
+            <a
+              href="2. Admin - Sales.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-graph-up fs-1"></i>
+              <p>Sales</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="3. Admin - Appointments.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-list-task fs-1"></i>
+              <p>Appointments</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="4. Admin - Bill of Ladings.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-receipt-cutoff fs-1"></i>
+              <p>Bill of Ladings</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="5. Admin - Vessel Scheduling.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-calendar2-week fs-1"></i>
+              <p>Vessel Scheduling</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="6. Admin - Announcements.html"
+              class="nav-link link-secondary p-0 border-bottom rounded-0"
+            >
+              <i class="bi bi-megaphone fs-1"></i>
+              <p>Announcement</p>
+            </a>
+          </li>
+          <!-- Authentication dropdown in mobile view -->
+          <li>
+            <div class="dropdown dropend">
+              <a
+                href="#"
+                class="nav-link p-0 border-bottom rounded-0 text-light"
+                aria-current="page"
+                data-bs-placement="right"
+                data-bs-original-title="Home"
+                style="background-color: rgb(35 100 151)"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-people fs-1"></i>
+                <p class="text-normal">Account Settings</p>
+              </a>
+              <ul class="dropdown-menu border border-1 text-small ms-1">
+                <li>
+                  <a
+                    href="7. Admin - Accounts - System User.html"
+                    class="nav-link link-secondary dropdown-item"
+                  >
+                    System User
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="nav-link link-secondary dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#sign-out"
+                  >
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- User profile Picture-->
+        <div class="border-top">
+          <a
+            href="#"
+            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none"
+          >
+            <img
+              src="https://github.com/onessan.png"
+              alt="mdo"
+              width="30"
+              height="30"
+              class="rounded-circle"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- /Mobile Sidebar -->
+
+    <!-- /Sidebar -->
+
+    <!-- Main content -->
+    <main class="main-content mb-5 z-n1">
+      <div class="admin-accounts-container container-flex px-4 px-lg-5">
+        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-4">ACCOUNT SETTINGS</h4>
+        <!-- Navagation tabs -->
+        <div class="nav-tabs-wrapper">
+          <ul class="nav nav-tabs text-mobile-sm" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active link-body-emphasis text-nowrap"
+                id="change-password"
+                data-bs-toggle="tab"
+                data-bs-target="#change-password-pane"
+                type="button"
+                role="tab"
+                aria-controls="change-password-pane"
+                aria-selected="true"
+              >
+                Change Password
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link link-body-emphasis text-nowrap"
+                id="personal-info"
+                data-bs-toggle="tab"
+                data-bs-target="#personal-info-pane"
+                type="button"
+                role="tab"
+                aria-controls="personal-info-pane"
+                aria-selected="false"
+              >
+                Personal Information
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- /Navagation Tabs -->
+
+        <!-- Tabs Contents -->
+        <div class="tab-content">
+          <!-- Change Password Tab -->
+          <div
+            class="tab-pane fade show active"
+            id="change-password-pane"
+            role="tabpanel"
+            aria-labelledby="change-password"
+            tabindex="0"
+          >
+            <!-- Account Settings & Password Management -->
+            <!-- Email & Role-->
+            <div class="container text-mobile-md pb-2 mt-5">
+              <div class="row">
+                <div class="col-md-6 col-xl-4">
+                  <div class="form-floating mb-3 z-0">
+                    <input
+                      type="email"
+                      class="form-control-plaintext text-mobile-md"
+                      id="email"
+                      placeholder="nessonbrecia24@gmail.com"
+                      value="nessonbrecia24@gmail.com"
+                    />
+                    <label for="first-name text-mobile-md z-0"
+                      >Email Address:</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <div class="form-floating mb-3 z-0" style="max-width: 284px">
+                    <select
+                      class="form-select text-mobile-md border-0"
+                      aria-label="Default select example"
+                      id="role-select"
+                      disabled
+                      style="background-color: gba(0, 0, 0, 0.5)"
+                    >
+                      <option selected>Select Role</option>
+                      <option value="admin">Admin</option>
+                      <option value="head-checker">Head Checker</option>
+                      <option value="cashier">Cashier</option>
+                    </select>
+                    <label id="role-label" for="role-select text-mobile-md"
+                      >Role:</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- /Email & Role-->
+
+              <!-- Change Password Section -->
+              <div class="container text-mobile-md">
+                <div class="row">
+                  <!-- Column for Current Password -->
+                  <div class="col-md-6 col-xl-4 pe-md-5">
+                    <div class="mb-3 row">
+                      <!-- Label for current password input -->
+                      <label
+                        for="inputPassword"
+                        class="col-12 col-form-label pb-1 mb-0"
+                        style="font-size: 12px"
+                      >
+                        Current Password:
+                      </label>
+                      <div class="col-12">
+                        <!-- Current password input field -->
+                        <input
+                          type="password"
+                          class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
+                          id="inputPassword"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Column for New and Confirm Password -->
+                  <div class="col-md-6 col-xl-8">
+                    <div class="row">
+                      <!-- Column for New Password -->
+                      <div class="col-md-12 col-xl-6 pe-md-5">
+                        <div class="mb-3 row">
+                          <!-- Label for new password input -->
+                          <label
+                            for="inputPassword"
+                            class="col-12 col-form-label pb-1 mb-0"
+                            style="font-size: 12px"
+                          >
+                            New Password:
+                          </label>
+                          <div class="col-12">
+                            <!-- New password input field -->
+                            <input
+                              type="password"
+                              class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
+                              id="inputPassword"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Column for Confirm Password -->
+                      <div class="col-md-12 col-xl-6 pe-md-5">
+                        <div class="mb-3 row">
+                          <label
+                            for="inputPassword"
+                            class="col-12 col-form-label pb-1 mb-0"
+                            style="font-size: 12px"
+                          >
+                            Confirm Password:
+                          </label>
+                          <div class="col-12">
+                            <input
+                              type="password"
+                              class="form-control text-mobile-md py-1 mt-0 mt-sm-1"
+                              id="inputPassword"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Buttons for canceling or submitting the password change -->
+
+                <div class="pt-3">
+                  <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2">
+                      <div class="col"></div>
+                      <div class="col px-0">
+                        <div class="row cols-2 g-2">
+                          <div class="col d-grid">
+                            <button
+                              class="btn btn-sm bg-body-tertiary text-mobile-md me-1"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                          <div class="col d-grid">
+                            <button
+                              class="btn btn-sm btn-secondary text-mobile-md"
+                              data-bs-toggle="modal"
+                              data-bs-target="#save-password"
+                            >
+                              Change Password
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- /Change Password Section -->
+            </div>
+            <!-- /Account Settings & Password Management -->
+          </div>
+          <!-- /Change Password Tab -->
+
+          <!-- Personal Information Tab -->
+          <div
+            class="tab-pane fade"
+            id="personal-info-pane"
+            role="tabpanel"
+            aria-labelledby="personal-info"
+            tabindex="0"
+          >
+            <!-- Personal Information -->
+            <div class="container pe-3 mb-5 mt-5">
+              <!-- Personal Information -->
+              <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="col">
+                  <div class="container text-mobile-md">
+                    <div class="form-floating mb-3 z-0">
+                      <input
+                        type="text"
+                        class="form-control-plaintext text-mobile-md"
+                        id="first-name"
+                        placeholder="Nesson"
+                        value="Nesson"
+                        readonly
+                      />
+                      <label for="first-name text-mobile-md z-0"
+                        >First Name:</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="container text-mobile-md">
+                    <div class="form-floating mb-3 z-0">
+                      <input
+                        type="text"
+                        class="form-control-plaintext text-mobile-md"
+                        id="last-name"
+                        placeholder="Brecia"
+                        value="Brecia"
+                        readonly
+                      />
+                      <label for="last-name text-mobile-md">Last Name:</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="container text-mobile-md">
+                    <div class="form-floating mb-3 z-0">
+                      <input
+                        type="text"
+                        class="form-control-plaintext text-mobile-md"
+                        id="sufix"
+                        placeholder="N/A"
+                        value="N/A"
+                        readonly
+                      />
+                      <label for="sufix text-mobile-md">Sufix:</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="container text-mobile-md z-0">
+                    <div class="form-floating mb-3 z-0">
+                      <select
+                        class="form-select border-0 text-mobile-md"
+                        aria-label="Default select example"
+                        id="gender-select"
+                        disabled
+                        style="background-color: gba(0, 0, 0, 0.5)"
+                      >
+                        <option selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Prefer not to say</option>
+                      </select>
+                      <label
+                        id="gender-label"
+                        for="gender-select text-mobile-md"
+                        >Gender:</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="container text-mobile-md">
+                    <div class="form-floating mb-3 z-0">
+                      <input
+                        type="date"
+                        id="dateFrom"
+                        class="form-control-plaintext text-mobile-md"
+                        value="2001-08-24"
+                        readonly
+                      />
+                      <label for="first-name text-mobile-md">Birthday:</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-3 d-flex justify-content-end">
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col d-grid">
+                      <button
+                        class="btn btn-sm bg-body-tertiary me-1 d-grid text-mobile-md"
+                        style="min-width: 230px"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-data"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Personal Information -->
+          <!-- Personal Information Tab -->
+        </div>
+      </div>
+
+      <!-- Modal Container -->
+      <div class="modal-container">
+        <!--  Modal for Save Password -->
+        <div
+          class="modal fade"
+          id="save-password"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-exclamation-octagon fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+
+                  <p
+                    class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                  >
+                    CONFIRM CHANGE PASSWORD?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="update-password-btn"
+                    class="btn btn-danger text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Modal for Save Password -->
+
+        <!--  Modal for Edit Personal Data -->
+        <div class="modal fade" id="edit-data" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">
+                  UPDATE PERSONAL INFORMATION
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container pe-3 mb-5">
+                  <!-- Uneditable Section -->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="email"
+                            class="form-control-plaintext text-mobile-md"
+                            id="email"
+                            placeholder="nessonbrecia24@gmail.com"
+                            value="nessonbrecia24@gmail.com"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >Email Address:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md border-0"
+                            aria-label="Default select example"
+                            id="role-select"
+                            disabled
+                            style="background-color: gba(0, 0, 0, 0.5)"
+                          >
+                            <option selected>Select Role</option>
+                            <option value="admin">Admin</option>
+                            <option value="head-checker">Head Checker</option>
+                            <option value="cashier">Cashier</option>
+                          </select>
+                          <label
+                            id="role-label"
+                            for="role-select text-mobile-md"
+                            >Role:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Uneditable Section -->
+                  <br />
+                  <!-- Personal Information -->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="first-name"
+                            placeholder="Nesson"
+                            value="Nesson"
+                          />
+                          <label for="first-name text-mobile-md z-0"
+                            >First Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="last-name"
+                            placeholder="Brecia"
+                            value="Brecia"
+                          />
+                          <label for="last-name text-mobile-md"
+                            >Last Name:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="text"
+                            class="form-control text-mobile-md"
+                            id="sufix"
+                            placeholder="N/A"
+                            value="N/A"
+                          />
+                          <label for="sufix text-mobile-md">Sufix:</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="container text-mobile-md z-0">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="gender-select"
+                          >
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Prefer not to say</option>
+                          </select>
+                          <label
+                            id="gender-label"
+                            for="gender-select text-mobile-md"
+                            >Gender:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <input
+                            type="date"
+                            id="dateFrom"
+                            class="form-control text-mobile-md"
+                            value="2001-08-24"
+                          />
+                          <label for="first-name text-mobile-md"
+                            >Birthday:</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col"></div>
+                    <div class="col">
+                      <div class="row cols-2 g-2">
+                        <div class="col d-grid">
+                          <button
+                            type="button"
+                            class="btn bg-body-tertiary text-mobile-md"
+                            data-bs-dismiss="modal"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                        <div class="col d-grid">
+                          <button
+                            type="button"
+                            class="btn btn-info text-mobile-md"
+                            data-bs-target="#update-personal-information"
+                            data-bs-toggle="modal"
+                          >
+                            Update
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  /Modal for Edit Personal Data -->
+
+        <!--  Modal for Update Personal Information -->
+        <div
+          class="modal fade"
+          id="update-personal-information"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container mb-3">
+                  <i
+                    class="bi bi-info-circle fs-1 text-info d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+
+                  <p
+                    class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                  >
+                    UPDATE PERSONAL INFORMATION?
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="personal-information-btn"
+                    class="btn btn-info text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#edit-data"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Modal for Update Personal Information -->
+      </div>
+      <!-- Modal Container -->
+
+      <!-- Toast Container -->
+      <div class="toast-container">
+        <!-- Toast for Password Changed -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="password-update">
+            <div class="toast-header text-bg-warning text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-warning text-mobile-md fw-normal">
+              Password Updated Successfully
+            </div>
+          </div>
+        </div>
+        <!-- /Toast for Password Changed -->
+
+        <!-- Toast for Personal Information Changed -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="personal-information-update">
+            <div class="toast-header text-bg-info text-mobile-md">
+              <div class="me-auto">Admin</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-info text-mobile-md fw-normal">
+              Personal Information Updated Successfully
+            </div>
+          </div>
+        </div>
+        <!-- /Toast for Personal Information Changed -->
+      </div>
+      <!-- /Toast Container -->
+
+      <!-- Sign Out Modal -->
+      <div class="modal fade" id="sign-out" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close text-mobile-md"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-mobile-md">
+              <div class="container mb-3">
+                <i
+                  class="bi bi-emoji-frown fs-1 text-danger d-flex justify-content-center align-items-center pb-3"
+                ></i>
+                <p
+                  class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                >
+                  ARE YOU SURE TO SIGN OUT?
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <div class="d-grid vstack gap-2">
+                <button
+                  type="button"
+                  id="sign-out-confirm"
+                  class="btn btn-danger text-mobile-md"
+                  data-bs-dismiss="modal"
+                >
+                  Sign Out
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-body-tertiary text-mobile-md"
+                  data-bs-target="#"
+                  data-bs-toggle="modal"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign Out Modal -->
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="JS/bootstrap.bundle.js"></script>
+    <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      // Set the default value programmatically
+      document.getElementById("gender-select").value = "male";
+    </script>
+    <script>
+      // Set the default value programmatically
+      document.getElementById("role-select").value = "admin";
+    </script>
+    <script>
+      const toastTrigger1 = document.querySelector("#update-password-btn");
+      const toast1 = document.querySelector("#password-update");
+
+      if (toastTrigger1) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast1);
+
+        toastTrigger1.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const toastTrigger2 = document.querySelector("#personal-information-btn");
+      const toast2 = document.querySelector("#personal-information-update");
+
+      if (toastTrigger2) {
+        const toastBoootstrap = bootstrap.Toast.getOrCreateInstance(toast2);
+
+        toastTrigger2.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+  </body>
+</html>
