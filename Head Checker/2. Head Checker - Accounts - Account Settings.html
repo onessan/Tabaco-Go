@@ -253,7 +253,7 @@
 
     <!-- Main content -->
     <main class="main-content mb-5 z-n1">
-      <div class="admin-accounts-container container-flex px-4 px-lg-5">
+      <div class="bill-of-lading-accounts-acontainer container-flex px-4 px-lg-5">
         <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-4">ACCOUNT SETTINGS</h4>
         <!-- Navagation tabs -->
         <div class="nav-tabs-wrapper">
@@ -675,9 +675,9 @@
                             disabled
                             style="background-color: gba(0, 0, 0, 0.5)"
                           >
-                            <option selected>Select Role</option>
+                            <option >Select Role</option>
                             <option value="admin">Admin</option>
-                            <option value="head-checker">Head Checker</option>
+                            <option value="head-checker" selected>Head Checker</option>
                             <option value="cashier">Cashier</option>
                           </select>
                           <label
@@ -877,7 +877,7 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div class="toast" id="password-update">
             <div class="toast-header text-bg-warning text-mobile-md">
-              <div class="me-auto">Admin</div>
+              <div class="me-auto">Head Checker</div>
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-warning text-mobile-md fw-normal">
@@ -891,7 +891,7 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div class="toast" id="personal-information-update">
             <div class="toast-header text-bg-info text-mobile-md">
-              <div class="me-auto">Admin</div>
+              <div class="me-auto">Head Checker</div>
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-info text-mobile-md fw-normal">
@@ -962,7 +962,7 @@
     </script>
     <script>
       // Set the default value programmatically
-      document.getElementById("role-select").value = "admin";
+      document.getElementById("role-select").value = "head-checker";
     </script>
     <script>
       const toastTrigger1 = document.querySelector("#update-password-btn");

@@ -258,303 +258,1344 @@
 
     <!-- Main content -->
     <main class="main-content mb-5">
-      <div class="admin-bill-of-ladings-container container-flex px-4 px-lg-5">
-        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-1">
-          CARGO INVENTORY REPORT
-        </h4>
-
-        <!-- Data Filtering by Date -->
-        <div class="row g-3 pt-3" style="max-width: 1000px">
-          <div class="col-md-4">
-            <div class="filter-item text-mobile-sm">
-              <label for="dateFrom" class="pb-1">Filter Date From:</label>
-              <input
-                type="date"
-                id="dateFrom"
-                class="form-control text-mobile-sm"
-                value=""
-              />
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="filter-item text-mobile-sm">
-              <label for="dateFrom" class="pb-1">Filter Date To:</label>
-              <input
-                type="date"
-                id="dateFrom"
-                class="form-control text-mobile-sm"
-                value=""
-              />
-            </div>
-          </div>
-          <div class="col-md-4 d-grid pt-md-3 h-50">
-            <button
-              type="submit"
-              class="btn btn-primary filter-button mt-md-2 text-mobile-sm"
-              style="
-                background-color: rgb(35 100 151);
-                border-color: rgb(35 100 151);
-              "
-            >
-              <i class="bi bi-funnel"></i> Filter Data
-            </button>
-          </div>
-        </div>
-        <!-- /Data Filtering by Date -->
-
-        <!-- Search Bar for Table -->
-        <div class="row g-2 pt-5">
-          <div class="col-sm-8 d-flex align-items-center">
-            <div class="input-group">
-              <!-- Search input -->
-              <input
-                type="text"
-                class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="search-icon"
-                style="height: 27px; font-size: 9px"
-              />
-              <span
-                class="input-group-text rounded-0 d-flex justify-content-center"
-                id="search-icon"
-                style="height: 27px; width: 35px"
-              >
-                <i class="bi bi-search text-mobile-sm"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!-- /Search Bar for Table -->
-        <div class="table-responsive text-nowrap">
-          <table class="table table-striped table-hover mt-3 text-mobile-md">
-            <thead>
-              <tr>
-                <th class="z-1">#</th>
-                <th class="z-1">Bill of Lading ID</th>
-                <th class="z-1">Cargo ID</th>
-                <th class="z-1">Vessel</th>
-                <th class="z-1">Voyage Number</th>
-                <th class="z-1">Shipper</th>
-                <th class="z-1">Date</th>
-                <th class="z-1">Consignee</th>
-                <th class="z-1">Cargo Destination</th>
-                <th class="z-1">Descrition of Article</th>
-                <th class="z-1">Value</th>
-              </tr>
-            </thead>
-            <tbody style="font-size: 12px">
-              <tr>
-                <td>1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- /Table -->
-        <!-- Table Footer -->
-        <div class="row pt-1">
-          <div class="col-7 pt-1">
-            <p class="text-mobile-sm">Showing 10 out of 0 entries.</p>
-          </div>
-          <div class="col-5">
-            <nav aria-label="page navigation">
-              <ul class="pagination pagination-sm d-flex justify-content-end">
-                <li class="page-item">
-                  <a
-                    href="#"
-                    class="page-link border border-0 link-body-emphasis text-mobile-sm"
-                    >Previous</a
-                  >
-                </li>
-                <li class="page-item">
-                  <a
-                    href="#"
-                    class="page-link border border-1 link-body-emphasis mx-1 px-3 text-mobile-sm"
-                    >1</a
-                  >
-                </li>
-                <li class="page-item">
-                  <a
-                    href="#"
-                    class="page-link border border-0 link-body-emphasis text-mobile-sm"
-                    aria-label="Next"
-                    >Next</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /Table Footer -->
-
-        <!-- Button group of Export CSV | Export PDF | Print Report -->
-        <div class="row pt-3 pb-5">
-          <div class="col-lg-6 col-xxl-8"></div>
-          <div class="col-lg-6 col-xxl-4 d-grid">
-            <div class="btn-group" role="group" aria-label="Download">
+      <div
+        class="head-checker-bill-of-ladings-container container-flex px-4 px-lg-5"
+      >
+        <h4 class="fw-bold fs-5 pt-2 pt-sm-3 pt-lg-0 pb-4">CARGO MANAGEMENT</h4>
+        <!-- Navagation tabs -->
+        <div class="nav-tabs-wrapper">
+          <ul class="nav nav-tabs text-mobile-sm" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
               <button
+                class="nav-link active link-body-emphasis text-nowrap"
+                id="add-new-cargo-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#add-new-cargo-tab-pane"
                 type="button"
-                class="btn btn-primary py-1 text-mobile-md"
-                style="background-color: #1f4981; border: none; margin-right: 0"
-                id="exporting-as-csv-btn"
+                role="tab"
+                aria-controls="add-new-cargo-tab-pane"
+                aria-selected="true"
               >
-                Export CSV
+                Add New Cargo
               </button>
+            </li>
+            <li class="nav-item" role="presentation">
               <button
+                class="nav-link link-body-emphasis text-nowrap"
+                id="cargo-details-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#cargo-details-tab-pane"
                 type="button"
-                class="btn btn-primary text-mobile-md"
-                style="
-                  background-color: rgb(35 100 151);
-                  border: none;
-                  margin-right: 0;
-                "
-                id="exporting-as-pdf-btn"
+                role="tab"
+                aria-controls="cargo-details-tab-pane"
+                aria-selected="false"
               >
-                Export PDF
+                Cargo Details
               </button>
+            </li>
+            <li class="nav-item active" role="presentation">
               <button
+                class="nav-link link-body-emphasis text-nowrap"
+                id="cargo-reports"
+                data-bs-toggle="tab"
+                data-bs-target="#cargo-reports-pane"
                 type="button"
-                class="btn btn-success text-mobile-md"
-                style="border: none"
-                ;
-                id="printing-report-btn"
+                role="tab"
+                aria-controls="cargo-reports-pane"
+                aria-selected="true"
               >
-                Print Report
+                Reports
               </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- /Navagation Tabs -->
+
+        <!-- Tabs Contents -->
+        <div class="tab-content">
+          <!-- Add New Cargo Tab -->
+          <div
+            class="tab-pane fade show active"
+            id="add-new-cargo-tab-pane"
+            role="tabpanel"
+            aria-labelledby="add-new-cargo-tab"
+            tabindex="0"
+          >
+            <div class="container text-mobile-md pb-2 mt-5">
+              <!-- Number of Cargo-->
+              <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="col">
+                  <div class="container text-mobile-md">
+                    <div class="form-floating mb-3 z-0">
+                      <select
+                        class="form-select text-mobile-md"
+                        aria-label="Default select example"
+                        id="number-of-cargo-select"
+                        onchange="toggleCustomInput()"
+                      >
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="custom">Custom</option>
+                      </select>
+                      <label id="destination-label" for="number-of-cargo-select"
+                        >Number of Cargo:</label
+                      >
+
+                      <!-- Custom input field, initially hidden -->
+                      <div id="custom-input-container" style="display: none">
+                        <input
+                          type="number"
+                          min="6"
+                          max="20"
+                          class="form-control mt-2 text-mobile-md"
+                          id="custom-input"
+                          placeholder="Enter custom destination"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Number of Cargo-->
+
+              <!-- Cargo Information Section -->
+              <div class="text-mobile-md">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-4">
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="text"
+                          class="form-control text-mobile-md"
+                          id="vessel-name"
+                          placeholder="Vessel Name"
+                        />
+                        <label for="vessel-name">Vessel Name:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="number"
+                          class="form-control text-mobile-md"
+                          id="voyage-number"
+                          placeholder="Voyage Number"
+                        />
+                        <label for="voyage-number">Voyage Number:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="text"
+                          class="form-control text-mobile-md"
+                          id="shipper"
+                          placeholder="Shipper"
+                        />
+                        <label for="shipper">Shipper:</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="date"
+                          id="date"
+                          class="form-control text-mobile-md"
+                        />
+                        <label for="date">Date:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="text"
+                          class="form-control text-mobile-md"
+                          id="consignee"
+                          placeholder="Consignee"
+                        />
+                        <label for="consignee">Consignee:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="text"
+                          class="form-control text-mobile-md"
+                          id="destination"
+                          placeholder="Destination"
+                        />
+                        <label for="destination">Destination:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="number"
+                          class="form-control text-mobile-md"
+                          id="quantity"
+                          placeholder="Quantity"
+                        />
+                        <label for="quantity">Quantity:</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <div class="form-floating mb-3 z-0">
+                        <input
+                          type="text"
+                          class="form-control text-mobile-md"
+                          id="comments"
+                          placeholder="Comments"
+                        />
+                        <label for="comments">Comements:</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-4">
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <label for="value" class="ps-1 pb-1 text-mobile-md"
+                        >Value:</label
+                      >
+                      <div class="input-group mb-3 text-mobile-md">
+                        <span class="input-group-text"> &#8369;</span>
+                        <input
+                          type="number"
+                          class="form-control text-mobile-md"
+                          id="value"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container text-mobile-md">
+                      <label
+                        for="weight-measurement"
+                        class="ps-1 pb-1 text-mobile-md"
+                        >Weight Measurement:</label
+                      >
+                      <div class="input-group mb-3 text-mobile-md">
+                        <input
+                          type="number"
+                          class="form-control text-mobile-md"
+                          id="weight-measurement"
+                        />
+                        <span
+                          class="input-group-text text-mobile-md fw-semibold"
+                          >Metric Ton</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Buttons for canceling or adding new cargo -->
+                <div class="pt-3">
+                  <div class="container px-4">
+                    <div class="row row-cols-1 row-cols-md-2">
+                      <div class="col"></div>
+                      <div class="col px-0">
+                        <div class="row cols-2 g-2">
+                          <div class="col d-grid">
+                            <button
+                              class="btn btn-sm bg-body-tertiary text-mobile-md me-1"
+                            >
+                              Clear
+                            </button>
+                          </div>
+                          <div class="col d-grid">
+                            <button
+                              class="btn btn-sm btn-success text-mobile-md"
+                              data-bs-toggle="modal"
+                              data-bs-target="#confirm-add-cargo"
+                            >
+                              Add
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Buttons for canceling or adding new cargo -->
+              </div>
+              <!-- /Cargo Information Section -->
             </div>
           </div>
+          <!-- /Add New Cargo Tab -->
+
+          <!-- Cargo Details Tab -->
+          <div
+            class="tab-pane fade"
+            id="cargo-details-tab-pane"
+            role="tabpanel"
+            aria-labelledby="cargo-details-tab"
+            tabindex="0"
+          >
+            <!-- Search Bar for Table -->
+            <div class="row g-2 pt-5">
+              <div class="col-sm-8 d-flex align-items-center">
+                <div class="input-group">
+                  <!-- Search input -->
+                  <input
+                    type="text"
+                    class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-icon"
+                    style="height: 27px; font-size: 9px"
+                  />
+                  <span
+                    class="input-group-text rounded-0 d-flex justify-content-center"
+                    id="search-icon"
+                    style="height: 27px; width: 35px"
+                  >
+                    <i class="bi bi-search text-mobile-sm"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /Search Bar for Table -->
+
+            <!-- Table -->
+            <div class="table-responsive text-nowrap text-mobile-md">
+              <table class="table table-hover table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th class="z-1">#</th>
+                    <th class="z-1">Vessel Name</th>
+                    <th class="z-1">Voyage Number</th>
+                    <th class="z-1">Shipper</th>
+                    <th class="z-1">Date</th>
+                    <th class="z-1">Consignee</th>
+                    <th class="z-1">Cargo Destination</th>
+                    <th class="z-1">Description</th>
+                    <th class="z-1">Quantity</th>
+                    <th class="z-1">Value</th>
+                    <th class="z-1">Weight Mesurement</th>
+                    <th class="sticky-right-1">
+                      <p class="d-flex justify-content-center p-0 m-0">
+                        Action
+                      </p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-wrap py-0 my-0 ms-auto sticky-right-1">
+                      <button
+                        class="btn btn-sm d-inline-block w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#edit-cargo-details"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Table -->
+
+            <!-- Table Footer -->
+            <div class="row pt-1">
+              <div class="col-7 pt-1">
+                <p class="text-mobile-sm">Showing 10 out of 0 entries.</p>
+              </div>
+              <div class="col-5">
+                <nav aria-label="page navigation">
+                  <ul
+                    class="pagination pagination-sm d-flex justify-content-end"
+                  >
+                    <li class="page-item">
+                      <a
+                        href="#"
+                        class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                        >Previous</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        href="#"
+                        class="page-link border border-1 link-body-emphasis mx-1 px-3 text-mobile-sm"
+                        >1</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        href="#"
+                        class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                        aria-label="Next"
+                        >Next</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- /Table Footer -->
+          </div>
+          <!-- /Cargo Details Tab -->
+
+          <!-- Cargo Reports Tab -->
+          <div
+            class="tab-pane fade"
+            id="cargo-reports-pane"
+            role="tabpanel"
+            aria-labelledby="cargo-reports"
+            tabindex="0"
+          >
+            <!-- Data Filtering by Date -->
+            <div class="row g-3 pt-3" style="max-width: 1000px">
+              <div class="col-md-4">
+                <div class="filter-item text-mobile-sm">
+                  <label for="dateFrom" class="pb-1">Filter Date From:</label>
+                  <input
+                    type="date"
+                    id="dateFrom"
+                    class="form-control text-mobile-sm"
+                    value=""
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="filter-item text-mobile-sm">
+                  <label for="dateFrom" class="pb-1">Filter Date To:</label>
+                  <input
+                    type="date"
+                    id="dateFrom"
+                    class="form-control text-mobile-sm"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 d-grid pt-md-3 h-50">
+                <button
+                  type="submit"
+                  class="btn btn-primary filter-button mt-md-2 text-mobile-sm"
+                  style="
+                    background-color: rgb(35 100 151);
+                    border-color: rgb(35 100 151);
+                  "
+                >
+                  <i class="bi bi-funnel"></i> Filter Data
+                </button>
+              </div>
+            </div>
+            <!-- /Data Filtering by Date -->
+
+            <!-- Search Bar for Table -->
+            <div class="row g-2 pt-5">
+              <div class="col-sm-8 d-flex align-items-center">
+                <div class="input-group">
+                  <!-- Search input -->
+                  <input
+                    type="text"
+                    class="form-control text-mobile-sm rounded-0 adaptive-search-bar"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search-icon"
+                    style="height: 27px; font-size: 9px"
+                  />
+                  <span
+                    class="input-group-text rounded-0 d-flex justify-content-center"
+                    id="search-icon"
+                    style="height: 27px; width: 35px"
+                  >
+                    <i class="bi bi-search text-mobile-sm"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- /Search Bar for Table -->
+            <br />
+
+            <!-- Table -->
+            <div class="table-responsive text-nowrap">
+              <table
+                class="table table-striped table-hover mt-3 text-mobile-md"
+              >
+                <thead>
+                  <tr>
+                    <th class="z-1">#</th>
+                    <th class="z-1">Bill of Lading ID</th>
+                    <th class="z-1">Cargo ID</th>
+                    <th class="z-1">Vessel Name</th>
+                    <th class="z-1">Voyage Number</th>
+                    <th class="z-1">Shipper</th>
+                    <th class="z-1">Date</th>
+                    <th class="z-1">Consignee</th>
+                    <th class="z-1">Cargo Destination</th>
+                    <th class="z-1">Descrition of Article</th>
+                    <th class="z-1">Value</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 12px">
+                  <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Table -->
+
+            <!-- Table Footer -->
+            <div class="row pt-1">
+              <div class="col-7 pt-1">
+                <p class="text-mobile-sm">Showing 10 out of 0 entries.</p>
+              </div>
+              <div class="col-5">
+                <nav aria-label="page navigation">
+                  <ul
+                    class="pagination pagination-sm d-flex justify-content-end"
+                  >
+                    <li class="page-item">
+                      <a
+                        href="#"
+                        class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                        >Previous</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        href="#"
+                        class="page-link border border-1 link-body-emphasis mx-1 px-3 text-mobile-sm"
+                        >1</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        href="#"
+                        class="page-link border border-0 link-body-emphasis text-mobile-sm"
+                        aria-label="Next"
+                        >Next</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- /Table Footer -->
+
+            <!-- Button group of Export CSV | Export PDF | Print Report -->
+            <div class="row pt-3 pb-5">
+              <div class="col-lg-6 col-xxl-8"></div>
+              <div class="col-lg-6 col-xxl-4 d-grid">
+                <div class="btn-group" role="group" aria-label="Download">
+                  <button
+                    id="exporting-as-csv-btn"
+                    type="button"
+                    class="btn btn-primary py-1 text-mobile-md"
+                    style="
+                      background-color: #1f4981;
+                      border: none;
+                      margin-right: 0;
+                    "
+                  >
+                    Export CSV
+                  </button>
+                  <button
+                    id="exporting-as-pdf-btn"
+                    type="button"
+                    class="btn btn-primary text-mobile-md"
+                    style="
+                      background-color: rgb(35 100 151);
+                      border: none;
+
+                      margin-right: 0;
+                    "
+                  >
+                    Export PDF
+                  </button>
+                  <button
+                    id="printing-report-btn"
+                    type="button"
+                    class="btn btn-success text-mobile-md"
+                    style="border: none"
+                    ;
+                  >
+                    Print Report
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- /Button group of Export CSV | Export PDF | Print Report -->
+          </div>
+          <!-- /Cargo Reports Tab -->
         </div>
-        <!-- /Button group of Export CSV | Export PDF | Print Report -->
+        <!-- /Tabs Contents -->
       </div>
+
+      <!-- Modal Container -->
+      <div class="modal-container">
+        <!-- Add New Cargo -->
+        <div
+          class="modal fade"
+          id="confirm-add-cargo"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container">
+                  <i
+                    class="bi bi-info-circle fs-1 text-success d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                  >
+                    CONFIRM ADDING THIS CARGO?
+                  </p>
+                  <div
+                    class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
+                  ></div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="cargo-added-btn"
+                    class="btn btn-success text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#add-schedule"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Add New Cargo -->
+
+        <!-- Edit Vessel Schedule -->
+        <div
+          class="modal fade"
+          id="edit-cargo-details"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 text-mobile-md">
+                <h4 class="container fw-bold fs-6">UPDATE CARGO DETAILS</h4>
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md pt-0">
+                <div class="container pe-3 mb-2">
+                  <br />
+
+                  <!-- Number of Cargo-->
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <div class="col">
+                      <div class="container text-mobile-md">
+                        <div class="form-floating mb-3 z-0">
+                          <select
+                            class="form-select text-mobile-md"
+                            aria-label="Default select example"
+                            id="number-of-cargo-select"
+                            onchange="toggleCustomInput()"
+                          >
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="custom">Custom</option>
+                          </select>
+                          <label
+                            id="destination-label"
+                            for="number-of-cargo-select"
+                            >Number of Cargo:</label
+                          >
+
+                          <!-- Custom input field, initially hidden -->
+                          <div
+                            id="custom-input-container"
+                            style="display: none"
+                          >
+                            <input
+                              type="number"
+                              min="6"
+                              max="20"
+                              class="form-control mt-2 text-mobile-md"
+                              id="custom-input"
+                              placeholder="Enter custom destination"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Number of Cargo-->
+
+                  <!-- Cargo Information Section -->
+                  <div class="text-mobile-md">
+                    <div
+                      class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-4"
+                    >
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="text"
+                              class="form-control text-mobile-md"
+                              id="vessel-name"
+                              placeholder="Vessel Name"
+                              value="M/V Titanic II"
+                            />
+                            <label for="vessel-name">Vessel Name:</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="number"
+                              class="form-control text-mobile-md"
+                              id="voyage-number"
+                              placeholder="Voyage Number"
+                              value="112323"
+                            />
+                            <label for="voyage-number">Voyage Number:</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="text"
+                              class="form-control text-mobile-md"
+                              id="shipper"
+                              placeholder="Shipper"
+                              value="Ian Shipping"
+                            />
+                            <label for="shipper">Shipper:</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="date"
+                              id="date"
+                              class="form-control text-mobile-md"
+                              value="2024-11-23"
+                            />
+                            <label for="date">Date:</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="text"
+                              class="form-control text-mobile-md"
+                              id="consignee"
+                              placeholder="Consignee"
+                              value="Ian Azupardo"
+                            />
+                            <label for="consignee">Consignee:</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="text"
+                              class="form-control text-mobile-md"
+                              id="destination"
+                              placeholder="Destination"
+                              value="Laem Chabang Port, Thailand"
+                            />
+                            <label for="destination">Destination:</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="number"
+                              class="form-control text-mobile-md"
+                              id="quantity"
+                              placeholder="Quantity"
+                              value="500"
+                            />
+                            <label for="quantity">Quantity:</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <div class="form-floating mb-3 z-0">
+                            <input
+                              type="text"
+                              class="form-control text-mobile-md"
+                              id="comments"
+                              placeholder="Comments"
+                              value="N/A"
+                            />
+                            <label for="comments">Comements:</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="row row-cols-1 row-cols-md-2 row-cols-xl-3 mt-4"
+                    >
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <label for="value" class="ps-1 pb-1 text-mobile-md"
+                            >Value:</label
+                          >
+                          <div class="input-group mb-3 text-mobile-md">
+                            <span class="input-group-text"> &#8369;</span>
+                            <input
+                              type="number"
+                              class="form-control text-mobile-md"
+                              id="value"
+                              value="1200000.00"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="container text-mobile-md">
+                          <label
+                            for="weight-measurement"
+                            class="ps-1 pb-1 text-mobile-md"
+                            >Weight Measurement:</label
+                          >
+                          <div class="input-group mb-3 text-mobile-md">
+                            <input
+                              type="number"
+                              class="form-control text-mobile-md"
+                              id="weight-measurement"
+                              value="250"
+                            />
+                            <span
+                              class="input-group-text text-mobile-md fw-semibold"
+                              >Metric Ton</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer border-0">
+                  <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2">
+                      <div class="col"></div>
+                      <div class="col">
+                        <div class="row cols-2 g-2">
+                          <div class="col d-grid">
+                            <button
+                              type="button"
+                              class="btn bg-body-tertiary text-mobile-md"
+                              data-bs-dismiss="modal"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                          <div class="col d-grid">
+                            <button
+                              type="button"
+                              class="btn btn-info text-mobile-md"
+                              data-bs-target="#confirm-update-cargo-dedails"
+                              data-bs-toggle="modal"
+                            >
+                              Update
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Edit Vessel Schedule -->
+        </div>
+        <!-- /Edit Vessel Schedule -->
+
+        <!-- Update Cargo Details-->
+        <div
+          class="modal fade"
+          id="confirm-update-cargo-dedails"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close text-mobile-md"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-mobile-md">
+                <div class="container">
+                  <i
+                    class="bi bi-info-circle fs-1 text-success d-flex justify-content-center align-items-center pb-3"
+                  ></i>
+                  <p
+                    class="d-flex align-items-center justify-content-center text-center fw-semibold m-0 fs-6"
+                  >
+                    CONFIRM TO UPDATE THIS CARGO DETAILS?
+                  </p>
+                  <div
+                    class="form-check form-check-inline d-flex align-items-center justify-content-center fw-normal m-0"
+                  ></div>
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <div class="d-grid vstack gap-2">
+                  <button
+                    type="button"
+                    id="cargo-updated-btn"
+                    class="btn btn-info text-mobile-md"
+                    data-bs-dismiss="modal"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    class="btn bg-body-tertiary text-mobile-md"
+                    data-bs-target="#edit-cargo-details"
+                    data-bs-toggle="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Update Cargo -->
+      </div>
+      <!-- /Modal Container -->
+
+      <!-- Toast Container -->
+      <div class="toast-container">
+        <!-- Cargo Added Successfully -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="cargo-added">
+            <div class="toast-header text-bg-warning text-mobile-md">
+              <div class="me-auto">Head Checker</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-warning text-mobile-md fw-normal">
+              New Cargo Added Successfully.
+            </div>
+          </div>
+        </div>
+        <!-- /Cargo Added Successfully -->
+        <!-- Cargo Details Updated Successfully -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast" id="cargo-updated">
+            <div class="toast-header text-bg-info text-mobile-md">
+              <div class="me-auto">Head Checker</div>
+              <small>Just Now</small>
+            </div>
+            <div class="toast-body text-bg-info text-mobile-md fw-normal">
+              New Cargo Details Updated Successfully.
+            </div>
+          </div>
+        </div>
+        <!-- /Cargo Details Updated Successfully -->
+      </div>
+      <!-- /Toast Container -->
 
       <!-- Toast for Export & Print -->
       <div class="toast-for-export-and-print-container">
@@ -562,7 +1603,7 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div class="toast" id="exporting-as-csv">
             <div class="toast-header text-bg-info text-mobile-md">
-              <div class="me-auto">Admin</div>
+              <div class="me-auto">Head Checker</div>
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-info text-mobile-md fw-normal">
@@ -576,7 +1617,7 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div class="toast" id="exporting-as-pdf">
             <div class="toast-header text-bg-danger text-mobile-md">
-              <div class="me-auto">Admin</div>
+              <div class="me-auto">Head Checker</div>
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-danger text-mobile-md fw-normal">
@@ -590,7 +1631,7 @@
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div class="toast" id="printing-report">
             <div class="toast-header text-bg-success text-mobile-md">
-              <div class="me-auto">Admin</div>
+              <div class="me-auto">Head Checker</div>
               <small>Just Now</small>
             </div>
             <div class="toast-body text-bg-success text-mobile-md fw-normal">
@@ -655,6 +1696,47 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="JS/bootstrap.bundle.js"></script>
     <script src="JS/darkmodetoggle.js"></script>
+    <script>
+      function toggleCustomInput() {
+        const select = document.getElementById("number-of-cargo-select");
+        const customInputContainer = document.getElementById(
+          "custom-input-container"
+        );
+
+        // Show custom input field when "Custom" is selected, otherwise hide it
+        if (select.value === "custom") {
+          customInputContainer.style.display = "block";
+        } else {
+          customInputContainer.style.display = "none";
+        }
+      }
+    </script>
+    <script>
+      const updateCargoDetails = document.querySelector("#cargo-updated-btn");
+      const cargoUpdated = document.querySelector("#cargo-updated");
+
+      if (updateCargoDetails) {
+        const toastBoootstrap =
+          bootstrap.Toast.getOrCreateInstance(cargoUpdated);
+
+        updateCargoDetails.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const addNewCargo = document.querySelector("#cargo-added-btn");
+      const cargoAddedd = document.querySelector("#cargo-added");
+
+      if (addNewCargo) {
+        const toastBoootstrap =
+          bootstrap.Toast.getOrCreateInstance(cargoAddedd);
+
+        addNewCargo.addEventListener("click", () => {
+          toastBoootstrap.show();
+        });
+      }
+    </script>
     <script>
       const exportingCSV = document.querySelector("#exporting-as-csv-btn");
       const csv = document.querySelector("#exporting-as-csv");
