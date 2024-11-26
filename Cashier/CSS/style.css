@@ -1,0 +1,266 @@
+html,
+body {
+  height: 100%; /* Make the root elements span the full viewport height */
+  margin: 0;
+  width: 100%;
+}
+body {
+  padding-top: 60px;
+  font-family: Barlow;
+  padding: 0px;
+  font-weight: 500;
+  height: 100%;
+}
+header {
+  font-family: Nunito;
+  font-weight: bold;
+}
+tabaco-go {
+  font-family: arial;
+}
+@media (max-width: 500px) {
+  .online-booking {
+    letter-spacing: 4.5px;
+  }
+}
+@media (min-width: 576px) {
+  .online-booking {
+    letter-spacing: 5.4px;
+  }
+}
+@media (min-width: 768px) {
+  .online-booking {
+    letter-spacing: 6.2px;
+  }
+}
+@media (min-width: 992px) {
+  .online-booking {
+    letter-spacing: 7.2px;
+  }
+}
+
+.showcase {
+  margin-top: 45px;
+}
+
+@media (min-width: 800px) {
+  .sched {
+    width: 800px;
+  }
+}
+.go-to {
+  font-family: barlow;
+  font-weight: 200px;
+}
+
+.catanduanes {
+  font-family: nunito;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+/*
+      Color Palete from Adobe XD
+
+     DARK BLUE        =   rgb(20 65 105)
+     DARK/LIGHT BLUE  =   rgb(35 100 151)
+     LIGHT BLUE       =   rgb(134 193 205)
+     SOFT BLUE        =   rgb(244 249 249)
+     GREY             =   rgb(235 235 235)
+    
+*/
+/* Fonts */
+.nunito {
+  font-family: Nunito;
+}
+.barlow {
+  font-family: barlow;
+}
+
+/* Background Color */
+.bg-dark-blue {
+  background-color: rgb(20 65 105);
+}
+
+.bg-semi-dark-blue {
+  background-color: rgb(35 100 151);
+}
+
+.bg-light-blue {
+  background-color: rgb(134 193 205);
+}
+.bg-fade-blue {
+  background-color: rgb(244 249 249);
+}
+
+.bg-grey {
+  background-color: rgb(235 235 235);
+}
+
+.bg-dark-grey {
+  background-color: rgb(88 112 130);
+}
+.bg-yellow {
+  background-color: rgb(255 198 42);
+}
+
+/* Text Color */
+.text-dark-blue {
+  color: rgb(20 65 105);
+}
+.text-semi-dark-blue {
+  color: rgb(35 100 151);
+}
+
+.text-light-blue {
+  color: rgb(134 193 205);
+}
+.text-dark-grey {
+  color: rgb(88 112 130);
+}
+.text-green {
+  color: rgb(4 195 5);
+}
+.text-yellow {
+  color: rgb(255 198 42);
+}
+
+/* Side Bar Collapsable*/
+.sidebar.collapsed {
+  width: 0;
+  overflow: hidden;
+}
+.sidebar-mobile.collapsed {
+  width: 0;
+  overflow: hidden;
+}
+/* /Side Bar Collpasable*/
+
+/* Contents-Holder*/
+.main-content {
+  height: 100%;
+  padding-top: 50px;
+  flex-grow: 1;
+}
+
+/* Media query for screens 91px wide or smaller - Small Screen or "sm" in Bootstrap */
+@media (max-width: 991px) {
+  .main-content {
+    /*padding-left: 60px;*/
+  }
+}
+
+/* Media query for screens wider than 992px - Medium Screen or "md" in Bootstrap*/
+@media (min-width: 992px) {
+  .main-content {
+    /* padding-left: 285px;*/
+    padding-top: 70px;
+  }
+}
+**/
+/* /Contents-Holder*/
+
+/* Nav Tabs Responsive Size*/
+/* Default styles for larger screens */
+
+.text-mobile-xsm {
+  font-size: 11px;
+}
+/* Smaller styles for mobile screens */
+@media (max-width: 576px) {
+  .text-mobile-xsm {
+    font-size: 8px; /* Smaller font size */
+  }
+}
+
+.text-mobile-sm {
+  font-size: 12px;
+}
+/* Smaller styles for mobile screens */
+@media (max-width: 576px) {
+  .text-mobile-sm {
+    font-size: 9px; /* Smaller font size */
+  }
+}
+
+.text-mobile-md {
+  font-size: 13px !important; /* Override if needed */
+}
+/* Smaller styles for mobile screens */
+@media (max-width: 576px) {
+  .text-mobile-md {
+    font-size: 11px; /* Smaller font size */
+  }
+}
+
+/* /Nav Tabs Responsive Size*/
+
+/* Table Hover Color*/
+tr {
+  --bs-table-hover-bg: rgb(162, 199, 206);
+}
+/* Table Hover Color*/
+
+/* Sticky Column & Row */
+
+/* Make the last column sticky */
+th.sticky-right-1,
+td.sticky-right-1 {
+  position: sticky;
+  right: 0; /* Last column on the right */
+  z-index: 2; /* High z-index to stay above other content */
+}
+
+th.sticky-right-2,
+td.sticky-right-2 {
+  position: sticky;
+  right: 45px; /* Adjusted to match the width of the last column */
+  z-index: 2;
+}
+
+/* Optional: Sticky header */
+th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+/* Sticky Column & Row */
+
+@media (min-width: 576px) {
+  /* Search Bar*/
+  .adaptive-search-bar {
+    max-width: 200px;
+  }
+}
+/* /Search Bar */
+
+/* Custom style to make disabled form-select transparent */
+.form-select:disabled,
+label[for="gender-label"] {
+  background-color: transparent !important;
+  opacity: 1 !important; /* Optional: Ensures full opacity */
+  pointer-events: none; /* Ensures the element is still non-interactive */
+}
+
+/* Change Password Button*/
+
+/* Change Password Button*/
+
+/*Floating Form Control*/
+
+/*Floating Form Control*/
+
+/* Bellow are for the Contents -------------------------------------------------*/
+
+/* Admin - Dashboard */
+.admin-dashboard-container {
+  padding: 0px 10px;
+}
+
+.dashboard-card-length {
+  max-width: 800px;
+}
+/* /Admin - Dashboard */
+
+/* Admin - Salse */
+
+/* /Admin - Salse */
